@@ -1,0 +1,346 @@
+{
+  /**********
+   * VSCode *
+   **********/
+  // 控制是否及如何在“导航路径”视图中显示文件路径
+  "breadcrumbs.filePath": "on",
+  // 调试控制台中可以用 enter 接受建议
+  "debug.console.acceptSuggestionOnEnter": "on",
+  // 从不自动打开内部调试控制台
+  "debug.internalConsoleOptions": "neverOpen",
+  // 编辑器中可以用 enter 接受建议
+  "editor.acceptSuggestionOnEnter": "on",
+  // 编辑器始终自动改写左引号或右引号
+  "editor.autoClosingOvertype": "always",
+  // 禁用自动检测文件缩进模式和缩进大小，即打开文件后自动将文件更改为 VSCode 配置的缩进格式
+  "editor.detectIndentation": false,
+  // 粘贴时格式化文件
+  "editor.formatOnPaste": true,
+  // 保存时格式化文件
+  "editor.formatOnSave": true,
+  // 在编辑器中自动显示内联建议
+  "editor.inlineSuggest.enabled": true,
+  // 输入时显示含有参数文档和类型信息的小面板
+  "editor.parameterHints.enabled": true,
+  // 控制是否在键入代码时自动显示建议
+  "editor.quickSuggestions": {
+    // 键入注释时不允许
+    "comments": false,
+    // 键入其他时允许
+    "other": true,
+    // 键入字符串时不允许
+    "strings": false
+  },
+  // 控制显示快速建议前的等待时间（毫秒）
+  "editor.quickSuggestionsDelay": 0,
+  // 控制编辑器在空白字符上显示符号的方式
+  "editor.renderWhitespace": "none",
+  // 代码片段建议置于其他建议之下
+  "editor.snippetSuggestions": "bottom",
+  // 使用空格缩进时模拟制表符的行为，可以方便对齐
+  "editor.stickyTabStops": true,
+  // 建议的接受方式
+  "editor.suggest.insertMode": "replace",
+  // 控制排序时是否提高靠近光标的词语的优先级
+  "editor.suggest.localityBonus": true,
+  // 在多个工作区和窗口间共享建议记忆
+  "editor.suggest.shareSuggestSelections": true,
+  // 控制建议小部件底部的状态栏可见
+  "editor.suggest.showStatusBar": true,
+  // 控制在键入触发字符后是否自动显示建议
+  "editor.suggestOnTriggerCharacters": true,
+  // 始终预先选择第一个建议
+  "editor.suggestSelection": "first",
+  // 一个制表符 = 2个空格
+  "editor.tabSize": 2,
+  // 不突出显示可能与基本 ASCII 字符混淆的字符
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  // 会根据文档中的文字提供建议列表
+  "editor.wordBasedSuggestions": true,
+  // 把文件删除时无需确认
+  "explorer.confirmDelete": false,
+  // 移动文件时无需确认
+  "explorer.confirmDragAndDrop": false,
+  // 粘贴同名文件时的重命名方式
+  //smart: 在重复名称末尾智能地添加/递增数字
+  "explorer.incrementalNaming": "smart",
+  // 忽略扩展建议的通知
+  "extensions.ignoreRecommendations": true,
+  // 等待一定时间后自动保存
+  "files.autoSave": "afterDelay",
+  // 自动保存的等待时间（毫秒）
+  "files.autoSaveDelay": 1000,
+  // 控制单元格编辑器中行号的显示
+  "notebook.lineNumbers": "on",
+  // 控制问题导航的显示顺序
+  "problems.sortOrder": "position",
+  // 显示搜索结果所在行号
+  "search.showLineNumbers": true,
+  // 当搜索词为小写时，则不区分大小写进行搜索；否则区分大小写
+  "search.smartCase": true,
+  // MacOS: 集成终端默认为 zsh
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  // Windows: 集成终端默认为 PowerShell
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  // 集成终端启用视觉化铃声
+  "terminal.integrated.enableBell": true,
+  // 集成终端编码: zh_CN.UTF-8
+  "terminal.integrated.env.windows": {
+    "LC_ALL": "zh_CN.UTF-8"
+  },
+  // 集成终端使用GPU加速
+  "terminal.integrated.gpuAcceleration": "on",
+  // MacOS: 将 Option 键视为终端上的元键
+  "terminal.integrated.macOptionIsMeta": true,
+  // 集成终端右击时选择光标下方的字词，并打开上下文菜单
+  "terminal.integrated.rightClickBehavior": "selectWord",
+  // 始终显示“新建终端”按钮旁的“终端拆分”和“终止”按钮
+  "terminal.integrated.tabs.showActions": "always",
+  // 始终显示活动终端
+  "terminal.integrated.tabs.showActiveTerminal": "always",
+  // 窗口缩放等级
+  "window.zoomLevel": 1,
+  // 允许语言检测使用编辑器历史记录
+  "workbench.editor.historyBasedLanguageDetection": true,
+  // 文件图标主题: 插件 vscode-icons
+  "workbench.iconTheme": "vscode-icons",
+  // 在没有从上一个会话恢复出信息的情况下，在启动时不打开编辑器
+  "workbench.startupEditor": "none",
+  // 显示视图头部的操作项
+  "workbench.view.alwaysShowHeaderActions": true,
+
+  /********
+   * Font *
+   ********/
+  // 针对输出窗口的部分设置
+  "[plaintext]": {
+    // 不使用连字体
+    "editor.fontLigatures": false,
+    // 不在保存时自动格式化
+    "editor.formatOnSave": false,
+    // 启用自动换行
+    "editor.wordWrap": "on"
+  },
+  // 用于 CodeLens 的字体系列
+  "editor.codeLensFontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  // 字体系列
+  "editor.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  // 启用连体字
+  "editor.fontLigatures": true,
+  // 字号
+  "editor.fontSize": 14,
+  // 行高：使用 0 根据字号自动计算行高
+  "editor.lineHeight": 0,
+  // 资源管理器不采用紧凑模式
+  "explorer.compactFolders": false,
+  // 用于终端的字体系列
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  // 集成终端字号
+  "terminal.integrated.fontSize": 14,
+
+  /*********
+   * Color *
+   *********/
+  // 启用括号着色
+  "editor.bracketPairColorization.enabled": true,
+  // 各类括号着色等级独立
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  // 启用括号指导线
+  "editor.guides.bracketPairs": true,
+  // 启用水平括号指导线
+  "editor.guides.bracketPairsHorizontal": "active",
+  // 禁用高亮选中的缩进指导线
+  "editor.guides.highlightActiveIndentation": false,
+  // 禁用缩进指导线
+  "editor.guides.indentation": false,
+  // 语义高亮
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "[Default Dark+]": {
+      "enabled": true,
+      "rules": {
+        // 抽象符号
+        "*.abstract": {
+          "fontStyle": "italic"
+        },
+        // 静态量（静态变量，静态函数）
+        "*.static": {
+          "fontStyle": "bold"
+        },
+        // 未启用的宏
+        "comment": {
+          "fontStyle": "",
+          "foreground": "#767BA6"
+        },
+        // 宏
+        "macro": {
+          "foreground": "#8F5DAF"
+          // "foreground": "#4FC1FF"
+        },
+        // 成员函数
+        "method": {
+          "fontStyle": "underline"
+        },
+        // 命名空间
+        "namespace": {
+          "foreground": "#00D780"
+        },
+        // 函数参数
+        "parameter": {
+          "foreground": "#C8ECFF"
+        },
+        // 只读的函数参数
+        "parameter.readonly": {
+          "foreground": "#7BD1FF"
+        },
+        // 成员变量，似乎需要clangd12以上
+        "property": {
+          "fontStyle": "underline",
+          "foreground": "#C8ECFF"
+        },
+        // 只读量等效为宏
+        "readonly": "#4FC1FF",
+        // 类型参数
+        "typeParameter": "#31A567"
+      }
+    }
+  },
+  // 语义高亮自定义
+  "editor.tokenColorCustomizations": {
+    "[Default Dark+]": {
+      // 注释字体设置为斜体
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    }
+  },
+  // 括号颜色
+  "workbench.colorCustomizations": {
+    "[Default Dark+]": {
+      "editorBracketHighlight.foreground3": "#9CDCFE",
+      "editorBracketHighlight.foreground4": "#F3FD00",
+      "editorBracketHighlight.foreground5": "#F47D9F",
+      "editorBracketHighlight.foreground6": "#A5ADFE"
+    }
+  },
+
+  /**********
+   * Clangd *
+   **********/
+  // 关闭“C/C++”扩展的 IntelliSense，因为我们使用了“clangd”扩展的 IntelliSense
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  // Clangd 运行参数(在终端/命令行输入 clangd --help-list-hidden 可查看更多)
+  "clangd.arguments": [
+    // 全局补全(输入时弹出的建议将会给出不在当前作用域可见的索引，插入后将自动补充作用域标识符)
+    //如，在`int main()`中直接写`cout`，
+    //    即使没有`#include <iostream>`，也会给出`std::cout`的建议
+    //    配合"--header-insertion=iwyu" (见下)，还可自动插入缺失的头文件
+    "--all-scopes-completion",
+    // 启用 Clang-Tidy 以提供「静态检查」
+    "--clang-tidy",
+    // compelie_commands.json 文件的目录位置
+    // 搭配 CMake 时建议设置(相对于工作区，由于 CMake 生成的该文件默认在 build 文件夹中，故设置为 build)
+    "--compile-commands-dir=build",
+    // 建议风格：打包(重载函数只会给出一个建议）；反可以设置为 detailed
+    "--completion-style=bundled",
+    // 启用读取项目配置文件和用户配置文件，其设置格式均为YAML
+    //项目配置文件是在项目文件夹里的“.clangd”
+    //用户配置文件是“clangd/config.yaml”，该文件来自如下目录
+    //    Windows: %USERPROFILE%\AppData\Local
+    //    MacOS: ~/Library/Preferences/
+    //    Others: $XDG_CONFIG_HOME, usually ~/.config
+    "--enable-config",
+    // 默认格式化风格: 在 clangd 没能找到 .clang-format 文件时采用
+    //这里用的谷歌开源项目代码风格（可用的有 LLVM, Google, Chromium, Mozilla, Webkit, Microsoft, GNU 等）
+    "--fallback-style=Google",
+    // 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符，乃至函数末
+    //我选择禁用
+    "--function-arg-placeholders=false",
+    // 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
+    "--header-insertion-decorators",
+    // 插入建议时自动补充头文件
+    "--header-insertion=iwyu",
+    // 让 Clangd 生成更详细的日志
+    "--log=verbose",
+    // pch优化的位置 (memory 或 disk，选择memory会增加内存开销，但会提升性能)
+    "--pch-storage=memory",
+    // 输出的 JSON 文件更美观
+    "--pretty",
+    // 建议的排序方案：hueristics (启发式), decision_forest (决策树)
+    //我采用决策树
+    "--ranking-model=decision_forest",
+    // 同时开启的任务数量
+    "-j=12"
+  ],
+  // 自动检测 clangd 更新
+  "clangd.checkUpdates": true,
+  // 默认编译器选项：在 clangd 没能找到 compile_flags.json 文件时采用
+  // 缺陷是不能如读取到 compile_flags.json 时一样直接索引同一项目的不同文件，因为没有它 clangd 仅能保守地分析
+  //系统头文件、当前文件、当前文件`#include`的文件
+  // compile_flags.json 可通过 CMake 等工具生成
+  "clangd.fallbackFlags": [
+    "-pedantic",
+    "-Wall",
+    "-Wcast-align",
+    "-Wdouble-promotion",
+    "-Wextra",
+    "-Wformat=2",
+    "-Wimplicit-fallthrough",
+    "-Wmisleading-indentation",
+    "-Wnon-virtual-dtor",
+    "-Wnull-dereference",
+    "-Wold-style-cast",
+    "-Woverloaded-virtual",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wunused",
+    "-pthread",
+    "-fuse-ld=lld",
+    "-fsanitize=address",
+    "-fsanitize=undefined",
+    "-stdlib=libc++",
+    "-std=c++2b"
+  ],
+  // 重启 clangd 时重载配置
+  // 重启方法：
+  //Windows: Alt + Shift + P 打开命令面板，然后搜索“clangd: restart”
+  //MacOS: Command + Shift + P 打开命令面板，然后搜索“clangd: restart"
+  "clangd.onConfigChanged": "restart",
+  // 借助网上的信息排序建议
+  "clangd.serverCompletionRanking": true,
+  // clangd的snippets有很多的跳转点，不用这个就必须手动触发Intellisense了
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+  /********
+   * LLDB *
+   ********/
+  // LLDB 指令自动补全
+  "lldb.commandCompletions": true,
+  // LLDB 指针显示解引用内容
+  "lldb.dereferencePointers": true,
+  // LLDB 鼠标悬停在变量上时预览变量值
+  "lldb.evaluateForHovers": true,
+  // LLDB 监视表达式的默认类型
+  "lldb.launch.expressions": "native",
+  // LLDB 不显示汇编代码
+  "lldb.showDisassembly": "never",
+  // LLDB 生成更详细的日志
+  "lldb.verboseLogging": true,
+
+  /**************
+   * CodeRunner *
+   **************/
+  // Code Runner 的 C++ 编译配置，考虑到一致性，可执行文件输出到build文件夹中，命名为test
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && clang++ $fileName -pthread -pedantic -Wall -Wcast-align -Wdouble-promotion -Wextra -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wnon-virtual-dtor -Wnull-dereference -Wold-style-cast -Woverloaded-virtual -Wpedantic -Wshadow -Wunused -fuse-ld=lld -fsanitize=address -fsanitize=undefined -stdlib=libc++ -std=c++2b -o $workspaceRoot/build/test && $workspaceRoot/build/test"
+  },
+  // Code Runner 总是运行整个文件而非选择的部分
+  "code-runner.ignoreSelection": true,
+  // Code Runner 在终端运行
+  "code-runner.runInTerminal": true
+}

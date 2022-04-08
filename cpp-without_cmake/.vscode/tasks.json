@@ -1,0 +1,152 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Clang++: 编译单文件",
+      "command": "clang++",
+      "args": [
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/test",
+        "-g",
+        "-pedantic",
+        "-Wall",
+        "-Wcast-align",
+        "-Wdouble-promotion",
+        "-Wextra",
+        "-Wformat=2",
+        "-Wimplicit-fallthrough",
+        "-Wmisleading-indentation",
+        "-Wnon-virtual-dtor",
+        "-Wnull-dereference",
+        "-Wold-style-cast",
+        "-Woverloaded-virtual",
+        "-Wpedantic",
+        "-Wshadow",
+        "-Wunused",
+        "-pthread",
+        "-fuse-ld=lld",
+        "-fsanitize=address",
+        "-fsanitize=undefined",
+        "-stdlib=libc++",
+        "-std=c++2b"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Clang++: 编译多文件",
+      "command": "clang++",
+      "args": [
+        "${fileDirname}/*.cpp",
+        "-o",
+        "${workspaceFolder}/build/test",
+        "-g",
+        "-pedantic",
+        "-Wall",
+        "-Wcast-align",
+        "-Wconversion",
+        "-Wdouble-promotion",
+        "-Wextra",
+        "-Wformat=2",
+        "-Wimplicit-fallthrough",
+        "-Wmisleading-indentation",
+        "-Wnon-virtual-dtor",
+        "-Wnull-dereference",
+        "-Wold-style-cast",
+        "-Woverloaded-virtual",
+        "-Wpedantic",
+        "-Wshadow",
+        "-Wno-sign-conversion",
+        "-Wunused",
+        "-pthread",
+        "-fuse-ld=lld",
+        "-fsanitize=address",
+        "-fsanitize=undefined",
+        "-stdlib=libc++",
+        "-std=c++2b"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "运行文件",
+      "command": "${workspaceFolder}/build/test",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Clang++: 编译并运行单文件",
+      "command": "${workspaceFolder}/test",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "dependsOn": ["Clang++: 编译单文件"]
+    },
+    {
+      "type": "shell",
+      "label": "Clang++: 编译并运行多文件",
+      "command": "${workspaceFolder}/test",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "dependsOn": ["Clang++: 编译单文件"]
+    }
+  ],
+  "version": "2.0.0"
+}

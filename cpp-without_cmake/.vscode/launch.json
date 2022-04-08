@@ -1,0 +1,76 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "LLDB: 生成和调试单文件",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/test",
+      "args": [],
+      "stopOnEntry": false,
+      "cwd": "${fileDirname}",
+      "internalConsoleOptions": "neverOpen",
+      "environment": [],
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "text": "settings set target.process.thread.step-avoid-regexp",
+          "description": "Enable stepping into STL"
+        },
+        {
+          "text": "settings set target.process.thread.step-avoid-libraries",
+          "description": "Avoid stepping into libraries"
+        }
+      ],
+      "preLaunchTask": "Clang++: 编译单文件"
+    },
+    {
+      "name": "LLDB: 生成和调试多文件",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/test",
+      "args": [],
+      "stopOnEntry": false,
+      "cwd": "${fileDirname}",
+      "internalConsoleOptions": "neverOpen",
+      "environment": [],
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "text": "settings set target.process.thread.step-avoid-regexp",
+          "description": "Enable stepping into STL"
+        },
+        {
+          "text": "settings set target.process.thread.step-avoid-libraries",
+          "description": "Avoid stepping into libraries"
+        }
+      ],
+      "preLaunchTask": "Clang++: 编译多文件"
+    },
+    {
+      "name": "LLDB: 调试已编译的 test.exe",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/test",
+      "args": [],
+      "stopOnEntry": false,
+      "cwd": "${fileDirname}",
+      "internalConsoleOptions": "neverOpen",
+      "environment": [],
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "text": "settings set target.process.thread.step-avoid-regexp",
+          "description": "Enable stepping into STL"
+        },
+        {
+          "text": "settings set target.process.thread.step-avoid-libraries",
+          "description": "Avoid stepping into libraries"
+        }
+      ]
+    }
+  ]
+}
