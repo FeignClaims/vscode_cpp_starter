@@ -1,8 +1,0 @@
-{
-  "recommendations": [
-    "llvm-vs-code-extensions.vscode-clangd",
-    "formulahendry.code-runner",
-    "vadimcn.vscode-lldb",
-    "ms-ceintl.vscode-language-pack-zh-hans"
-  ]
-}
