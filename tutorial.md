@@ -2,9 +2,9 @@
 
 - [[前言]](#前言)
 - [[下载和安装]](#下载和安装)
-  - [[Windows]](#Windows)
-  - [[MacOS]](#MacOS)
-  - [[字体（可选）]](#字体（可选）)
+  - [[Windows]](#windows)
+  - [[MacOS]](#macos)
+  - [[字体（可选）]](#字体可选)
 - [[配置]](#配置)
 - [[检验配置结果]](#检验配置结果)
 - [[解释]](#解释)
@@ -32,7 +32,7 @@
 ### 教程采用的形式
 
 1. 先**傻瓜式**地配置好软件：
-   - [[下载和安装]](#下载和安装)：[[Windows]](#Windows) -- [[MacOS]](#MacOS)
+   - [[下载和安装]](#下载和安装)：[[Windows]](#windows) -- [[MacOS]](#macos)
    - [[配置]](#配置)
    - [[检验配置结果]](#检验配置结果)
 2. 给出各配置的逐条解释：[[解释]](#解释)
@@ -50,17 +50,17 @@
 
 ## 下载和安装
 
-- [[Windows]](#Windows)
-- [[MacOS]](#MacOS)
-- [[字体（可选）]](#字体（可选）)
+- [[Windows]](#windows)
+- [[MacOS]](#macos)
+- [[字体（可选）]](#字体可选)
 
 ### Windows
 
 - [[下载安装包]](#下载安装包)
-- [[安装 VSCode]](#安装-VSCode)
-- [[安装 MSYS2]](#安装-MSYS2)
+- [[安装 VSCode]](#安装-vscode)
+- [[安装 MSYS2]](#安装-msys2)
 - [[配置环境变量]](#配置环境变量)
-- [[利用 MSYS2 安装 LLVM]](#利用-MSYS2-安装-LLVM)
+- [[利用 MSYS2 安装 LLVM]](#利用-msys2-安装-llvm)
 
 #### 下载安装包
 
@@ -120,6 +120,7 @@
 如果得到的是图二样式，点击**新建(<u>N</u>)**，并输入 **C:\msys64\clang64\bin**（或你在安装时自定义的 MSYS2 路径\clang64\bin）即可。
 
 ![环境变量1](https://img-blog.csdnimg.cn/815870a7e8b443df8ca2413084b7206f.png)
+
 ![环境变量2](https://img-blog.csdnimg.cn/d0d07f43a6c14c069c9b9ed2140e925b.png)
 
 #### 利用 MSYS2 安装 LLVM
@@ -187,7 +188,7 @@ pacman -Syu
    ```
 
    ```bash
-     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+   export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
    ```
 
 4. 在终端运行以下命令以安装 Homebrew / Linuxbrew：
@@ -286,7 +287,7 @@ pacman -Syu
 
 ### 字体（可选）
 
-- [[安装方法]](#安装方法): [[Windows]](#windows-2) -- [[MacOS]](#macos-2)
+- [[安装方法]](#安装方法): [[Windows]](#windows-1) -- [[MacOS]](#macos-1)
 - [[推荐的免费字体]](#推荐的免费字体)
 
 #### 安装方法
@@ -351,7 +352,7 @@ pacman -Syu
 - [[打开文件夹]](#打开文件夹)
 - [[将设置应用到全局]](#将设置应用到全局)
 - [[安装插件]](#安装插件)
-- [[为 CMake 选择编译器]](#为-CMake-选择编译器)
+- [[为 CMake 选择编译器]](#为-cmake-选择编译器)
 - [[配置完成]](#配置完成)
 
 ### 下载并解压
@@ -473,9 +474,9 @@ pacman -Syu
 [旧版教程]: https://blog.csdn.net/tyKuGengty/article/details/120119820
 [官网 vscode]: https://code.visualstudio.com/
 [官网 msys2]: https://www.msys2.org/
-[官网 jetbrains mono]: https://github.com/JetBrains/JetBrainsMono/releases/tag/v2.242
-[官网 meslolgs nf]: https://github.com/ryanoasis/nerd-fontsb
-[官网 更纱黑体]: https://github.com/be5invis/Sarasa-Gothic/releases/tag/v0.36.1
+[官网 jetbrains mono]: https://github.com/JetBrains/JetBrainsMono/releases
+[官网 meslolgs nf]: https://github.com/ryanoasis/nerd-fonts/releases
+[官网 更纱黑体]: https://github.com/be5invis/Sarasa-Gothic/releases
 [giteevscode]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/VSCodeUserSetup-x64-1.67.1.exe
 [giteemsys2]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/msys2-x86_64-20220503.exe
 [gitee jetbrains mono]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/JetBrains%20Mono
