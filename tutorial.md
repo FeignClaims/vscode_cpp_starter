@@ -87,7 +87,7 @@
 
   进入清华大学开源软件镜像站，点击右侧的**获取下载链接**，切换到**应用软件**即可找到。
 
-![MYSY2 清华大学开源软件镜像站](https://img-blog.csdnimg.cn/97523a8cb9404a2ca9febe4f4e49806d.png)
+  ![MYSY2 清华大学开源软件镜像站](https://img-blog.csdnimg.cn/97523a8cb9404a2ca9febe4f4e49806d.png)
 
 #### 安装 VSCode
 
