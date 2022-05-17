@@ -482,7 +482,7 @@ pacman -Syu
 [gitee jetbrains mono]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/JetBrains%20Mono
 [gitee meslolgs nf]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/MesloLGS%20NF
 [gitee 更纱黑体]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
-[gitee code]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code.zip
-[gitee code-old]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code-old.zip
+[gitee code]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code.zip
+[gitee code-old]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code-old.zip
 [清华大学开源软件镜像站]: https://mirrors.tuna.tsinghua.edu.cn/
 [中科大源：使用科大源安装 homebrew / linuxbrew]: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew

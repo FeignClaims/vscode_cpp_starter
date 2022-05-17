@@ -4,5 +4,5 @@
 
 文章地址：
 
-- [Gitee（推荐）](tutorial.md)
+- [Gitee（推荐）](doc/tutorial.md)
 - [CSDN](https://blog.csdn.net/tyKuGengty/article/details/124828372)
