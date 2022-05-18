@@ -134,7 +134,7 @@
 
 在打开的窗口输入以下命令：
 
-- 一行一行复制（【**Control + C**】）、粘贴（**【窗口内右键 - Paste】**）
+- 一行一行复制（【**Control + C**】）、粘贴（【**窗口内右键 - Paste**】）
 - **多次**回车！**多次**回车！**多次**回车！
 - 等待执行完毕（见上文）继续下一行
 
@@ -162,8 +162,8 @@ pacman -Syu
 
 ### MacOS
 
-- [[安装 Homebrew]](#安装 Homebrew)
-- [[使用 Homebrew 安装 VSCode 和 LLVM]](#使用 Homebrew 安装 VSCode 和 LLVM)
+- [[安装 Homebrew]](#安装-homebrew)
+- [[使用 Homebrew 安装 VSCode 和 LLVM]](#使用-homebrew-安装-vscode-和-llvm)
 
 #### 安装 Homebrew
 
@@ -367,7 +367,7 @@ pacman -Syu
 
 打开 VSCode，将解压得到的 cpp-practice 文件夹拖动到 VSCode 中。
 
-在弹出的界面中选择 **是，我信任此作者(Yes, I trust the authros)**.
+在弹出的界面中选择**是，我信任此作者(Yes, I trust the authros)**.
 
 ![security](https://img-blog.csdnimg.cn/img_convert/c9bf84ccf6e58a76c85977a2ccb82e9a.png)
 
@@ -379,13 +379,13 @@ pacman -Syu
 
 3. 复制局部设置文件中的内容：
 
-   - Windows：在打开的页面中**【左键】**，**【Ctrl + A】**全选，**【Ctrl + C】**复制。
-   - MacOS：在打开的页面中**【左键】**，**【Command + A】**全选，**【Command + C】**复制。
+   - Windows：在打开的页面中【**左键**】，【**Ctrl + A**】全选，【**Ctrl + C**】复制。
+   - MacOS：在打开的页面中【**左键**】，【**Command + A**】全选，【**Command + C**】复制。
 
 4. 粘贴内容到全局设置文件中：
 
-   - Windows：切换到另一个 **settings.json**，在打开的页面中**【左键】**，**【Ctrl + A】**全选，**【Ctrl + V】**粘贴。
-   - MacOS：切换到另一个 **settings.json**，在打开的页面中**【左键】**，**【Command + A】**全选，**【Command + V】**粘贴。
+   - Windows：切换到另一个 **settings.json**，在打开的页面中【**左键**】，【**Ctrl + A**】全选，【**Ctrl + V**】粘贴。
+   - MacOS：切换到另一个 **settings.json**，在打开的页面中【**左键**】，【**Command + A**】全选，【**Command + V**】粘贴。
 
 5. 删除局部设置文件：右击侧边栏的 **settings.json**，选择**删除(delete)**.
 
@@ -412,7 +412,7 @@ pacman -Syu
 
 ### 配置完成
 
-通过**【Ctrl + Shift + P】**或**【Command + Shift + P】**打开命令菜单，输入 `clangdr` 以找到 **clangd: Restart language server**，从而刷新配置。
+通过【**Ctrl + Shift + P**】或【**Command + Shift + P**】打开命令菜单，输入 `clangdr` 以找到 **clangd: Restart language server**，从而刷新配置。
 
 > 当你的 C++ 源代码莫名其妙显示错误信息时，通过该步骤可能得到解决。
 
