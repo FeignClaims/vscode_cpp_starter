@@ -9,6 +9,7 @@
 - [[检验配置结果]](#检验配置结果)
 - [[解释]](#解释)
 - [[可我想要用 gcc]](#可我想要用-gcc)
+- [[我的其他 VSCode 通用类插件]](#我的其他-vscode-通用类插件)
 - [[附录]](#附录)
 
 ## 前言
@@ -462,6 +463,10 @@ pacman -Syu
 
 ![clangd + gcc](https://img-blog.csdnimg.cn/img_convert/42b11c07ddcdc8ec70adc9489f3ec5b0.png)
 
+## 我的其他 VSCode 通用类插件
+
+[点击下载][gitee 通用]，配置方法与[[配置]](#配置)类似。
+
 ## 附录
 
 - [Clangd 官网](https://clangd.llvm.org/)
@@ -484,5 +489,6 @@ pacman -Syu
 [gitee 更纱黑体]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
 [gitee code]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code.zip
 [gitee code-old]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code-old.zip
+[gitee 通用]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/my_utility.zip
 [清华大学开源软件镜像站]: https://mirrors.tuna.tsinghua.edu.cn/
 [中科大源：使用科大源安装 homebrew / linuxbrew]: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
