@@ -370,6 +370,11 @@ pacman -Syu
 
 打开 VSCode，将解压得到的 cpp-practice 文件夹拖动到 VSCode 中。
 
+**注意**：
+
+- 拖动到右侧区域而非左边的侧边栏。
+- 不要自作主张用左上角菜单栏打开，因为该菜单下有两个对应操作，很容易犯错。
+
 在弹出的界面中选择**是，我信任此作者(Yes, I trust the authros)**.
 
 ![security](https://img-blog.csdnimg.cn/img_convert/c9bf84ccf6e58a76c85977a2ccb82e9a.png)
