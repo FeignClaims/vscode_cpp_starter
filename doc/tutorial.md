@@ -403,11 +403,30 @@ pacman -Syu
 
 在左方侧边栏点击 **扩展(Extensions)**，在出现的窗口中搜索 `@recommended`，点击云下载图标。
 
+> 如果未能找到，请首先检查前面[[解压]](#解压)或者[[打开文件夹]](#打开文件夹)的步骤有无疏忽；实在找不到，请看下文。
+
 观察下方，等所有插件右下角的**蓝色 install 按钮**消失变成**齿轮**，即安装全部完成。
 
 **关闭 VSCode.**
 
 ![安装插件](https://img-blog.csdnimg.cn/3ed449abb9694d9e8b84b18808bf1d2d.png)
+
+> 如果没能通过 `@recommended` 找到，请手动逐行搜索、安装一下拓展：
+>
+> **（注意，这意味着前面[[解压]](#解压)或者[[打开文件夹]](#打开文件夹)的步骤已经出错了！）**
+>
+> ```txt
+> clangd
+> Code Runner
+> CodeLLDB
+> Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
+> Cmake
+> Cmake Tools
+> cmake-format
+> Prettier - Code formatter
+> Disable Ligatures
+> vscode-icons
+> ```
 
 ### 为 CMake 选择编译器
 
