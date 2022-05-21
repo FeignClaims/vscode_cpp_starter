@@ -500,6 +500,7 @@ pacman -Syu
 
 ## 附录
 
+- [VSCode 变量参考](https://code.visualstudio.com/docs/editor/variables-reference)
 - [Clangd 官网](https://clangd.llvm.org/)
 - [Clang 编译器诊断选项列表](https://clang.llvm.org/docs/DiagnosticsReference.html)
 - [Clang-Format 配置选项列表](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
