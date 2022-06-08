@@ -1,5 +1,6 @@
 # Windows/MacOS 上 VSCode 配置 C++：LLVM14（Clang + Clangd + LLDB)
 
+- [[更新日志]](#更新日志)
 - [[前言]](#前言)
 - [[下载和安装]](#下载和安装)
   - [[Windows]](#windows)
@@ -11,6 +12,12 @@
 - [[可我想要用 gcc]](#可我想要用-gcc)
 - [[我的其他 VSCode 通用类插件]](#我的其他-vscode-通用类插件)
 - [[附录]](#附录)
+
+## 更新日志
+
+- 2022 年 6 月 8 日，彻底修复 Windows 调试无法设置断点的问题；**但对于项目仍需自己通过 CMake 进行配置**。
+
+  方法来自 [vscode-lldb: Breakpoints are not getting hit](https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit).
 
 ## 前言
 
