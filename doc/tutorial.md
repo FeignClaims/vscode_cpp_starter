@@ -15,6 +15,8 @@
 
 ## 更新日志
 
+- 2022 年 6 月 26 日，Homebrew 终于更新了 LLVM14，调整了 MacOS 的配置文件；开始写[[解释]](#解释)部分。
+
 - 2022 年 6 月 8 日，彻底修复 Windows 调试无法设置断点的问题；**但对于项目仍需自己通过 CMake 进行配置**。
 
   方法来自 [vscode-lldb: Breakpoints are not getting hit](https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit).
@@ -365,8 +367,8 @@ pacman -Syu
 
 ### 下载并解压
 
-- [Windows 点此下载][gitee code]
-- 对于 MacOS，由于 Homebrew 尚未更新 LLVM 14，请下载 **[code-old.zip][gitee code-old]**
+- [Windows 点此下载][gitee code-windows]
+- [MacOS 点此下载][gitee code-macos]
 
 **记得解压！记得解压！记得解压！**
 
@@ -526,8 +528,8 @@ pacman -Syu
 [gitee jetbrains mono]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/JetBrains%20Mono
 [gitee meslolgs nf]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/MesloLGS%20NF
 [gitee 更纱黑体]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
-[gitee code]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code.zip
-[gitee code-old]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code-old.zip
+[gitee code-windows]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code-windows.zip
+[gitee code-macos]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/code-macos.zip
 [gitee 通用]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/my_utility.zip
 [清华大学开源软件镜像站]: https://mirrors.tuna.tsinghua.edu.cn/
 [中科大源：使用科大源安装 homebrew / linuxbrew]: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
