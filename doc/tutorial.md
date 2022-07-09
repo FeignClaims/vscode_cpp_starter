@@ -495,7 +495,7 @@ pacman -Syu
 
 ## 解释
 
-**等 Homebrew 更新 LLVM 14 再进行解释。**
+摸了。
 
 ## 可我想要用 gcc
 
