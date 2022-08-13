@@ -32,7 +32,7 @@
 
 本教程并没有创建一个 C++ 项目，只是提供了一个配置好的开发/学习环境；为方便日常学习 C++，内置了运行/调试单个 `.cpp` 源代码（必须是这个后缀！）或整个文件夹的便捷脚本。
 
-如果需要配置项目，请自行学习 CMake，并修改根目录下的 `CMakeLists.txt`; 同时，建议参考附录给出的文档修改配置。
+如果需要配置项目，请自行学习 CMake，并修改根目录下的 `CMakeLists.txt`; 同时，建议参考[[附录]](#附录)给出的文档修改配置。
 
 CMake 推荐读物：[《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
 
