@@ -1,6 +1,7 @@
 # Windows/MacOS 上 VSCode 配置 C++：LLVM14（Clang + Clangd + LLDB)
 
 - [[更新日志]](#更新日志)
+- [[特别声明]](#特别声明)
 - [[前言]](#前言)
 - [[下载和安装]](#下载和安装)
   - [[Windows]](#windows)
@@ -15,6 +16,8 @@
 
 ## 更新日志
 
+- 2022 年 8 月 13 日，新增了[[特别声明]](#特别声明)。
+
 - 2022 年 8 月 13 日，新增了一个插件 `Error Lens`，感谢[【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备](https://www.bilibili.com/video/BV1YG4y1v7uB)让我知道有这么个插件。
 
 - 2022 年 7 月 8 日，VSCode 更新了导出/导入配置档案的功能，但涉及的部分自认为足够简单，不想重写，摸了。
@@ -24,6 +27,14 @@
 - 2022 年 6 月 8 日，彻底修复 Windows 调试无法设置断点的问题；**但对于项目仍需自己通过 CMake 进行配置**。
 
   方法来自 [vscode-lldb: Breakpoints are not getting hit](https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit).
+
+## 特别声明
+
+本教程并没有创建一个 C++ 项目，只是提供了一个配置好的开发/学习环境；为方便日常学习 C++，内置了运行/调试单个 `.cpp` 源代码（必须是这个后缀！）或整个文件夹的便捷脚本。
+
+如果需要配置项目，请自行学习 CMake，并修改根目录下的 `CMakeLists.txt`; 同时，建议参考附录给出的文档修改配置。
+
+CMake 推荐读物：[《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
 
 ## 前言
 
