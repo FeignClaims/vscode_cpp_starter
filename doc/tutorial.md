@@ -529,7 +529,7 @@ pacman -Syu
 - [Clang 编译器诊断选项列表](https://clang.llvm.org/docs/DiagnosticsReference.html)
 - [Clang-Format 配置选项列表](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 - [Clang-Tidy 诊断选项列表](https://clang.llvm.org/extra/clang-tidy/checks/list.html)
-- [vscode-lldb 用户手册](https://github.com/vadimcn/vscode-lldb/blob/v1.6.5/MANUAL.md)
+- [vscode-lldb 用户手册](https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md)
 
 [gitee]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter
 [旧版教程]: https://blog.csdn.net/tyKuGengty/article/details/120119820
