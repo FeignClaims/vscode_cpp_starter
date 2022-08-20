@@ -16,6 +16,8 @@
 
 ## 更新日志
 
+- 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[只需更新这个文件点此](../update/launch.json)。
+
 - 2022 年 8 月 13 日，新增了[[特别声明]](#特别声明)。
 
 - 2022 年 8 月 13 日，新增了一个插件 `Error Lens`，感谢[【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备](https://www.bilibili.com/video/BV1YG4y1v7uB)让我知道有这么个插件。
