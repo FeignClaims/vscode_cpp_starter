@@ -16,7 +16,7 @@
 
 ## 更新日志
 
-- 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[只需更新这个文件点此](../update/launch.json)。
+- 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[只需更新这个文件点此][gitee 更新 launch.json]。
 
 - 2022 年 8 月 13 日，新增了[[特别声明]](#特别声明)。
 
@@ -550,3 +550,4 @@ pacman -Syu
 [gitee 通用]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/code/my_utility.zip
 [清华大学开源软件镜像站]: https://mirrors.tuna.tsinghua.edu.cn/
 [中科大源：使用科大源安装 homebrew / linuxbrew]: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
+[gitee 更新 launch.json]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/update/launch.json
