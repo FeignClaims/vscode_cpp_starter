@@ -16,6 +16,8 @@
 
 ## 更新日志
 
+- 2022 年 8 月 23 日，补充了 Windows 安装 LLVM 的一个操作。
+
 - 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[只需更新这个文件点此][gitee 更新 launch.json]。
 
 - 2022 年 8 月 13 日，新增了[[特别声明]](#特别声明)。
@@ -152,7 +154,7 @@ CMake 推荐读物：[《Modern CMake for C++》](https://github.com/PacktPublis
 
 #### 利用 MSYS2 安装 LLVM
 
-通过**开始**菜单，或 **MSYS2 安装路径**（默认为 C:\msys64 ）打开 **clang64** 或 **clang64.exe**（而不是**MYSY2.exe**！）。
+通过**开始**菜单，或 **MSYS2 安装路径**（默认为 C:\msys64 ），【**右键**】，**以管理员身份运行**打开 **clang64** 或 **clang64.exe**（而不是**MYSY2.exe**！）。
 
 注意此时的窗口样式，当输入命令后，再次出现类似样式时，说明命令执行完毕：
 
