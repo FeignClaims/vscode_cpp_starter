@@ -16,6 +16,8 @@
 
 ## 更新日志
 
+- 2022 年 8 月 27 日，更新了 CMake 相关拓展，[[只需更新拓展点此]][gitee 更新 extensions.json]。
+
 - 2022 年 8 月 23 日，补充了 Windows 安装 LLVM 的一个操作。
 
 - 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[只需更新这个文件点此][gitee 更新 launch.json]。
@@ -553,3 +555,4 @@ pacman -Syu
 [清华大学开源软件镜像站]: https://mirrors.tuna.tsinghua.edu.cn/
 [中科大源：使用科大源安装 homebrew / linuxbrew]: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
 [gitee 更新 launch.json]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/update/launch.json
+[gitee 更新 extensions.json]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/blob/master/update/extensins.json
