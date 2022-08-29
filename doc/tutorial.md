@@ -40,7 +40,16 @@
 
 如果需要配置项目，请自行学习 CMake，并修改根目录下的 `CMakeLists.txt`; 同时，建议参考[[附录]](#附录)给出的文档修改配置。
 
-CMake 推荐读物：[《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
+CMake 推荐读物：
+
+- 书籍
+  - [《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
+- 视频
+  - [Effective CMake - Daniel Pfeife - C++Now 2017](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
+  - [Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017](https://www.youtube.com/watch?v=eC9-iRN2b04)
+  - [Git, CMake, Conan - How to ship and reuse our C++ projects - CppCon 2018 - Mateusz Pusz](https://www.youtube.com/watch?v=S4QSKLXdTtA)
+  - [More Modern CMake - Deniz Bahadir - Meeting C++ 2018](https://www.youtube.com/watch?v=y7ndUhdQuU8)
+- [VSCode CMake 拓展用户手册](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md)
 
 ## 前言
 
