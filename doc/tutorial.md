@@ -47,7 +47,7 @@ CMake 推荐读物：
 - 视频
   - [Effective CMake - Daniel Pfeife - C++Now 2017](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
   - [Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017](https://www.youtube.com/watch?v=eC9-iRN2b04)
-  - [Git, CMake, Conan - How to ship and reuse our C++ projects - CppCon 2018 - Mateusz Pusz](https://www.youtube.com/watch?v=S4QSKLXdTtA)
+  - [Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018](https://www.youtube.com/watch?v=S4QSKLXdTtA)
   - [More Modern CMake - Deniz Bahadir - Meeting C++ 2018](https://www.youtube.com/watch?v=y7ndUhdQuU8)
 - [VSCode CMake 拓展用户手册](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md)
 
