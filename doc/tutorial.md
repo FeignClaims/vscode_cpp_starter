@@ -454,22 +454,9 @@ pacman -Syu
 
 ![安装插件](https://img-blog.csdnimg.cn/3ed449abb9694d9e8b84b18808bf1d2d.png)
 
-> 如果没能通过 `@recommended` 找到，请手动逐行搜索、安装以下拓展：
+> 如果没能通过 `@recommended` 找到，~~请手动逐行搜索、安装以下拓展~~
 >
-> **（注意，这意味着前面[[解压]](#解压)或者[[打开文件夹]](#打开文件夹)的步骤已经出错了！）**
->
-> ```txt
-> clangd
-> Code Runner
-> CodeLLDB
-> Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
-> Cmake
-> Cmake Tools
-> cmake-format
-> Prettier - Code formatter
-> Disable Ligatures
-> vscode-icons
-> ```
+> **这意味着前面[[解压]](#解压)或者[[打开文件夹]](#打开文件夹)的步骤已经出错了！请不要错上加错！**
 
 ### 为 CMake 选择编译器
 
