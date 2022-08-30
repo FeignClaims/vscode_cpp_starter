@@ -23,9 +23,9 @@
 
 记录需要更新文件的更新，更新的文件都有对应的链接跳转。
 
-- 2022 年 8 月 27 日，更新了 CMake 相关拓展，[[更新补丁: `.vscode/extensions.json`]][gitee 更新 extensions.json]。
+- 2022 年 8 月 27 日，更新了 CMake 相关拓展，[更新补丁: .vscode/extensions.json][gitee 更新 extensions.json]。
 
-- 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[更新补丁：`.vscode/extensions.json`][gitee 更新 launch.json]。
+- 2022 年 8 月 20 日，在 `.vscode/launch.json` 中增加了 CMake 项目用的 LLDB 调试配置，请注意[[特别声明]](#特别声明)，[更新补丁：.vscode/extensions.json][gitee 更新 launch.json]。
 
 ### 其他
 
