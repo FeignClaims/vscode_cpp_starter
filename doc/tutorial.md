@@ -40,16 +40,7 @@
 
 如果需要配置项目，请自行学习 CMake，并修改根目录下的 `CMakeLists.txt`; 同时，建议参考[[附录]](#附录)给出的文档修改配置。
 
-CMake 推荐读物：
-
-- 书籍
-  - [《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
-- 视频
-  - [Effective CMake - Daniel Pfeife - C++Now 2017](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
-  - [Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017](https://www.youtube.com/watch?v=eC9-iRN2b04)
-  - [Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018](https://www.youtube.com/watch?v=S4QSKLXdTtA)
-  - [More Modern CMake - Deniz Bahadir - Meeting C++ 2018](https://www.youtube.com/watch?v=y7ndUhdQuU8)
-- [VSCode CMake 拓展用户手册](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md)
+CMake 推荐读物见文章末[[CMake 推荐读物]](#cmake-推荐读物)。
 
 ## 前言
 
@@ -545,6 +536,22 @@ pacman -Syu
 - [Clang-Format 配置选项列表](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 - [Clang-Tidy 诊断选项列表](https://clang.llvm.org/extra/clang-tidy/checks/list.html)
 - [vscode-lldb 用户手册](https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md)
+
+## CMake 推荐读物
+
+- 书籍
+  - [《Modern CMake for C++》](https://github.com/PacktPublishing/Modern-CMake-for-Cpp).
+- 视频
+  - [Effective CMake - Daniel Pfeife - C++Now 2017](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
+  - [Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017](https://www.youtube.com/watch?v=eC9-iRN2b04)
+  - [Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018](https://www.youtube.com/watch?v=S4QSKLXdTtA)
+  - [More Modern CMake - Deniz Bahadir - Meeting C++ 2018](https://www.youtube.com/watch?v=y7ndUhdQuU8)
+- 文档
+  - [CMake 官方文档](https://cmake.org/cmake/help/latest/index.html)
+  - [Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
+  - [More Modern CMake](https://hsf-training.github.io/hsf-training-cmake-webpage/)
+  - [Effective Modern CMake](https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1)
+  - [VSCode CMake 拓展用户手册](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md)
 
 [gitee]: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter
 [旧版教程]: https://blog.csdn.net/tyKuGengty/article/details/120119820
