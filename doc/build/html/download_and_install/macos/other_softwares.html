@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用 Homebrew 安装 VSCode 和 LLVM &mdash; Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB) v1.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="字体" href="font.html" />
+    <link rel="prev" title="安装 Homebrew" href="homebrew.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../meet_trouble.html">遇到问题？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update_notes.html">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../special_announcement.html">CMake 特别声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">前言</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">下载和安装</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">MacOS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="homebrew.html">安装 Homebrew</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="font.html">字体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configure.html">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../verify.html">检验配置结果</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explain.html">解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">附加内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">参考文献及拓展阅读</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">下载和安装</a> &raquo;</li>
+          <li><a href="index.html">MacOS</a> &raquo;</li>
+      <li>使用 Homebrew 安装 VSCode 和 LLVM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/download_and_install/macos/other_softwares.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="homebrew-vscode-llvm">
+<h1>使用 Homebrew 安装 VSCode 和 LLVM<a class="headerlink" href="#homebrew-vscode-llvm" title="此标题的永久链接"></a></h1>
+<p>继续在【终端】分别输入以下指令、【回车】，等待完成即可。</p>
+<ol class="arabic simple">
+<li><p>安装：</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install llvm ninja
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install --cask visual-studio-code cmake
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install cmake_format
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>配置 LLVM 的环境变量（重开【终端】生效）</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/opt/homebrew/opt/llvm/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.zshrc
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export LDFLAGS=&quot;-L/opt/homebrew/opt/llvm/lib&quot;&#39;</span> &gt;&gt; ~/.zshrc
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export CPPFLAGS=&quot;-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib&quot;&#39;</span> &gt;&gt; ~/.zshrc
+</pre></div>
+</div>
+</div></blockquote>
+<p>你可以通过【启动台】点击图标启动 VSCode，或按【Command + 空格】打开聚焦搜索，搜索 <strong>code</strong> 以找到。</p>
+<p>此后，你可以随时在【终端】输入 <cite>brew upgrade</cite> 更新这些软件。</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="homebrew.html" class="btn btn-neutral float-left" title="安装 Homebrew" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="font.html" class="btn btn-neutral float-right" title="字体" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, FeignClaims.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

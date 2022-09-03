@@ -1,0 +1,45 @@
+.. _`Gitee 仓库`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter
+.. _`Gitee 仓库 Issues`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues
+
+.. CMake 推荐读物
+.. _`《Modern CMake for C++》`: https://github.com/PacktPublishing/Modern-CMake-for-Cpp
+.. _`Effective CMake - Daniel Pfeife - C++Now 2017`: https://www.youtube.com/watch?v=bsXLMQ6WgIk
+.. _`Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`: https://www.youtube.com/watch?v=eC9-iRN2b04
+.. _`Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`: https://www.youtube.com/watch?v=S4QSKLXdTtA
+.. _`More Modern CMake - Deniz Bahadir - Meeting C++ 2018`: https://www.youtube.com/watch?v=y7ndUhdQuU8
+.. _`CMake 官方文档`: https://cmake.org/cmake/help/latest/
+.. _`Modern CMake`: https://cliutils.gitlab.io/modern-cmake/
+.. _`More Modern CMake`: https://hsf-training.github.io/hsf-training-cmake-webpage/
+.. _`Effective Modern CMake`: https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1
+.. _`VSCode CMake 拓展用户手册`: https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
+
+.. 下载和安装
+.. _`VSCode：通过官网下载`: https://code.visualstudio.com/
+.. _`VSCode：我备份的安装包`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/VSCodeUserSetup-x64-1.67.1.exe
+.. _`MSYS2：通过官网下载`: https://www.msys2.org/
+.. _`MSYS2：我备份的安装包`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/msys2-x86_64-20220503.exe
+.. _`清华大学开源软件镜像站`: https://mirrors.tuna.tsinghua.edu.cn/
+.. _`JetBrains Mono：通过官网下载`: https://github.com/JetBrains/JetBrainsMono/releases
+.. _`JetBrains Mono：我备份的文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/JetBrains%20Mono
+.. _`MesloLGS NF：通过官网下载`: https://github.com/ryanoasis/nerd-fonts/releases
+.. _`MesloLGS NF：我备份的文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/MesloLGS%20NF
+.. _`等距更纱黑体 SC：通过官网下载`: https://github.com/be5invis/Sarasa-Gothic/releases
+.. _`等距更纱黑体 SC：我备份的文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
+.. _`中科大源：使用科大源安装 homebrew / linuxbrew`: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
+
+.. 配置
+.. _`配置文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/cpp-practice.zip
+
+.. 其他引用
+.. _`Error Lens`: https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
+.. _`【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备`: https://www.bilibili.com/video/BV1YG4y1v7uB
+.. _`vscode-lldb: Breakpoints are not getting hit`: https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit
+.. _`旧版教程`: https://blog.csdn.net/tyKuGengty/article/details/120119820
+
+.. 参考文献
+.. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
+.. _`Clangd 官网`: https://clangd.llvm.org
+.. _`Clang 编译器诊断选项列表`: https://clang.llvm.org/docs/DiagnosticsReference.html
+.. _`Clang-Format 配置选项列表`: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+.. _`Clang-Tidy 诊断选项列表`: https://clang.llvm.org/extra/clang-tidy/checks/list.html
+.. _`vscode-lldb 用户手册`: https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md

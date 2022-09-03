@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>安装 Homebrew &mdash; Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB) v1.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="使用 Homebrew 安装 VSCode 和 LLVM" href="other_softwares.html" />
+    <link rel="prev" title="MacOS" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../meet_trouble.html">遇到问题？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update_notes.html">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../special_announcement.html">CMake 特别声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">前言</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">下载和安装</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">MacOS</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">安装 Homebrew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other_softwares.html">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="font.html">字体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configure.html">配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../verify.html">检验配置结果</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../explain.html">解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../others.html">附加内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">参考文献及拓展阅读</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">下载和安装</a> &raquo;</li>
+          <li><a href="index.html">MacOS</a> &raquo;</li>
+      <li>安装 Homebrew</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/download_and_install/macos/homebrew.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="homebrew">
+<h1>安装 Homebrew<a class="headerlink" href="#homebrew" title="此标题的永久链接"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>参照自 <a class="reference external" href="https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew">中科大源：使用科大源安装 homebrew / linuxbrew</a>。</p>
+</div>
+<ol class="arabic simple">
+<li><p>【Command + 空格】打开聚焦搜索，搜索 <strong>终端</strong> 并打开。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注意此时的窗口样式，当输入命令后，再次出现类似样式时，说明命令执行完毕：</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/MacOS终端_窗口样式.png" src="../../_images/MacOS终端_窗口样式.png" />
+<figcaption>
+<p><span class="caption-text">终端窗口样式</span><a class="headerlink" href="#id10" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</div>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>输入 <code class="docutils literal notranslate"><span class="pre">xcode-select</span> <span class="pre">--install</span></code> 并【回车】，在弹出的页面中点击【安装】，再点击【同意】，等待安装完成。</p>
+<blockquote>
+<div><figure class="align-default" id="id11">
+<img alt="../../_images/MacOS_安装xcode-select.png" src="../../_images/MacOS_安装xcode-select.png" />
+<figcaption>
+<p><span class="caption-text">安装 xcode-select</span><a class="headerlink" href="#id11" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><p>在终端输入以下命令设置环境变量：</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">备注</p>
+<ul class="simple">
+<li><p><strong>一行一行地</strong> 复制（【Control + C】）、粘贴（【窗口内右键 - Paste】而非【Control + V】！）。</p></li>
+<li><p><strong>多次</strong> 【回车】！ <strong>多次</strong> 【回车】！ <strong>多次</strong> 【回车】！</p></li>
+<li><p>等待执行完毕后继续下一行。（确定执行完毕的方法见上文。）</p></li>
+</ul>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.ustc.edu.cn/homebrew-bottles&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>在终端运行以下命令以安装 Homebrew / Linuxbrew。</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>键入这一行命令后，需要 <strong>输入电脑密码</strong> 并【回车】、再【回车】以继续！</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/MacOS_输入电脑密码.png" src="../../_images/MacOS_输入电脑密码.png" />
+<figcaption>
+<p><span class="caption-text">输入电脑密码</span><a class="headerlink" href="#id12" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>输入 <code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-m</span></code> 并【回车】，如果输出 <code class="docutils literal notranslate"><span class="pre">arm64</span></code> 则进行第 6 步，否则跳过第 6 步。</p></li>
+<li><p>将 brew 程序的相关路径加入到环境变量中。</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span> &gt;&gt; ~/.zprofile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>/opt/homebrew/bin/brew shellenv<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>更泛用的方式是上一步完成后，查看【终端】提示的的 <cite>Next steps</cite> 并逐步进行。</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/MacOS_Next_steps.png" src="../../_images/MacOS_Next_steps.png" />
+<figcaption>
+<p><span class="caption-text">Next Steps</span><a class="headerlink" href="#id13" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>配置下载镜像源。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如果按照第 6 步备注中的 <cite>Next steps</cite> 操作了，跳过这一步。</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> &gt;&gt; ~/.profile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;&#39;</span> &gt;&gt; ~/.profile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/brew.git&quot;&#39;</span> &gt;&gt; ~/.zprofile
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.ustc.edu.cn/homebrew-core.git&quot;&#39;</span> &gt;&gt; ~/.zprofile
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="MacOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="other_softwares.html" class="btn btn-neutral float-right" title="使用 Homebrew 安装 VSCode 和 LLVM" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, FeignClaims.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

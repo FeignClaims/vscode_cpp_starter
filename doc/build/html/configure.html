@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>配置 &mdash; Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB) v1.0 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="检验配置结果" href="verify.html" />
+    <link rel="prev" title="字体" href="download_and_install/macos/font.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="meet_trouble.html">遇到问题？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_notes.html">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_announcement.html">CMake 特别声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download_and_install/index.html">下载和安装</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">配置</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id11">下载并解压</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">打开文件夹</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">将设置应用到全局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">安装插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">为 CMake 选择编译器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">配置完成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="verify.html">检验配置结果</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explain.html">解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="others.html">附加内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">参考文献及拓展阅读</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>配置</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/configure.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>配置<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<section id="id11">
+<h2>下载并解压<a class="headerlink" href="#id11" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/cpp-practice.zip">配置文件</a></p></li>
+</ul>
+<p><strong>记得解压缩！记得解压缩！记得解压缩！</strong></p>
+<ul class="simple">
+<li><p>Windows：【右键】该文件，然后选择【提取】以提取文件。</p></li>
+<li><p>MacOS：【双击】该文件以提取文件。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<ul class="simple">
+<li><p>这里写的都是系统内置的解压缩方法，如果有其他压缩软件请随意。</p></li>
+<li><p>解压在全英路径，且文件夹名不要有奇怪的标点符号乃至空格！</p></li>
+<li><p>不要图省事解压到桌面，以免因用户名过于奇怪而出错！—— <strong>来自提问者的真实经历！</strong></p></li>
+</ul>
+</div>
+</section>
+<section id="id12">
+<h2>打开文件夹<a class="headerlink" href="#id12" title="此标题的永久链接"></a></h2>
+<p>打开 VSCode，将解压得到的 cpp-practice 文件夹拖动到 VSCode 中。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<ul class="simple">
+<li><p>拖动到右侧区域而非左边的侧边栏。</p></li>
+<li><p>不要自作主张用左上角菜单栏打开，因为该菜单下有两个对应操作，很容易犯错。</p></li>
+</ul>
+</div>
+<p>在弹出的界面中选择【是，我信任此作者(Yes, I trust the authros)】。</p>
+<figure class="align-default" id="id17">
+<img alt="_images/VSCode_安全性.png" src="_images/VSCode_安全性.png" />
+<figcaption>
+<p><span class="caption-text">安全性提示</span><a class="headerlink" href="#id17" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id13">
+<h2>将设置应用到全局<a class="headerlink" href="#id13" title="此标题的永久链接"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>下方有动图指导怎么操作。</p>
+</div>
+<ol class="arabic simple">
+<li><p>打开全局设置文件：</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>点击窗口左下角的【齿轮】，选择【设置(settings)】，点击右上角第二栏第一个按钮【打开设置(Open Settings)】。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>打开局部设置文件：</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>在左方侧边栏选择【资源管理器(Explorer)】，找到【.vscode】文件夹下的【settings.json】，打开。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>复制局部设置文件中的内容：</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Windows：在打开的页面中【左键】，【Ctrl + A】全选，【Ctrl + C】复制。</p></li>
+<li><p>MacOS：在打开的页面中【左键】，【Command + A】全选，【Command + C】复制。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>粘贴内容到全局设置文件中：</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Windows：切换到另一个【settings.json】，在打开的页面中【左键】，【Ctrl + A】全选，【Ctrl + V】粘贴。</p></li>
+<li><p>MacOS：切换到另一个【settings.json】，在打开的页面中【左键】，【Command + A】全选，【Command + V】粘贴。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>删除局部设置文件：</p></li>
+</ol>
+<blockquote>
+<div><p>【右击】侧边栏的【settings.json】，选择【删除(delete)】。</p>
+</div></blockquote>
+<figure class="align-default" id="id18">
+<img alt="_images/VSCode_应用设置.gif" src="_images/VSCode_应用设置.gif" />
+<figcaption>
+<p><span class="caption-text">将设置应用到全局</span><a class="headerlink" href="#id18" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id14">
+<h2>安装插件<a class="headerlink" href="#id14" title="此标题的永久链接"></a></h2>
+<p>在左方侧边栏点击【扩展(Extensions)】，在出现的窗口中搜索 <code class="docutils literal notranslate"><span class="pre">&#64;recommended</span></code>，点击【云朵形状的下载图标】。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如果未能找到，请首先检查前面 [[解压]](#解压) 或者 [[打开文件夹]](#打开文件夹) 的步骤有无疏忽。</p>
+</div>
+<p>观察下方，等所有插件右下角的【蓝色 install 按钮】消失变成【齿轮】，即安装全部完成。</p>
+<p><strong>关闭 VSCode。</strong></p>
+<figure class="align-default" id="id19">
+<img alt="_images/VSCode_安装插件.png" src="_images/VSCode_安装插件.png" />
+<figcaption>
+<p><span class="caption-text">安装插件</span><a class="headerlink" href="#id19" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id15">
+<h2>为 CMake 选择编译器<a class="headerlink" href="#id15" title="此标题的永久链接"></a></h2>
+<p>重新启动 VSCode，会弹出如下图选项。</p>
+<ul class="simple">
+<li><p>Windows：选择 Clang 即可。</p></li>
+<li><p>MacOS：系统自带有 Clang 编译器，请注意选择 <strong>homebrew</strong> 路径下的版本。</p></li>
+</ul>
+<figure class="align-default" id="id20">
+<img alt="_images/MacOS_选择编译器.png" src="_images/MacOS_选择编译器.png" />
+<figcaption>
+<p><span class="caption-text">MacOS 选择 homebrew 路径下的编译器</span><a class="headerlink" href="#id20" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id16">
+<h2>配置完成<a class="headerlink" href="#id16" title="此标题的永久链接"></a></h2>
+<p>通过【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 <code class="docutils literal notranslate"><span class="pre">clangdr</span></code> 以找到【clangd: Restart language server】，从而刷新配置。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>当你的 C++ 源代码莫名其妙显示错误信息时，通过该步骤可能得到解决。</p>
+</div>
+<figure class="align-default" id="id21">
+<img alt="_images/VSCode_刷新_clangd.png" src="_images/VSCode_刷新_clangd.png" />
+<figcaption>
+<p><span class="caption-text">刷新 Clangd</span><a class="headerlink" href="#id21" title="此图像的永久链接"></a></p>
+</figcaption>
+</figure>
+<p>你可以直接将这个【cpp-practice】文件夹作为学习 C++ 所用的文件夹，将代码放入【src】子文件夹中。</p>
+<p>运行和调试代码的方法见下文。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>如果需要在其他文件夹中应用配置，请看 <a class="reference internal" href="explain.html"><span class="doc">解释</span></a></p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="download_and_install/macos/font.html" class="btn btn-neutral float-left" title="字体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="verify.html" class="btn btn-neutral float-right" title="检验配置结果" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, FeignClaims.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
