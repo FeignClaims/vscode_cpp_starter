@@ -30,6 +30,7 @@
 
 .. 配置
 .. _`配置文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/cpp-practice.zip
+.. _`我的通用拓展`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/my_utility.zip
 
 .. 其他引用
 .. _`Error Lens`: https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens

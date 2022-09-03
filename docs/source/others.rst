@@ -2,6 +2,8 @@
 附加内容
 ########
 
+.. include:: /_include/links.rst
+
 可我想要用 gcc
 **************
 
@@ -17,8 +19,6 @@
 点击下载 `我的通用拓展`_，配置方法与 :doc:`configure` 类似。
 
 此外，建议装上 Vim 插件。
-
-.. _`我的通用拓展`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/my_utility.zip
 
 Visual Studio 的配置方案
 ************************
