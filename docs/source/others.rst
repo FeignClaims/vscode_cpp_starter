@@ -19,3 +19,8 @@
 此外，建议装上 Vim 插件。
 
 .. _`我的通用拓展`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/my_utility.zip
+
+Visual Studio 的配置方案
+************************
+
+- `一个简单的 Visual Studio 配置方案`_
