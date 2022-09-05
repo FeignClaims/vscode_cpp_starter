@@ -5,7 +5,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/include")
 
 file(GLOB_RECURSE files CONFIGURE_DEPENDS ".DS_Store")
 list(APPEND files
-  ${CMAKE_CURRENT_SOURCE_DIR}/build
   ${CMAKE_CURRENT_SOURCE_DIR}/code/cpp-practice/.cache
   ${CMAKE_CURRENT_SOURCE_DIR}/code/cpp-practice/build
   ${CMAKE_CURRENT_SOURCE_DIR}/code/cpp-practice/compile_commands.json
