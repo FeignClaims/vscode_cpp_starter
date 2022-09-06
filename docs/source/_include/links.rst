@@ -37,6 +37,7 @@
 .. _`【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备`: https://www.bilibili.com/video/BV1YG4y1v7uB
 .. _`vscode-lldb: Breakpoints are not getting hit`: https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit
 .. _`旧版教程`: https://blog.csdn.net/tyKuGengty/article/details/120119820
+.. _`cmake-toolchains`: https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html
 
 .. 参考文献
 .. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
