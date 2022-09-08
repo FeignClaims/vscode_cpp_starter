@@ -1,6 +1,5 @@
 .. _`Gitee 仓库`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter
 .. _`Gitee 仓库 Issues`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues
-.. _`一个简单的 Visual Studio 配置方案`: https://gitee.com/FeignClaims/weekly-questions/blob/master/src/weak_14/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%20Visual%20Studio%20%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88.md
 
 .. Issues
 .. _`Issue: 关于配置异常无输出`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues/I5PT6Y
