@@ -56,6 +56,7 @@
 
 - 该文件夹下能使用的任务，如编译源文件等。
 - 其中配置的编译器诊断选项文档见 `Clang 编译器诊断选项列表`_。
+- 这些诊断选项参考了 `cppbestpractices: Use the Tools Available - compilers`_ 和 `hacking C++: Diagnostic Basics`_。
 
 ``.vscode/launch.json``
 *************************

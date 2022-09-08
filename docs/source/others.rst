@@ -15,7 +15,7 @@
 
 .. note::
 
-  这只是让 clangd 正常解析 gcc 的设置；其余工具链配置需通过 `cmake-toolchains`_ 配置。
+  这只是让 clangd 正常解析 gcc 的设置；其余工具链配置可通过 `cmake-toolchains`_ 配置。
 
 我的其他 VSCode 通用类拓展
 ************************

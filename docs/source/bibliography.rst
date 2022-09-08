@@ -10,3 +10,5 @@
 - `Clang-Format 配置选项列表`_
 - `Clang-Tidy 诊断选项列表`_
 - `vscode-lldb 用户手册`_
+- `cppbestpractices: Use the Tools Available - compilers`_
+- `hacking C++: Diagnostic Basics`_

@@ -2,6 +2,10 @@
 .. _`Gitee 仓库 Issues`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues
 .. _`一个简单的 Visual Studio 配置方案`: https://gitee.com/FeignClaims/weekly-questions/blob/master/src/weak_14/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%20Visual%20Studio%20%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88.md
 
+.. Issues
+.. _`Issue: 关于配置异常无输出`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues/I5PT6Y
+.. _`Issue: 添加断点无效`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues/I58LOQ
+
 .. CMake 推荐读物
 .. _`《Modern CMake for C++》`: https://github.com/PacktPublishing/Modern-CMake-for-Cpp
 .. _`Effective CMake - Daniel Pfeife - C++Now 2017`: https://www.youtube.com/watch?v=bsXLMQ6WgIk
@@ -46,3 +50,5 @@
 .. _`Clang-Format 配置选项列表`: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 .. _`Clang-Tidy 诊断选项列表`: https://clang.llvm.org/extra/clang-tidy/checks/list.html
 .. _`vscode-lldb 用户手册`: https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md
+.. _`cppbestpractices: Use the Tools Available - compilers`: https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers
+.. _`hacking C++: Diagnostic Basics`: https://hackingcpp.com/cpp/diagnostics.html
