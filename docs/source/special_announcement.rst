@@ -29,6 +29,11 @@ CMake 特别声明
 
   - `《Modern CMake for C++》`_
 
+    - `Modern CMake for C++：代码`_
+    - `Modern CMake for C++：ACCU 书评`_
+
+  - `《Professional CMake》`_ **（别用这本书入门！）**
+
 - 视频
 
   - `Effective CMake - Daniel Pfeife - C++Now 2017`_

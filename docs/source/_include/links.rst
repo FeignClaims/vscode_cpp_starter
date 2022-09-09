@@ -6,7 +6,10 @@
 .. _`Issue: 添加断点无效`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues/I58LOQ
 
 .. CMake 推荐读物
-.. _`《Modern CMake for C++》`: https://github.com/PacktPublishing/Modern-CMake-for-Cpp
+.. _`《Modern CMake for C++》`: https://www.packtpub.com/product/modern-cmake-for-c/9781801070058
+.. _`Modern CMake for C++：代码`: https://github.com/PacktPublishing/Modern-CMake-for-Cpp
+.. _`Modern CMake for C++：ACCU 书评`: https://accu.org/bookreviews/2022/collyer_1988/
+.. _`《Professional CMake》`: https://crascit.com/professional-cmake/
 .. _`Effective CMake - Daniel Pfeife - C++Now 2017`: https://www.youtube.com/watch?v=bsXLMQ6WgIk
 .. _`Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`: https://www.youtube.com/watch?v=eC9-iRN2b04
 .. _`Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`: https://www.youtube.com/watch?v=S4QSKLXdTtA
