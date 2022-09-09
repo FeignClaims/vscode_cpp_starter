@@ -18,7 +18,7 @@ CMake 特别声明
 插件相关
 ********
 
-目前教程给出的配置使用了 ``CMake Tools`` 和 ``CMake Language Support`` 扩展，并禁用了打开文件夹或保存 ``CMakeLists.txt`` 时自动配置 CMake。
+目前教程给出的配置使用了 ``CMake Tools`` 和 ``CMake Language Support`` 扩展，并启用了打开文件夹或保存 ``CMakeLists.txt`` 时自动配置 CMake。
 
 在设置中，我启用了实验性质的 FileAPI 功能，使得 ``include(xxx)`` 所包含的内容能得到分析， **但该分析仅对上一次配置有效**，即 **修改 ``CMakeLists.txt`` 后，必须重新配置 CMake 才能得到新的分析结果**。
 
