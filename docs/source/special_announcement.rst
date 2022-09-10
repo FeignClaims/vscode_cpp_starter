@@ -34,6 +34,14 @@ CMake 特别声明
 
   - `《Professional CMake》`_ **（别用这本书入门！）**
 
+- 开源项目
+
+  - `Github: aminya/project_options`_
+  
+    - 大幅简化 CMake 项目的基本构建流程，几步即可达到《Modern CMake for C++》最终效果，建议看完后尝试配置。
+    
+    - 本教程的配置方案已借用这个项目来搭建，以供 CMake 学习参考。
+
 - 视频
 
   - `Effective CMake - Daniel Pfeife - C++Now 2017`_
