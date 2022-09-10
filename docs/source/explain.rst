@@ -45,6 +45,7 @@
 
 - ``CMakeLists.txt`` 的分文件，在 ``CMakeLists.txt`` 开头被包含。
 - 指示 CMake 配置时生成 ``compile_commands.json``，并在包含该文件的 ``CMakeLists.txt`` 文件所在目录下创建 ``compile_commands.json`` 的快捷方式。
+- 仅当 CMake 生成器为 Makefiles 或 Ninja 时有效，文中配置已默认使用 Ninja。（用 ``cmake -S <source> -B <build> -G <generator>`` 来指定， ``cmake --help`` 可查看当前环境可用生成器。）
 
 ``.vscode/extensions.json``
 *****************************
