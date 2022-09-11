@@ -96,6 +96,19 @@ SymlinkCompileCommands.cmake
 - 创建这个快捷方式便于 clangd 找到 ``compile_commands.json``，兼容源外构建。
 - 仅当 CMake 生成器为 Makefiles 或 Ninja 时有效，文中配置已默认设置为 Ninja。（用 ``cmake -S <source> -B <build> -G <generator>`` 来指定， ``cmake --help`` 可查看当前环境可用生成器。）
 
+mine/
+=======
+
+我使用的版本，为此需要安装一下软件：
+
+.. code-block:: txt
+
+  conan  # 包管理工具
+  include-what-you-use  # 缩写为 iwyu
+  ccache  # 通过缓存加快编译
+  doxygen  # 文档生成工具
+  cppcheck  # 一个代码检查工具
+
 .vscode/
 *****************************
   
