@@ -1,0 +1,3 @@
+STAR: lambda 表达式和函数对象隐藏参数
+\* by capturing variables from a lambda or storing values in a function object, you can
+\* call functions that takes arguments without having to have f() take explicit arguments

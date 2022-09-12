@@ -1,0 +1,31 @@
+Diagnostics:
+  ClangTidy:
+    Add: ["*"]
+    Remove:
+      [
+        abseil*,
+        altera*,
+        fuchsia*,
+        llvmlib*,
+        llvm-qualified-auto,
+        zircon*,
+        google-readability-todo,
+        misc-unused-alias-decls,
+        modernize-use-trailing-return-type,
+        readability-braces-around-statements,
+        readability-implicit-bool-conversion,
+        readability-qualified-auto,
+        hicpp-braces-around-statements,
+      ]
+    CheckOptions:
+      readability-identifier-length.IgnoredVariableNames: ch|_
+      readability-identifier-length.IgnoredParameterNames: ^[n]$|ch|_
+  UnusedIncludes: None # 误诊断太多了
+Index:
+  Background: Build
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+Hover:
+  ShowAKA: Yes

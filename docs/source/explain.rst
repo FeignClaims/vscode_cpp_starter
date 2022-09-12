@@ -15,11 +15,13 @@
   +-- .clangd
   +-- compile_commands.json
   +-- CMakeLists.txt
-  +-- cmake
+  +-- cmake/
   |   +-- GetProjectOptions.cmake
   |   +-- MyProjectOptions.cmake
+  |   +-- StructureOnly.cmake
   |   +-- SymlinkCompileCommands.cmake
-  +-- .vscode
+  |   +-- mine/
+  +-- .vscode/
       +-- extensions.json
       +-- tasks.json
       +-- launch.json
@@ -87,6 +89,34 @@ MyProjectOptions.cmake
 
 - 禁用代码检查工具、文档生成工具等。
 - 启用更多的编译器诊断选项，这些选项会被保存到 ``compile_commands.json`` 中，提供给 clangd 进行解析。
+
+StructureOnly.cmake
+========================
+
+定义的 CMake 函数，用于将源文件添加到 CMake 中，并与 ``project_options`` 等链接，最终这些信息会保存在 ``compile_commands.json`` 中被 clangd 使用。
+
+.. note::
+
+  这样加入 CMake 中的文件都假定最终编译成一个可执行文件，故一般不能 **通过 CMake** 编译运行，只是提供给 clangd 进行解析。
+
+函数如下所示，其中 ``<xxx>`` 表示必须输入， ``[xxx]`` 表示可选输入。
+
+- ``structure_only([<DIRECTOIRES> <directory>...])``，将文件夹中的文件（以 h hpp hh c cc cxx cpp 结尾）加入 CMake 中。
+- ``structure_only_options([<LIBRARIES> <library>...] [<INCLUDES> <include>...])``，通用设置，实际并没有使用。
+
+  - ``LIBRARIES``：structure_only 预链接的库
+  - ``INCLUDES``：structure_only 预包含的头文件文件夹
+
+例如，给出的配置将 ``src`` 和 ``test`` 文件夹下的文件加入 CMake 中。
+
+.. code-block:: cmake
+
+  include(StructureOnly)
+  structure_only(
+    DIRECTORIES
+    src
+    test
+  )
 
 SymlinkCompileCommands.cmake
 ==================================

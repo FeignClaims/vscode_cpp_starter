@@ -19,6 +19,7 @@ Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
    :caption: 目录
 
    meet_trouble.rst
+   todo.rst
    update_notes.rst
    special_announcement.rst
    preface.rst

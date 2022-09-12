@@ -1,0 +1,48 @@
+BasedOnStyle: Google
+---
+Language: Cpp
+# AlignArrayOfStructures: Right # LLVM 15
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Inline
+AlignConsecutiveAssignments: Consecutive # 试用看看效果
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Right
+AlignOperands: AlignAfterOperator # 试用看看效果
+# ArrayInitializerAlignmentStyle: Right # LLVM 15
+BinPackArguments: false
+BinPackParameters: false
+ColumnLimit: 120
+DerivePointerAlignment: false
+EmptyLineBeforeAccessModifier: Always
+IncludeCategories:
+  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority: 2
+  - Regex: '^((<|")(gtest|gmock|isl|json)/)'
+    Priority: 3
+  - Regex: "^<gsl/.*>"
+    Priority: 4
+  - Regex: "^<.*/.*>"
+    Priority: 5
+  - Regex: "^<[[:alnum:]_]+>"
+    Priority: 4
+  - Regex: "^<.*"
+    Priority: 5
+  - Regex: '^".*'
+    Priority: 1
+# InsertBraces: true # LLVM 15
+IndentRequires: true # Remove This
+# IndentRequiresClause: true # LLVM 15
+IndentPPDirectives: AfterHash
+NamespaceIndentation: Inner
+PackConstructorInitializers: NextLine
+# RequiresClausePositionStyle: OwnLine # LLVM 15
+PointerAlignment: Left
+QualifierAlignment: Custom
+QualifierOrder:
+  ["inline", "static", "constexpr", "type", "restrict", "const", "volatile"]
+ReferenceAlignment: Pointer
+ReflowComments: false
+ShortNamespaceLines: 0
+---
+
