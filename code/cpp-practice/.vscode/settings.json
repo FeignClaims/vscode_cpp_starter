@@ -85,6 +85,8 @@
   "problems.showCurrentInStatus": true,
   // 控制问题导航的显示顺序
   "problems.sortOrder": "position",
+  // 输出窗口智能滚动：点击时锁定，点击最后一行时解锁
+  "output.smartScroll.enabled": true,
   // 显示搜索结果所在行号
   "search.showLineNumbers": true,
   // 当搜索词为小写时，则不区分大小写进行搜索；否则区分大小写
