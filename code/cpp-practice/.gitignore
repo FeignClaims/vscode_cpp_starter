@@ -1,4 +1,3 @@
-/.cache/
-/build/
+.cache/
+build/
 .DS_Store
-*/.DS_Store
