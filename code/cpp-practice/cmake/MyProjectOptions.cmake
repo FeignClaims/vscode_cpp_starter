@@ -32,6 +32,7 @@ dynamic_project_options(
   CLANG_WARNINGS
   -Wall
   -Wextra # reasonable and standard
+  -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
   -Wdouble-promotion # warn if float is implicit promoted to double
   -Wformat=2 # warn on security issues around functions that format output (ie printf)
@@ -51,6 +52,7 @@ dynamic_project_options(
   GCC_WARNINGS
   -Wall
   -Wextra
+  -Wextra-semi
   -Wcast-align
   -Wdouble-promotion
   -Wduplicated-cond # warn if if / else chain has duplicated conditions

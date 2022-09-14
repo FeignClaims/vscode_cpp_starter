@@ -37,6 +37,7 @@ dynamic_project_options(
   CLANG_WARNINGS
   -Wall
   -Wextra # reasonable and standard
+  -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
   -Wconversion # warn on type conversions that may lose data
   -Wdouble-promotion # warn if float is implicit promoted to double
@@ -59,6 +60,7 @@ dynamic_project_options(
   GCC_WARNINGS
   -Wall
   -Wextra
+  -Wextra-semi
   -Wcast-align
   -Wconversion
   -Wdouble-promotion

@@ -14,6 +14,7 @@
         "-Wall",
         "-Wextra", // reasonable and standard
         // 额外开启的警告
+        "-Wextra-semi", // warn about semicolon after in-class function definition
         "-Wcast-align", // warn for potential performance problem casts
         // "-Wconversion", // warn on type conversions that may lose data
         "-Wdouble-promotion", // warn if float is implicit promoted to double
