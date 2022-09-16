@@ -337,13 +337,13 @@
    * CMake *
    *********/
   // 保存 CMakeLists.txt 内容时，自动配置 CMake 项目目录
-  "cmake.configureOnEdit": true,
-  // 在 CMake 项目目录打开时自动对其进行配置
+  "cmake.configureOnEdit": false,
+  // 在 CMake 项目目录打开时，自动对其进行配置
   "cmake.configureOnOpen": true,
   // 默认的 CMake 生成器为 Ninja
   "cmake.generator": "Ninja",
-  // 成功配置后，将 compile_commands.json 复制到此位置
-  "cmake.copyCompileCommands": "",
+  // 忽略文件夹中找到 CMakeLists.txt 而在工作区根目录没找到的情况
+  "cmake.ignoreCMakeListsMissing": true,
   "cmake.statusbar.visibility": "compact",
   "cmakeLanguageSupport.enableFileAPI": true,
 

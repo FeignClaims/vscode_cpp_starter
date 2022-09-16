@@ -1,8 +1,13 @@
 # https://github.com/aminya/project_options
 
-set(project_options_dir ${CMAKE_CURRENT_LIST_DIR}/project_options)
-
-include(${project_options_dir}/Index.cmake)
-
-# 提供一系列推荐的默认设置
-include(${project_options_dir}/src/DynamicProjectOptions.cmake)
+message(
+  STATUS
+  "Downloading ProjectOptions from https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/project_options.zip"
+)
+include(FetchContent)
+FetchContent_Declare(_project_options
+  URL https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/project_options.zip
+)
+FetchContent_MakeAvailable(_project_options)
+include(${_project_options_SOURCE_DIR}/Index.cmake)
+include(${_project_options_SOURCE_DIR}/src/DynamicProjectOptions.cmake)
