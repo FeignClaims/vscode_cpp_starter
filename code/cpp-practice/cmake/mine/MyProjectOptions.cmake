@@ -1,5 +1,5 @@
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
-set(ENABLE_DEVELOPER_MODE ON CACHE BOOL "Enable 'developer mode'")
+set(ENABLE_DEVELOPER_MODE OFF CACHE BOOL "Enable 'developer mode'")
 
 set(ENABLE_CONAN_DEFAULT ON)
 set(ENABLE_INTERPROCEDURAL_OPTIMIZATION_DEFAULT ON)
@@ -7,9 +7,9 @@ set(ENABLE_NATIVE_OPTIMIZATION_DEFAULT ON)
 set(ENABLE_PCH ON)
 
 set(ENABLE_COVERAGE_DEVELOPER_DEFAULT OFF)
-set(ENABLE_INCLUDE_WHAT_YOU_USE_DEVELOPER_DEFAULT ON)
-set(ENABLE_DOXYGEN_DEVELOPER_DEFAULT ON)
-set(ENABLE_BUILD_WITH_TIME_TRACE_DEVELOPER_DEFAULT ON)
+set(ENABLE_INCLUDE_WHAT_YOU_USE_DEVELOPER_DEFAULT OFF)
+set(ENABLE_DOXYGEN_DEVELOPER_DEFAULT OFF)
+set(ENABLE_BUILD_WITH_TIME_TRACE_DEVELOPER_DEFAULT OFF)
 
 dynamic_project_options(
   MSVC_WARNINGS
@@ -38,6 +38,7 @@ dynamic_project_options(
   CLANG_WARNINGS
   -Wall
   -Wextra # reasonable and standard
+  -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
   -Wconversion # warn on type conversions that may lose data
   -Wdouble-promotion # warn if float is implicit promoted to double
@@ -60,6 +61,7 @@ dynamic_project_options(
   GCC_WARNINGS
   -Wall
   -Wextra
+  -Wextra-semi
   -Wcast-align
   -Wconversion
   -Wdouble-promotion
@@ -79,7 +81,7 @@ dynamic_project_options(
   -Wunused
   -Wuseless-cast # warn if you perform a cast to the same type
 
-  CPPCHECK_WARNINGS
+  CPPCHECK_OPTIONS
   --check-config
   --inline-suppr
   --enable=all
