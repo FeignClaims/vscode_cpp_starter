@@ -31,7 +31,7 @@
         "-Wpedantic", // warn if non-standard C++ is used
         // "-Wpointer-arith",
         "-Wshadow", // warn the user if a variable declaration shadows one from a parent context
-        "-Wnosign-conversion",
+        "-Wno-sign-conversion",
         // "-Wswitch-enum", // warn on enum values don't _explicitly_ handlded in switch statement
         "-Wunused", // warn on anything being unused
         // "-Wundef",
