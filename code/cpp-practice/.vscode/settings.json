@@ -368,7 +368,7 @@
    **************/
   // Code Runner 的 C++ 编译配置，考虑到一致性，可执行文件输出到build文件夹中，命名为test
   "code-runner.executorMap": {
-    "cpp": "cd $dir && clang++ $fileName -pthread -pedantic -Wall -Wcast-align -Wdouble-promotion -Wextra -Wextra-semi -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wnon-virtual-dtor -Wnull-dereference -Wold-style-cast -Woverloaded-virtual -Wpedantic -Wshadow -Wunused -fexperimental-library -fuse-ld=lld -stdlib=libc++ -std=c++2b -o $workspaceRoot/build/test && $workspaceRoot/build/test"
+    "cpp": "cd $dir && clang++ $fileName -pthread -pedantic -Wall -Wcast-align -Wdouble-promotion -Wextra -Wextra-semi -Wformat=2 -Wimplicit-fallthrough -Wmisleading-indentation -Wnon-virtual-dtor -Wnull-dereference -Wold-style-cast -Woverloaded-virtual -Wpedantic -Wshadow -Wunused -fuse-ld=lld -stdlib=libc++ -std=c++2b -o $workspaceRoot/build/test && $workspaceRoot/build/test"
   },
   // Code Runner 总是运行整个文件而非选择的部分
   "code-runner.ignoreSelection": true,

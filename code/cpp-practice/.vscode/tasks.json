@@ -36,7 +36,6 @@
         "-Wunused", // warn on anything being unused
         // "-Wundef",
         "-pthread",
-        "-fexperimental-library",
         "-fuse-ld=lld",
         // "-fsanitize=address",
         // "-fsanitize=undefined",
@@ -89,7 +88,6 @@
         "-Wunused",
         // "-Wundef",
         "-pthread",
-        "-fexperimental-library",
         "-fuse-ld=lld",
         // "-fsanitize=address",
         // "-fsanitize=undefined",
