@@ -73,4 +73,10 @@ dynamic_project_options(
   -Wuseless-cast # warn if you perform a cast to the same type
 )
 
-include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake) 
+
+# LLVM 15 起
+target_compile_options(project_options
+  INTERFACE
+  $<$<AND:$<CXX_COMPILER_ID:Clang>,$<VERSION_GREATER_EQUAL:$<CXX_COMPILER_VERSION>,15>>:-fexperimental-library>
+)
