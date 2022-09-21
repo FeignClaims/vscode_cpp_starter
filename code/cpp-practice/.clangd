@@ -20,7 +20,7 @@ Diagnostics:
     CheckOptions:
       readability-identifier-length.IgnoredVariableNames: ch|_
       readability-identifier-length.IgnoredParameterNames: ^[n]$|ch|_
-  UnusedIncludes: None # 误诊断太多了
+  UnusedIncludes: Strict
 Index:
   Background: Build
 InlayHints:

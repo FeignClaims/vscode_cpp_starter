@@ -9,9 +9,7 @@
 
 记录需要更新 `配置文件`_ 的更新，文中所用的 `配置文件`_ 始终保持最新版本。
 
-.. note::
-
-  由于配置文件没多少，想更新配置文件请直接重新下载 `配置文件`_ 进行操作。
+更新方法见 :doc:`how_to_update`。
 
 - 2022 年 9 月 11 日，将 CMake 源文件管理部分抽象成 ``cmake/StructureOnly.cmake``，从而允许为单源文件代码提供分析的同时管理 CMake 项目，并为未来可能做的 **利用 Conan 添加第三方库** （见 :doc:`todo`）提供接口，目前请通过 :doc:`special_announcement` 自行学习。
 - 2022 年 9 月 10 日，对 CMake 部分借用 `Github: aminya/project_options`_ 重新配置，更加简洁有效。

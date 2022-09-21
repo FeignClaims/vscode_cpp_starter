@@ -1,15 +1,14 @@
 BasedOnStyle: Google
 ---
 Language: Cpp
-# AlignArrayOfStructures: Right # LLVM 15
+AlignArrayOfStructures: Right
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortLambdasOnASingleLine: Inline
-AlignConsecutiveAssignments: Consecutive # 试用看看效果
+AlignConsecutiveAssignments: Consecutive
 AlignConsecutiveBitFields: Consecutive
 AlignConsecutiveMacros: Consecutive
 AlignEscapedNewlines: Right
-AlignOperands: AlignAfterOperator # 试用看看效果
-# ArrayInitializerAlignmentStyle: Right # LLVM 15
+AlignOperands: AlignAfterOperator
 BinPackArguments: false
 BinPackParameters: false
 ColumnLimit: 120
@@ -30,13 +29,12 @@ IncludeCategories:
     Priority: 5
   - Regex: '^".*'
     Priority: 1
-# InsertBraces: true # LLVM 15
-IndentRequires: true # Remove This
-# IndentRequiresClause: true # LLVM 15
+InsertBraces: true
+IndentRequiresClause: true
 IndentPPDirectives: AfterHash
 NamespaceIndentation: Inner
 PackConstructorInitializers: NextLine
-# RequiresClausePositionStyle: OwnLine # LLVM 15
+RequiresClausePosition: OwnLine
 PointerAlignment: Left
 QualifierAlignment: Custom
 QualifierOrder:
