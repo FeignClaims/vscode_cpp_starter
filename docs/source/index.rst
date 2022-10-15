@@ -3,6 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. meta::
+   :describe: VSCode 配置 C++ 的手把手教程
+   :keywords: vscode, windows, macos, llvm, clangd, clang, cmake, lldb
+
 Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
 ==========================================================================================
 
