@@ -345,7 +345,7 @@
   // 忽略文件夹中找到 CMakeLists.txt 而在工作区根目录没找到的情况
   "cmake.ignoreCMakeListsMissing": true,
   "cmake.statusbar.visibility": "compact",
-  "cmakeLanguageSupport.enableFileAPI": true,
+  "cmake.languageSupport.enableFileAPI": true,
 
   /********
    * LLDB *

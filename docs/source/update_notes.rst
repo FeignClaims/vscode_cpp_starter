@@ -11,6 +11,7 @@
 
 更新方法见 :doc:`how_to_update`。
 
+- 2022 年 10 月 15 日，扩展 ``CMake Language Support`` 更新，其 ``.json`` 的配置选项命名做了变更，需要更新配置文件。
 - 2022 年 9 月 21 日，更新至 LLVM 15。
 - 2022 年 9 月 11 日，将 CMake 源文件管理部分抽象成 ``cmake/StructureOnly.cmake``，从而允许为单源文件代码提供分析的同时管理 CMake 项目，并为未来可能做的 **利用 Conan 添加第三方库** （见 :doc:`todo`）提供接口，目前请通过 :doc:`special_announcement` 自行学习。
 - 2022 年 9 月 10 日，对 CMake 部分借用 `Github: aminya/project_options`_ 重新配置，更加简洁有效。
@@ -21,7 +22,7 @@
 - 2022 年 9 月 3 日，对配置文件进行了大幅度的调整。
 - 2022 年 8 月 27 日，更新了 CMake 相关拓展。
 - 2022 年 8 月 20 日，在 ``.vscode/launch.json`` 中增加了 CMake 项目用的 LLDB 调试配置，请注意 :doc:`special_announcement`。
-- 2022 年 6 月 8 日，彻底修复 Windows 调试无法设置断点的问题；**但对于项目仍需自己通过 CMake 进行配置**。
+- 2022 年 6 月 8 日，彻底修复 Windows 调试无法设置断点的问题； **但对于项目仍需自己通过 CMake 进行配置**。
 
   见 `Issue: 添加断点无效`_，方法来自 `vscode-lldb: Breakpoints are not getting hit`_。
 
