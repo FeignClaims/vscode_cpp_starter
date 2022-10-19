@@ -33,7 +33,7 @@
 
   .. code-block:: bash
 
-    pip install cmake_format
+    pip install cmakelang
 
   .. code-block:: bash
 

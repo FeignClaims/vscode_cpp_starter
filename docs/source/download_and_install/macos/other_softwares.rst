@@ -15,7 +15,7 @@
 
   .. code-block:: bash
 
-    pip3 install cmake_format
+    pip3 install cmakelang
 
 2. 配置 LLVM 的环境变量（重开【终端】生效）
 

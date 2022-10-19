@@ -9,6 +9,7 @@
     "ms-vscode.cmake-tools",
     "usernamehw.errorlens",
     "vadimcn.vscode-lldb",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "cheshirekow.cmake-format"
   ]
 }
