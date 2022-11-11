@@ -138,20 +138,24 @@
   "disableLigatures.mode": "Line",
   // 用于 CodeLens 的字体系列
   "editor.codeLensFontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
-  // 字体系列
-  "editor.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
-  // 启用连字体
-  "editor.fontLigatures": true,
-  // 字号
-  "editor.fontSize": 14,
   // 行高：使用 0 根据字号自动计算行高
   "editor.lineHeight": 0,
-  // 资源管理器不采用紧凑模式
-  "explorer.compactFolders": false,
+  // 字体系列
+  "editor.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  // 字号
+  "editor.fontSize": 14,
+  // 连字体设置
+  "editor.fontLigatures": true,
+  // 调试控制台的字体系列
+  "debug.console.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  // 用于调试控制台的字体系列
+  "debug.console.fontSize": 14,
   // 用于终端的字体系列
-  "terminal.integrated.fontFamily": "MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
+  "terminal.integrated.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
   // 集成终端字号
   "terminal.integrated.fontSize": 14,
+  // 资源管理器不采用紧凑模式
+  "explorer.compactFolders": false,
 
   /*********
    * Color *
