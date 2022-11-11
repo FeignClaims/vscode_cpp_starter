@@ -15,7 +15,7 @@
 
 更新方法见 :doc:`how_to_update`。
 
-- 2022 年 11 月 11 日，为调试控制台启用自定义字体。
+- 2022 年 11 月 11 日，为调试控制台启用自定义字体，资源管理器中文件按 Unicode 排序。
 - 2022 年 10 月 15 日，扩展 ``CMake Language Support`` 更新，其 ``.json`` 的配置选项命名做了变更，需要更新配置文件。
 - 2022 年 9 月 21 日，更新至 LLVM 15。
 - 2022 年 9 月 11 日，将 CMake 源文件管理部分抽象成 ``cmake/StructureOnly.cmake``，从而允许为单源文件代码提供分析的同时管理 CMake 项目，并为未来可能做的 **利用 Conan 添加第三方库** （见 :doc:`todo`）提供接口，目前请通过 :doc:`special_announcement` 自行学习。

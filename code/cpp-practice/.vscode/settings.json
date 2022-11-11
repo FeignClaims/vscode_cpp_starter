@@ -70,6 +70,8 @@
   // 粘贴同名文件时的重命名方式
   //smart: 在重复名称末尾智能地添加/递增数字
   "explorer.incrementalNaming": "smart",
+  // 资源管理器中文件按 Unicode 排序
+  "explorer.sortOrderLexicographicOptions": "unicode",
   // 忽略扩展建议的通知
   "extensions.ignoreRecommendations": true,
   // 等待一定时间后自动保存
