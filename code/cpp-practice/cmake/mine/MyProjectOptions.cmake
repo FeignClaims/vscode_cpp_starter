@@ -1,17 +1,9 @@
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
-set(ENABLE_DEVELOPER_MODE OFF CACHE BOOL "Enable 'developer mode'")
+set(ENABLE_DEVELOPER_MODE ON CACHE BOOL "Enable 'developer mode'")
 
 set(ENABLE_CONAN_DEFAULT ON)
-set(ENABLE_INTERPROCEDURAL_OPTIMIZATION_DEFAULT ON)
-set(ENABLE_NATIVE_OPTIMIZATION_DEFAULT ON)
-set(ENABLE_PCH_DEFAULT ON)
-set(ENABLE_SANITIZER_ADDRESS_DEFAULT ON)
-set(ENABLE_SANITIZER_UNDEFINED_BEHAVIOR_DEFAULT ON)
 
-set(ENABLE_COVERAGE_DEVELOPER_DEFAULT OFF)
-set(ENABLE_INCLUDE_WHAT_YOU_USE_DEVELOPER_DEFAULT OFF)
-set(ENABLE_DOXYGEN_DEVELOPER_DEFAULT OFF)
-set(ENABLE_BUILD_WITH_TIME_TRACE_DEVELOPER_DEFAULT OFF)
+set(WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT OFF)
 
 dynamic_project_options(
   MSVC_WARNINGS
@@ -84,14 +76,14 @@ dynamic_project_options(
   -Wuseless-cast # warn if you perform a cast to the same type
 
   CPPCHECK_OPTIONS
-  --check-config
+  --enable=style,performance,warning,portability
   --inline-suppr
-  --enable=all
   --suppress=cppcheckError # We cannot act on a bug/missing feature of cppcheck
   --suppress=internalAstError
   --suppress=unmatchedSuppression # if a file does not have an internalAstError, we get an unmatchedSuppression error
   --suppress=passedByValue
   --suppress=syntaxError
+  --inconclusive
 )
 
 include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)

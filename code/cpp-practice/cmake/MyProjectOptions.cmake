@@ -1,10 +1,8 @@
 # 在一系列默认设置的基础上进行调整
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
+set(ENABLE_DEVELOPER_MODE ON CACHE BOOL "Enable 'developer mode'")
 
-set(ENABLE_DEVELOPER_MODE OFF) # 默认不启用开发者模式
-
-set(ENABLE_CACHE_DEFAULT OFF)
-set(ENABLE_CPPCHECK_DEFAULT ON)
+set(WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT OFF)
 
 dynamic_project_options(
   MSVC_WARNINGS
