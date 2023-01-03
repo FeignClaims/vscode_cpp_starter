@@ -1,7 +1,17 @@
-# 在一系列默认设置的基础上进行调整
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
-set(ENABLE_DEVELOPER_MODE ON CACHE BOOL "Enable 'developer mode'")
 
+# not supportted on my platform (MacOS Ventura, M1 2020)
+if(${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
+  set(ENABLE_SANITIZER_ADDRESS_DEFAULT OFF)
+  set(ENABLE_SANITIZER_UNDEFINED_BEHAVIOR_DEFAULT OFF)
+endif()
+
+# -----------------
+# for non-project
+set(ENABLE_CLANG_TIDY_DEVELOPER_DEFAULT OFF)
+set(ENABLE_CPPCHECK_DEVELOPER_DEFAULT OFF)
+
+# -----------------
 set(WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT OFF)
 
 dynamic_project_options(
@@ -33,6 +43,7 @@ dynamic_project_options(
   -Wextra # reasonable and standard
   -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
+  -Wconversion # warn on type conversions that may lose data
   -Wdouble-promotion # warn if float is implicit promoted to double
   -Wformat=2 # warn on security issues around functions that format output (ie printf)
   -Wimplicit-fallthrough # warn on statements that fallthrough without an explicit annotation
@@ -44,15 +55,19 @@ dynamic_project_options(
   -Woverloaded-virtual # warn if you overload (not override) a virtual function
   -Wpacked
   -Wpedantic # warn if non-standard C++ is used
+  -Wpointer-arith
   -Wshadow # warn the user if a variable declaration shadows one from a parent context
-  -Wnosign-conversion # 禁用符号转换检查
+  -Wsign-conversion # warn on sign conversions
   -Wunused # warn on anything being unused
+  -Wundef
+  -ftemplate-backtrace-limit=0
 
   GCC_WARNINGS
   -Wall
   -Wextra
   -Wextra-semi
   -Wcast-align
+  -Wconversion
   -Wdouble-promotion
   -Wduplicated-cond # warn if if / else chain has duplicated conditions
   -Wduplicated-branches # warn if if / else branches have duplicated code
@@ -66,9 +81,19 @@ dynamic_project_options(
   -Woverloaded-virtual
   -Wpedantic
   -Wshadow
-  -Wnosign-conversion # 禁用符号转换检查
+  -Wsign-conversion
   -Wunused
   -Wuseless-cast # warn if you perform a cast to the same type
+
+  CPPCHECK_OPTIONS
+  --enable=style,performance,warning,portability
+  --inline-suppr
+  --suppress=cppcheckError # We cannot act on a bug/missing feature of cppcheck
+  --suppress=internalAstError
+  --suppress=unmatchedSuppression # if a file does not have an internalAstError, we get an unmatchedSuppression error
+  --suppress=passedByValue
+  --suppress=syntaxError
+  --inconclusive
 )
 
-include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake) 
+include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)
