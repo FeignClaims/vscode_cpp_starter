@@ -11,6 +11,7 @@
 .. _`Modern CMake for C++：ACCU 书评`: https://accu.org/bookreviews/2022/collyer_1988/
 .. _`《Professional CMake》`: https://crascit.com/professional-cmake/
 .. _`Github: aminya/project_options`: https://github.com/aminya/project_options
+.. _`Github: FeignClaims/cmake_starter_template`: https://github.com/FeignClaims/cmake_starter_template
 .. _`Effective CMake - Daniel Pfeife - C++Now 2017`: https://www.youtube.com/watch?v=bsXLMQ6WgIk
 .. _`Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`: https://www.youtube.com/watch?v=eC9-iRN2b04
 .. _`Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`: https://www.youtube.com/watch?v=S4QSKLXdTtA

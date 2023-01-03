@@ -6,6 +6,8 @@
 
 摸了，以下为一些配置文件的说明，建议从上到下依次阅读。
 
+要想进阶，请参考 :doc:`special_announcement`。
+
 .. code-block:: txt
 
   根目录

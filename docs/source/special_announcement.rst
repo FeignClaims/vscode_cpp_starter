@@ -41,6 +41,10 @@ CMake 特别声明
     - 大幅简化 CMake 项目的基本构建流程，几步即可达到《Modern CMake for C++》最终效果，建议看完后尝试配置。
     
     - 本教程的配置方案已借用这个项目来搭建，以供 CMake 学习参考。
+  
+  - `Github: FeignClaims/cmake_starter_template`_
+
+    - 我基于 ``aminya/project_options`` 的 C++ 项目配置模板。
 
 - 视频
 

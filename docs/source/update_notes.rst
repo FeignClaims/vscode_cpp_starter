@@ -40,6 +40,7 @@
 其他更新
 ********
 
+- 2023 年 1 月 3 日，在 :doc:`special_announcement` 中新增我个人的 C++ 项目配置模板。
 - 2022 年 9 月 10 日，在 :doc:`special_announcement` 部分新增一个开源项目 `Github: aminya/project_options`_。
 - 2022 年 9 月 3 日，用 reStructuredText 重写了文档并进行迁移。
 - 2022 年 8 月 23 日，补充了 Windows 安装 LLVM 的一个操作。
