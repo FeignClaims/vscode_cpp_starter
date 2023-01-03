@@ -41,8 +41,10 @@
   "editor.snippetSuggestions": "bottom",
   // 启用粘滞滚动，即显示上一级对应的代码
   "editor.stickyScroll.enabled": true,
+  // 使用空格缩进时模拟制表符的行为，可以方便对齐
+  "editor.stickyTabStops": true,
   // 建议的接受方式
-  "editor.suggest.insertMode": "replace",
+  "editor.suggest.insertMode": "insert",
   // 控制排序时是否提高靠近光标的词语的优先级
   "editor.suggest.localityBonus": true,
   // 禁用建议必须匹配开头
@@ -67,6 +69,8 @@
   "explorer.confirmDelete": false,
   // 移动文件时无需确认
   "explorer.confirmDragAndDrop": false,
+  // 不以紧凑形式显示文件夹
+  "explorer.compactFolders": false,
   // 粘贴同名文件时的重命名方式
   //smart: 在重复名称末尾智能地添加/递增数字
   "explorer.incrementalNaming": "smart",
@@ -81,12 +85,12 @@
   "files.hotExit": "onExitAndWindowClose",
   // 控制单元格编辑器中行号的显示
   "notebook.lineNumbers": "on",
+  // 输出窗口禁用智能滚动
+  "output.smartScroll.enabled": false,
   // 在状态栏显示当前问题
   "problems.showCurrentInStatus": true,
   // 控制问题导航的显示顺序
   "problems.sortOrder": "position",
-  // 输出窗口智能滚动：点击时锁定，点击最后一行时解锁
-  "output.smartScroll.enabled": true,
   // 显示搜索结果所在行号
   "search.showLineNumbers": true,
   // 当搜索词为小写时，则不区分大小写进行搜索；否则区分大小写
@@ -107,8 +111,57 @@
   "terminal.integrated.gpuAcceleration": "on",
   // MacOS: 将 Option 键视为终端上的元键
   "terminal.integrated.macOptionIsMeta": true,
+  // Windows: 集成终端设置
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "args": [],
+      "icon": "terminal-cmd",
+      "path": [
+        "${env:windir}/Sysnative/cmd.exe",
+        "${env:windir}/System32/cmd.exe"
+      ]
+    },
+    "Msys2": {
+      "args": ["-defterm", "-no-start", "-here"],
+      "env": {
+        "CHERE_INVOKING": "1",
+        "MSYS2_PATH_TYPE": "inherit",
+        "MSYSTEM": "CLANG64"
+      },
+      "path": ["C:/msys64/msys2_shell.cmd"]
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    }
+  },
+  "terminal.external.osxExec": "iTerm",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
   // 集成终端右击时选择光标下方的字词，并打开上下文菜单
   "terminal.integrated.rightClickBehavior": "selectWord",
+  "terminal.integrated.shellIntegration.enabled": true,
   // 始终显示“新建终端”按钮旁的“终端拆分”和“终止”按钮
   "terminal.integrated.tabs.showActions": "always",
   // 始终显示活动终端
@@ -154,8 +207,6 @@
   "terminal.integrated.fontFamily": "JetBrains Mono, MesloLGS Nerd Font, MesloLGS NF, 等距更纱黑体 SC",
   // 集成终端字号
   "terminal.integrated.fontSize": 14,
-  // 资源管理器不采用紧凑模式
-  "explorer.compactFolders": false,
 
   /*********
    * Color *
@@ -194,7 +245,6 @@
         // 宏
         "macro": {
           "foreground": "#8F5DAF"
-          // "foreground": "#4FC1FF"
         },
         // 成员函数
         "method": {
@@ -217,16 +267,74 @@
           "fontStyle": "underline",
           "foreground": "#C8ECFF"
         },
-        // 只读量等效为宏
+        // 只读量
         "readonly": "#4FC1FF",
         // 类型参数
         "typeParameter": "#31A567"
+      }
+    },
+    "[Default Light+]": {
+      "enabled": true,
+      "rules": {
+        // 抽象符号
+        "*.abstract": {
+          "fontStyle": "italic"
+        },
+        // 静态量（静态变量，静态函数）
+        "*.static": {
+          "fontStyle": "bold"
+        },
+        // 未启用的宏
+        "comment": {
+          "fontStyle": "",
+          "foreground": "#E0ABC1"
+        },
+        // 宏
+        "macro": {
+          "foreground": "#72008E"
+        },
+        // 成员函数
+        "method": {
+          "fontStyle": "underline"
+        },
+        // 命名空间
+        "namespace": {
+          "foreground": "#28947F"
+        },
+        // 函数参数
+        "parameter": {
+          "foreground": "#5663C0"
+        },
+        // 只读的函数参数
+        "parameter.readonly": {
+          "foreground": "#1027A3"
+        },
+        // 成员变量，似乎需要clangd12以上
+        "property": {
+          "fontStyle": "underline",
+          "foreground": "#5663C0"
+        },
+        // 只读量
+        "*.readonly": "#211A5E",
+        // 类型参数
+        "typeParameter": "#679E93"
       }
     }
   },
   // 语义高亮自定义
   "editor.tokenColorCustomizations": {
     "[Default Dark+]": {
+      // 注释字体设置为斜体
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    },
+    "[Default Light+]": {
       // 注释字体设置为斜体
       "textMateRules": [
         {
@@ -348,7 +456,13 @@
   "cmake.generator": "Ninja",
   // 忽略文件夹中找到 CMakeLists.txt 而在工作区根目录没找到的情况
   "cmake.ignoreCMakeListsMissing": true,
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  // 状态栏显示模式：紧凑
   "cmake.statusbar.visibility": "compact",
+  // 如果存在缓存，跳过配置环节
+  "cmake.skipConfigureIfCachePresent": true,
+  // 允许参数缩进递进
+  "cmake.format.allowOptionalArgumentIndentation": true,
   "cmake.languageSupport.enableFileAPI": true,
 
   /********
@@ -377,9 +491,5 @@
   // Code Runner 总是运行整个文件而非选择的部分
   "code-runner.ignoreSelection": true,
   // Code Runner 在终端运行
-  "code-runner.runInTerminal": true,
-  "files.associations": {
-    "map": "cpp",
-    "stdexcept": "cpp"
-  }
+  "code-runner.runInTerminal": true
 }
