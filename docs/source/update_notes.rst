@@ -17,6 +17,7 @@
 
 - 2023 年 1 月 5 日
 
+  - 更新我个人的 MyProjectOptions.cmake，更严格的诊断。
   - 为 clangd 启用解析转发函数。
   - 为 concepts 着色。
 
