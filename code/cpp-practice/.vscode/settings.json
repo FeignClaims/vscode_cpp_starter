@@ -374,7 +374,7 @@
     // "--include-cleaner-stdlib",
     // 让 Clangd 生成更详细的日志
     "--log=verbose",
-    // 分析转发函数(emplace-like)
+    // 分析转发函数 (emplace-like)
     "--parse-forwarding-functions",
     // pch优化的位置 (memory 或 disk，选择memory会增加内存开销，但会提升性能)
     "--pch-storage=memory",
