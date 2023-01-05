@@ -15,6 +15,7 @@
 
 更新方法见 :doc:`how_to_update`。
 
+- 2023 年 1 月 5 日：为 concepts 着色。
 - 2023 年 1 月 3 日
 
   - 更新默认 MyProjectOptions.cmake 设置。

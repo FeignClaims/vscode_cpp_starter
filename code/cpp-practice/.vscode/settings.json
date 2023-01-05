@@ -270,7 +270,9 @@
         // 只读量
         "readonly": "#4FC1FF",
         // 类型参数
-        "typeParameter": "#31A567"
+        "typeParameter": "#31A567",
+        // 概念
+        "concept": "#4FD4E0"
       }
     },
     "[Default Light+]": {
@@ -287,7 +289,7 @@
         // 未启用的宏
         "comment": {
           "fontStyle": "",
-          "foreground": "#E0ABC1"
+          "foreground": "#876674"
         },
         // 宏
         "macro": {
@@ -299,7 +301,7 @@
         },
         // 命名空间
         "namespace": {
-          "foreground": "#28947F"
+          "foreground": "#207D6B"
         },
         // 函数参数
         "parameter": {
@@ -317,33 +319,10 @@
         // 只读量
         "*.readonly": "#211A5E",
         // 类型参数
-        "typeParameter": "#679E93"
+        "typeParameter": "#4D776F",
+        // 概念
+        "concept": "#4D71A1"
       }
-    }
-  },
-  // 语义高亮自定义
-  "editor.tokenColorCustomizations": {
-    "[Default Dark+]": {
-      // 注释字体设置为斜体
-      "textMateRules": [
-        {
-          "scope": "comment",
-          "settings": {
-            "fontStyle": "italic"
-          }
-        }
-      ]
-    },
-    "[Default Light+]": {
-      // 注释字体设置为斜体
-      "textMateRules": [
-        {
-          "scope": "comment",
-          "settings": {
-            "fontStyle": "italic"
-          }
-        }
-      ]
     }
   },
   // 括号颜色
