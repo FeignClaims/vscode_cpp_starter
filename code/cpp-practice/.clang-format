@@ -15,20 +15,16 @@ ColumnLimit: 120
 DerivePointerAlignment: false
 EmptyLineBeforeAccessModifier: Always
 IncludeCategories:
-  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
-    Priority: 2
-  - Regex: '^((<|")(gtest|gmock|isl|json)/)'
-    Priority: 3
-  - Regex: "^<gsl/.*>"
-    Priority: 4
-  - Regex: "^<.*/.*>"
-    Priority: 5
-  - Regex: "^<[[:alnum:]_]+>"
-    Priority: 4
-  - Regex: "^<.*"
-    Priority: 5
   - Regex: '^".*'
     Priority: 1
+  - Regex: "^<[[:alnum:]_]+.h>"
+    Priority: 2
+  - Regex: "^<[[:alnum:]_]+>"
+    Priority: 3
+  - Regex: "^<.*"
+    Priority: 4
+IncludeIsMainRegex: "([-_.](test|unittest|pass|fail))?$"
+IncludeIsMainSourceRegex: ""
 InsertBraces: true
 IndentRequiresClause: true
 IndentPPDirectives: AfterHash

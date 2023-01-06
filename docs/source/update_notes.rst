@@ -15,6 +15,8 @@
 
 更新方法见 :doc:`how_to_update`。
 
+- 2023 年 1 月 6 日：更改头文件 ``#include`` 的顺序。
+
 - 2023 年 1 月 5 日
 
   - 更新我个人的 MyProjectOptions.cmake，更严格的诊断。
