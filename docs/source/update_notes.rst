@@ -16,9 +16,7 @@
 更新方法见 :doc:`how_to_update`。
 
 - 2023 年 1 月 16 日：开启文件夹时不自动配置 CMake（因为一般已有缓存）。
-
 - 2023 年 1 月 7 日：添加“CMake: 编译活动目标”和“Clang-Tidy: 修复当前文件”的 VSCode 任务配置。
-
 - 2023 年 1 月 6 日：更改头文件 ``#include`` 的顺序。
 
 - 2023 年 1 月 5 日
@@ -52,6 +50,7 @@
 其他更新
 ********
 
+- 2023 年 1 月 18 日，强调 ``clangd: Restart language server`` 应当在打开源文件或头文件时进行。
 - 2023 年 1 月 3 日，在 :doc:`special_announcement` 中新增我个人的 C++ 项目配置模板。
 - 2022 年 9 月 10 日，在 :doc:`special_announcement` 部分新增一个开源项目 `Github: aminya/project_options`_。
 - 2022 年 9 月 3 日，用 reStructuredText 重写了文档并进行迁移。

@@ -114,7 +114,7 @@
 配置完成
 ********
 
-通过【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``clangdr`` 以找到【clangd: Restart language server】，从而刷新配置。
+打开一个源文件或头文件，通过【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``clangdr`` 以找到【clangd: Restart language server】，从而刷新配置。
 
 .. note::
 
