@@ -80,7 +80,7 @@ CMake 的分文件和一些脚本文件，分文件会在 ``CMakeLists.txt`` 中
 - 代码检查工具、文档生成工具等已禁用；在 ``mine/`` 文件夹下，有我使用的版本。
 - CMake 的学习可参考 :doc:`special_announcement`
 
-GetProjectOptions.cmake
+ProjectOptions.cmake
 =============================
 
 获取开源项目 `Github: aminya/project_options`_，考虑到网络条件，已预先下载到 ``project_options`` 文件夹中。
