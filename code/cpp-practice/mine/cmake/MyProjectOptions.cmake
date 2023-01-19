@@ -1,3 +1,5 @@
+include_guard()
+
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
 
 set(ENABLE_CONAN_DEFAULT ON)
@@ -19,7 +21,7 @@ set(WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT OFF)
 dynamic_project_options(
   MSVC_WARNINGS
   /W4 # Baseline reasonable warnings
-  /permissive- # standards conformance mode for MSVC compiler.
+  /permissive- # standards conformance mode for MSVC compiler
   /w14242 # 'identifier': conversion from 'type1' to 'type1', possible loss of data
   /w14254 # 'operator': conversion from 'type1:field_bits' to 'type2:field_bits', possible loss of data
   /w14263 # 'function': member function does not override any base class virtual member function
@@ -34,7 +36,7 @@ dynamic_project_options(
   /w14555 # expression has no effect; expected expression with side- effect
   /w14619 # pragma warning: there is no warning number 'number'
   /w14640 # Enable warning on thread un-safe static member initialization
-  /w14826 # Conversion from 'type1' to 'type_2' is sign-extended. This may cause unexpected runtime behavior.
+  /w14826 # Conversion from 'type1' to 'type_2' is sign-extended. This may cause unexpected runtime behavior
   /w14905 # wide string literal cast to 'LPSTR'
   /w14906 # string literal cast to 'LPWSTR'
   /w14928 # illegal copy-initialization; more than one user-defined conversion has been implicitly applied
@@ -43,48 +45,61 @@ dynamic_project_options(
   CLANG_WARNINGS
   -Wall
   -Wextra # reasonable and standard
-  -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
   -Wconversion # warn on type conversions that may lose data
   -Wdouble-promotion # warn if float is implicit promoted to double
+  -Wextra-semi # warn about semicolon after in-class function definition
+  -Wfloat-equal # warn on comparing floating point with == or !=
   -Wformat=2 # warn on security issues around functions that format output (ie printf)
+
+  # -Wglobal-constructors  # warn on declare global or static variables with dynamic constructors
   -Wimplicit-fallthrough # warn on statements that fallthrough without an explicit annotation
   -Wmisleading-indentation # warn if indentation implies blocks where blocks do not exist
-  -Wmissing-noreturn
+  -Wmissing-noreturn # warn about functions that might be candidates for [[noreturn]]
+  -Wno-braced-scalar-init # todo: remove this when it is correct
   -Wnon-virtual-dtor # warn the user if a class with virtual functions has a non-virtual destructor. This helps catch hard to track down memory errors
   -Wnull-dereference # warn if a null dereference is detected
   -Wold-style-cast # warn for c-style casts
   -Woverloaded-virtual # warn if you overload (not override) a virtual function
-  -Wpacked
+  -Wpacked # warn if a structure is given the packed attribute, but the packed attribute has no effect on the layout or size of the structure
   -Wpedantic # warn if non-standard C++ is used
-  -Wpointer-arith
+  -Wpointer-arith # warn on pointer arithmetic
   -Wshadow # warn the user if a variable declaration shadows one from a parent context
   -Wsign-conversion # warn on sign conversions
+  -Wundef # warn if an undefined identifier is evaluated in an #if directive
   -Wunused # warn on anything being unused
-  -Wundef
   -ftemplate-backtrace-limit=0
 
   GCC_WARNINGS
   -Wall
-  -Wextra
-  -Wextra-semi
-  -Wcast-align
-  -Wconversion
-  -Wdouble-promotion
-  -Wduplicated-cond # warn if if / else chain has duplicated conditions
+  -Wextra # reasonable and standard
+  -Wcast-align # warn for potential performance problem casts
+  -Wconversion # warn on type conversions that may lose data
+  -Wdisabled-optimization # warn if a requested optimization pass is disabled. often, the problem is that your code is too big or too complex
+  -Wdouble-promotion # warn if float is implicit promoted to double
   -Wduplicated-branches # warn if if / else branches have duplicated code
-  -Wformat=2
-  -Wimplicit-fallthrough
-  -Wmisleading-indentation
+  -Wduplicated-cond # warn if if / else chain has duplicated conditions
+  -Wextra-semi # warn about semicolon after in-class function definition
+  -Wfloat-equal # warn on comparing floating point with == or !=
+  -Wformat=2 # warn on security issues around functions that format output (ie printf)
+  -Wimplicit-fallthrough # warn on statements that fallthrough without an explicit annotation
+  -Winvalid-pch # warn if a precompiled header is found in the search path but cannot be used
   -Wlogical-op # warn about logical operations being used where bitwise were probably wanted
-  -Wnon-virtual-dtor
-  -Wnull-dereference
-  -Wold-style-cast
-  -Woverloaded-virtual
-  -Wpedantic
-  -Wshadow
-  -Wsign-conversion
-  -Wunused
+  -Wmisleading-indentation # warn if indentation implies blocks where blocks do not exist
+  -Wmissing-format-attribute # Warn about function pointers that might be candidates for format attributes
+  -Wmissing-include-dirs # warn if a user-supplied include directory does not exist
+  -Wmissing-noreturn # warn about functions that might be candidates for [[noreturn]]
+  -Wnon-virtual-dtor # warn the user if a class with virtual functions has a non-virtual destructor. This helps catch hard to track down memory errors
+  -Wnull-dereference # warn if a null dereference is detected
+  -Wold-style-cast # warn for c-style casts
+  -Woverloaded-virtual # warn if you overload (not override) a virtual function
+  -Wpedantic # warn if non-standard C++ is used
+  -Wpointer-arith # warn on pointer arithmetic
+  -Wredundant-decls # warn if anything is declared more than once in the same scope, even in cases where multiple declaration is valid and changes nothing
+  -Wshadow # warn the user if a variable declaration shadows one from a parent context
+  -Wsign-conversion # warn on sign conversions
+  -Wundef # warn if an undefined identifier is evaluated in an #if directive
+  -Wunused # warn on anything being unused
   -Wuseless-cast # warn if you perform a cast to the same type
 
   CPPCHECK_OPTIONS
@@ -99,3 +114,4 @@ dynamic_project_options(
 )
 
 include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptionsExtension.cmake)

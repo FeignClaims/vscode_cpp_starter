@@ -1,3 +1,5 @@
+include_guard()
+
 message(STATUS "Downloading ProjectOptions from https://github.com/aminya/project_options.git\n"
   "Please make sure that you can connect to github"
 )

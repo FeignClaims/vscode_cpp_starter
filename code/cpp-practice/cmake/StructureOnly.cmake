@@ -1,3 +1,7 @@
+include_guard()
+
+include(MyProjectOptions)
+
 # structure_only_options(
 # [LIBRARIES [lib1 lib2 ...]]
 # [INCLUDES [include1 include2 ...]]
@@ -15,8 +19,8 @@ function(structure_only_options)
     add_library(structure_only_options INTERFACE)
   endif()
 
-  target_link_libraries(structure_only_options INTERFACE ${args_LIBRARIES})
-  target_include_directories(structure_only_options INTERFACE ${args_INCLUDES})
+  target_link_system_libraries(structure_only_options INTERFACE ${args_LIBRARIES})
+  target_include_system_directories(structure_only_options INTERFACE ${args_INCLUDES})
 endfunction()
 
 # structure_only(

@@ -4,13 +4,13 @@
 with section("parse"):
 
     # Specify structure for custom cmake functions
-    additional_commands = {'foo': {'flags': ['BAR', 'BAZ'],
-                                   'kwargs': {'DEPENDS': '*',
-                                              'HEADERS': '*',
-                                              'SOURCES': '*',
-                                              'DIRECTORIES': '*',
-                                              'LIBRARIES': '*'
-                                              }}}
+    # additional_commands = {'foo': {'flags': ['BAR', 'BAZ'],
+    #                                'kwargs': {'DEPENDS': '*',
+    #                                           'HEADERS': '*',
+    #                                           'SOURCES': '*',
+    #                                           'DIRECTORIES': '*',
+    #                                           'LIBRARIES': '*'
+    #                                           }}}
 
     # Override configurations per-command where available
     override_spec = {}
@@ -61,7 +61,7 @@ with section("format"):
     max_rows_cmdline = 2
 
     # If true, separate flow control names from their parentheses with a space
-    separate_ctrl_name_with_space = True
+    separate_ctrl_name_with_space = False
 
     # If true, separate function names from parentheses with a space
     separate_fn_name_with_space = False
@@ -93,7 +93,7 @@ with section("format"):
     line_ending = 'unix'
 
     # Format command names consistently as 'lower' or 'upper' case
-    command_case = 'canonical'
+    command_case = 'unchanged'
 
     # Format keywords consistently as 'lower' or 'upper' case
     keyword_case = 'upper'
@@ -161,7 +161,7 @@ with section("markup"):
     canonicalize_hashrulers = True
 
     # enable comment markup parsing and reflow
-    enable_markup = True
+    enable_markup = False
 
 # ----------------------------
 # Options affecting the linter
@@ -175,7 +175,7 @@ with section("lint"):
     function_pattern = '[0-9a-z_]+'
 
     # regular expression pattern describing valid macro names
-    macro_pattern = '[0-9A-Z_]+'
+    macro_pattern = '_?[A-Z][0-9a-z_]+'
 
     # regular expression pattern describing valid names for variables with global
     # (cache) scope
@@ -187,9 +187,9 @@ with section("lint"):
 
     # regular expression pattern describing valid names for variables with local
     # scope
-    local_var_pattern = '[a-z][a-z0-9_]+'
+    local_var_pattern = '[a-z][a-z0-9_]+|args_[A-Z][0-9A-Z_]+'
 
-    # regular expression pattern describing valid names for privatedirectory
+    # regular expression pattern describing valid names for private directory
     # variables
     private_var_pattern = '_[0-9a-z_]+'
 

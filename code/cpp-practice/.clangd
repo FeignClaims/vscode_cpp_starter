@@ -5,22 +5,20 @@ Diagnostics:
       [
         abseil*,
         altera*,
+        cert-dcl21-cpp,
         fuchsia*,
         llvmlib*,
         llvm-include-order,
         llvm-qualified-auto,
         zircon*,
         google-readability-todo,
-        misc-unused-alias-decls,
         modernize-use-trailing-return-type,
-        readability-braces-around-statements,
         readability-implicit-bool-conversion,
         readability-qualified-auto,
-        hicpp-braces-around-statements,
       ]
     CheckOptions:
-      readability-identifier-length.IgnoredVariableNames: ch|_
-      readability-identifier-length.IgnoredParameterNames: ^[n]$|ch|_
+      readability-identifier-length.IgnoredVariableNames: ^[n]$|ch|_|id|to|t|u
+      readability-identifier-length.IgnoredParameterNames: ^[n]$|ch|_|id|to|t|u
   UnusedIncludes: Strict
 Index:
   Background: Build

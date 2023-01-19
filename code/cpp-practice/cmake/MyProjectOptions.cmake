@@ -1,19 +1,11 @@
+include_guard()
+
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptions.cmake)
 
-set(ENABLE_CONAN_DEFAULT ON)
-
-# not supportted on my platform (MacOS Ventura, M1 2020)
-if(${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
-  set(ENABLE_SANITIZER_ADDRESS_DEFAULT OFF)
-  set(ENABLE_SANITIZER_UNDEFINED_BEHAVIOR_DEFAULT OFF)
-endif()
-
-# -----------------
-# for non-project
+set(ENABLE_CONAN_DEFAULT OFF)
+set(ENABLE_CACHE_DEFAULT OFF)
 set(ENABLE_CLANG_TIDY_DEVELOPER_DEFAULT OFF)
 set(ENABLE_CPPCHECK_DEVELOPER_DEFAULT OFF)
-
-# -----------------
 set(WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT OFF)
 
 dynamic_project_options(
@@ -45,69 +37,42 @@ dynamic_project_options(
   -Wextra # reasonable and standard
   -Wextra-semi # warn about semicolon after in-class function definition
   -Wcast-align # warn for potential performance problem casts
-  -Wconversion # warn on type conversions that may lose data
   -Wdouble-promotion # warn if float is implicit promoted to double
   -Wformat=2 # warn on security issues around functions that format output (ie printf)
-  -Wfloat-equal # warn on comparing floating point with == or !=
-  # -Wglobal-constructors # warn on declare global or static variables with dynamic constructors
   -Wimplicit-fallthrough # warn on statements that fallthrough without an explicit annotation
   -Wmisleading-indentation # warn if indentation implies blocks where blocks do not exist
-  -Wmissing-noreturn # warn about functions that might be candidates for [[noreturn]].
+  -Wmissing-noreturn
   -Wnon-virtual-dtor # warn the user if a class with virtual functions has a non-virtual destructor. This helps catch hard to track down memory errors
   -Wnull-dereference # warn if a null dereference is detected
   -Wold-style-cast # warn for c-style casts
   -Woverloaded-virtual # warn if you overload (not override) a virtual function
-  -Wpacked # warn if a structure is given the packed attribute, but the packed attribute has no effect on the layout or size of the structure.
+  -Wpacked
   -Wpedantic # warn if non-standard C++ is used
-  -Wpointer-arith
   -Wshadow # warn the user if a variable declaration shadows one from a parent context
-  -Wsign-conversion # warn on sign conversions
+  -Wnosign-conversion # 禁用符号转换检查
   -Wunused # warn on anything being unused
-  -Wundef # warn if an undefined identifier is evaluated in an #if directive.
-  -ftemplate-backtrace-limit=0
 
   GCC_WARNINGS
   -Wall
   -Wextra
   -Wextra-semi
   -Wcast-align
-  -Wconversion
-  -Wdisabled-optimization
   -Wdouble-promotion
   -Wduplicated-cond # warn if if / else chain has duplicated conditions
   -Wduplicated-branches # warn if if / else branches have duplicated code
   -Wformat=2
-  -Wfloat-equal
   -Wimplicit-fallthrough
-  -Winvalid-pch # warn if a precompiled header is found in the search path but cannot be used.
   -Wmisleading-indentation
-  -Wmissing-format-attribute # Warn about function pointers that might be candidates for format attributes.
-  -Wmissing-include-dirs # warn if a user-supplied include directory does not exist.
-  -Wmissing-noreturn
   -Wlogical-op # warn about logical operations being used where bitwise were probably wanted
   -Wnon-virtual-dtor
   -Wnull-dereference
   -Wold-style-cast
   -Woverloaded-virtual
   -Wpedantic
-  -Wpointer-arith
-  -Wredundant-decls # warn if anything is declared more than once in the same scope, even in cases where multiple declaration is valid and changes nothing.
   -Wshadow
-  -Wsign-conversion
-  -Wswitch-enum
-  -Wundef
+  -Wnosign-conversion # 禁用符号转换检查
   -Wunused
   -Wuseless-cast # warn if you perform a cast to the same type
-
-  CPPCHECK_OPTIONS
-  --enable=style,performance,warning,portability
-  --inline-suppr
-  --suppress=cppcheckError # We cannot act on a bug/missing feature of cppcheck
-  --suppress=internalAstError
-  --suppress=unmatchedSuppression # if a file does not have an internalAstError, we get an unmatchedSuppression error
-  --suppress=passedByValue
-  --suppress=syntaxError
-  --inconclusive
 )
 
 include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)

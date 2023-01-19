@@ -1,4 +1,5 @@
 # https://github.com/aminya/project_options
+include_guard()
 
 message(
   STATUS

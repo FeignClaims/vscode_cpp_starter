@@ -1,14 +1,18 @@
 BasedOnStyle: Google
 ---
 Language: Cpp
-AlignArrayOfStructures: Right
+# AlignArrayOfStructures: Right  # 误诊断太多
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortLambdasOnASingleLine: Inline
-AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveAssignments:
+  Enabled: true
+  AlignCompound: true
+  PadOperators: true
 AlignConsecutiveBitFields: Consecutive
 AlignConsecutiveMacros: Consecutive
 AlignEscapedNewlines: Right
-AlignOperands: AlignAfterOperator
+AlignOperands: Align
+BreakBeforeBinaryOperators: All
 BinPackArguments: false
 BinPackParameters: false
 ColumnLimit: 120
@@ -37,6 +41,8 @@ QualifierOrder:
   ["inline", "static", "constexpr", "type", "restrict", "const", "volatile"]
 ReferenceAlignment: Pointer
 ReflowComments: false
+# RemoveSemicolon: true                   # TODO: LLVM 16
+# RequiresExpressionIndentation: Keyword  # TODO: LLVM 16
 ShortNamespaceLines: 0
 ---
 
