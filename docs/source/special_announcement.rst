@@ -2,7 +2,6 @@
 CMake 特别声明
 ##############
 
-.. include:: /_include/links.rst
 
 提示
 *****

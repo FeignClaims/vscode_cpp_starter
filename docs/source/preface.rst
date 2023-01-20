@@ -2,7 +2,6 @@
 前言
 #####
 
-.. include:: /_include/links.rst
 
 教程方式
 ********

@@ -2,7 +2,6 @@
 配置
 #####
 
-.. include:: /_include/links.rst
 
 .. ref:: download_and_unzip
 

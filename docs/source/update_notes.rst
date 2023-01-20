@@ -2,7 +2,6 @@
 更新日志
 ########
 
-.. include:: /_include/links.rst
 
 .. note::
 

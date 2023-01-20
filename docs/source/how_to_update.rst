@@ -2,7 +2,6 @@
 如何更新？
 ##########
 
-.. include:: /_include/links.rst
 
 更新软件
 *********

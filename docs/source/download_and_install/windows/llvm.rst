@@ -1,7 +1,6 @@
 利用 MSYS2 安装 LLVM
 ====================
 
-.. include:: /_include/links.rst
 
 1. 通过【开始】菜单（一般在左下角，Win11 在中间位置），或 **MSYS2 安装路径** （默认为 C:\\msys64 ）找到 **clang64** 或 **clang64.exe**。
 

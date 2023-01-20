@@ -1,7 +1,6 @@
 MSYS2
 =======
 
-.. include:: /_include/links.rst
 
 下载
 -----

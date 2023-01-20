@@ -1,7 +1,6 @@
 我的其他 VSCode 通用类拓展
 ************************
 
-.. include:: /_include/links.rst
 
 点击下载 `我的通用拓展`_，配置方法与 :doc:`configure` 类似。
 

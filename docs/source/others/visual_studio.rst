@@ -1,7 +1,6 @@
 一个简单的 Visual Studio 配置方案
 *******************************
 
-.. include:: /_include/links.rst
 
 前言
 =====

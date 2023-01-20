@@ -1,7 +1,6 @@
 VSCode
 ========
 
-.. include:: /_include/links.rst
 
 下载
 -----

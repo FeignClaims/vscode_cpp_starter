@@ -1,7 +1,6 @@
 字体
 =====
 
-.. include:: /_include/links.rst
 
 安装方法
 --------

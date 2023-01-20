@@ -19,6 +19,8 @@ extensions = []
 templates_path = ['_templates']
 exclude_patterns = []
 
+rst_prolog = open('_include/links.rst', 'r').read()
+
 language = 'zh_CN'
 
 # -- Options for HTML output -------------------------------------------------

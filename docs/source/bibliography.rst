@@ -2,7 +2,6 @@
 参考文献及拓展阅读
 ##################
 
-.. include:: /_include/links.rst
 
 - `VSCode 变量参考`_
 - `Clangd 官网`_

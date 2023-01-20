@@ -1,7 +1,6 @@
 安装 Homebrew
 ==============
 
-.. include:: /_include/links.rst
 
 .. note::
 
