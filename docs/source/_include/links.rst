@@ -2,6 +2,7 @@
 .. _`Gitee 仓库 Issues`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues
 .. _`《计软智转专业指南》（仅基于 2020、2021 年考题）`: https://gitee.com/FeignClaims/weekly-questions/raw/master/src/extra/计软智转专业指南.pdf
 .. _`我的 C++ 学习大纲`: https://gitee.com/FeignClaims/weekly-questions/raw/master/src/extra/C%2B%2B%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2.pdf
+.. _`C++ 核心准则`: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
 .. Issues
 .. _`Issue: 关于配置异常无输出`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/issues/I5PT6Y
