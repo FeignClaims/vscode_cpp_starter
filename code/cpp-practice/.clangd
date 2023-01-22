@@ -22,6 +22,7 @@ Diagnostics:
   UnusedIncludes: Strict
 Index:
   Background: Build
+  StandardLibrary: Yes
 InlayHints:
   Enabled: Yes
   ParameterNames: Yes
