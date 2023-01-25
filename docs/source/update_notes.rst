@@ -74,4 +74,4 @@
 - 2022 年 8 月 13 日，新增了 :doc:`special_announcement`。
 - 2022 年 8 月 13 日，新增了一个插件 `Error Lens`_，感谢 `【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备`_。
 - 2022 年 7 月 8 日，VSCode 更新了导出/导入配置档案的功能，但涉及的部分自认为足够简单，不想重写，摸了。
-- 2022 年 6 月 26 日，Homebrew 终于更新了 LLVM14（请通过 ``brew upgrade`` 更新），调整了 MacOS 的配置文件。
+- 2022 年 6 月 26 日，Homebrew 终于更新了 LLVM14（请通过 ``brew upgrade --greedy`` 更新），调整了 MacOS 的配置文件。
