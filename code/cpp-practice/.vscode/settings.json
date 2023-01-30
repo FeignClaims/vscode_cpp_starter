@@ -219,10 +219,10 @@
   "editor.guides.bracketPairs": true,
   // 启用水平括号指导线
   "editor.guides.bracketPairsHorizontal": "active",
-  // 禁用高亮选中的缩进指导线
-  "editor.guides.highlightActiveIndentation": false,
-  // 禁用缩进指导线
-  "editor.guides.indentation": false,
+  // 启用高亮选中的缩进指导线
+  "editor.guides.highlightActiveIndentation": true,
+  // 启用缩进指导线
+  "editor.guides.indentation": true,
   // 语义高亮
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
