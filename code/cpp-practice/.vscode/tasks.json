@@ -28,7 +28,7 @@
       "type": "shell",
       "label": "Clang-Tidy: fix current file",
       "command": "clang-tidy",
-      "args": ["--fix-errors", "${file}"],
+      "args": ["--fix-errors", "--use-color", "${file}"],
       "options": {
         "cwd": "${workspaceFolder}"
       },

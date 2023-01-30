@@ -28,7 +28,7 @@
       "type": "shell",
       "label": "Clang-Tidy: fix current file",
       "command": "clang-tidy",
-      "args": ["--fix-errors", "${file}"],
+      "args": ["--fix-errors", "--use-color", "${file}"],
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -55,6 +55,7 @@
         "-fuse-ld=lld",
         "-fsanitize=address",
         "-fsanitize=undefined",
+        "-ftemplate-backtrace-limit=0",
         "-pedantic",
         "-pthread",
         "-Wall",
@@ -80,11 +81,6 @@
         "-Wsign-conversion",
         "-Wundef",
         "-Wunused",
-        "-ftemplate-backtrace-limit=0",
-        "-I${workspaceFolder}/include",
-        "-I${workspaceFolder}/extern/include",
-        "-L${workspaceFolder}/extern/bin",
-        "-lfmt"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -111,6 +107,7 @@
         "-fuse-ld=lld",
         "-fsanitize=address",
         "-fsanitize=undefined",
+        "-ftemplate-backtrace-limit=0",
         "-pedantic",
         "-pthread",
         "-Wall",
@@ -136,11 +133,6 @@
         "-Wsign-conversion",
         "-Wundef",
         "-Wunused",
-        "-ftemplate-backtrace-limit=0",
-        "-I${workspaceFolder}/include",
-        "-I${workspaceFolder}/extern/include",
-        "-L${workspaceFolder}/extern/bin",
-        "-lfmt"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -195,10 +187,6 @@
         "-Wundef",
         "-Wunused",
         "-Wuseless-cast",
-        "-I${workspaceFolder}/include",
-        "-I${workspaceFolder}/extern/include",
-        "-L${workspaceFolder}/extern/bin",
-        "-lfmt"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -256,10 +244,6 @@
         "-Wundef",
         "-Wunused",
         "-Wuseless-cast",
-        "-I${workspaceFolder}/include",
-        "-I${workspaceFolder}/extern/include",
-        "-L${workspaceFolder}/extern/bin",
-        "-lfmt"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
