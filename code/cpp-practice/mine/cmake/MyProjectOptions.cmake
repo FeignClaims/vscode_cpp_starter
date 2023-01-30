@@ -113,5 +113,4 @@ dynamic_project_options(
   --inconclusive
 )
 
-include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/ProjectOptionsExtension.cmake)
