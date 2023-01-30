@@ -20,7 +20,7 @@
   |   +-- GetProjectOptions.cmake
   |   +-- MyProjectOptions.cmake
   |   +-- StructureOnly.cmake
-  |   +-- SymlinkCompileCommands.cmake
+  |   +-- SymlinkCompileCommands.cmake (已删除, 其功能 PR 已到 project_options 中, 故无需独立添加)
   +-- mine/
   +-- .vscode/
       +-- extensions.json
@@ -122,6 +122,10 @@ StructureOnly.cmake
 
 SymlinkCompileCommands.cmake
 ==================================
+
+.. note::
+
+  该文件已删除，其功能 PR 已到 project_options 中，故无需独立添加。
 
 在包含（ ``include()`` ）该文件的 ``CMakeLists.txt`` 文件所在目录下创建 ``compile_commands.json`` 的快捷方式。
 

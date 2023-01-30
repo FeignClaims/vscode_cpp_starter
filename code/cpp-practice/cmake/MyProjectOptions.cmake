@@ -74,5 +74,3 @@ dynamic_project_options(
   -Wunused
   -Wuseless-cast # warn if you perform a cast to the same type
 )
-
-include(${CMAKE_CURRENT_LIST_DIR}/SymlinkCompileCommands.cmake)
