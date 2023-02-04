@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "aaron-bond.better-comments",
+    "alefragnani.project-manager",
     "cheshirekow.cmake-format",
     "CoenraadS.disableligatures",
     "esbenp.prettier-vscode",

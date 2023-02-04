@@ -14,6 +14,7 @@
 
 更新方法见 :doc:`how_to_update`。
 
+- 2023 年 2 月 4 日，新增扩展 ``Project Manager``。
 - 2023 年 1 月 30 日，移除 ``cmake/SymlinkCompileCommands.json``，已将该功能 PR 到 project_options 中。
 - 2023 年 1 月 22 日，允许 clangd 更热切地索引标准库。
 - 2023 年 1 月 19 日，更新大量配置：
