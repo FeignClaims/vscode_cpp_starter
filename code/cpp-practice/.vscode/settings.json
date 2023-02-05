@@ -429,6 +429,8 @@
   /*********
    * CMake *
    *********/
+  // 生成时额外传递给 CMake 的参数
+  "cmake.buildArgs": ["-j"],
   // 保存 CMakeLists.txt 内容时，不自动配置 CMake 项目目录
   "cmake.configureOnEdit": false,
   // 在 CMake 项目目录打开时，不自动对其进行配置
