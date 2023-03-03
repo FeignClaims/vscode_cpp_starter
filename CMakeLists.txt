@@ -29,4 +29,3 @@ function(compress path)
 endfunction()
 
 compress(${CMAKE_CURRENT_SOURCE_DIR}/code/cpp-practice)
-compress(${CMAKE_CURRENT_SOURCE_DIR}/code/my_utility)

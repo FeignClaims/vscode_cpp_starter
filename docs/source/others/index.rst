@@ -8,5 +8,4 @@
 
    learning.rst
    gcc.rst
-   utility_extensions.rst
    visual_studio.rst
