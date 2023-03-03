@@ -27,7 +27,7 @@
 打开文件夹
 **********
 
-打开 VSCode，将解压得到的 cpp-practice 文件夹拖动到 VSCode 中。
+打开 VSCode，将解压得到的 cpp_starter 文件夹拖动到 VSCode 中。
 
 .. note::
 
@@ -124,7 +124,7 @@
 
    刷新 Clangd
 
-你可以直接将这个【cpp-practice】文件夹作为学习 C++ 所用的文件夹，将代码放入【src】子文件夹中。
+你可以直接将这个【cpp_starter】文件夹作为学习 C++ 所用的文件夹，将代码放入【src】子文件夹中。
 
 运行和调试代码的方法见下文。
 

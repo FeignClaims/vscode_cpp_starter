@@ -40,7 +40,7 @@
 .. _`中科大源：使用科大源安装 homebrew / linuxbrew`: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
 
 .. 配置
-.. _`配置文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/code/cpp-practice.zip
+.. _`配置文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/cpp_starter.zip
 
 .. 其他引用
 .. _`Error Lens`: https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
