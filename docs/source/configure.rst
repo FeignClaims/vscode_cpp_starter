@@ -40,76 +40,23 @@
 
    安全性提示
 
-将设置应用到全局
-****************
+导入配置文件
+*************
+
+点击窗口左下角的【齿轮】，选择【配置文件(Profiles)】-【导入配置文件...(Import Profile...)】。
+
+在弹出的窗口中，选择你解压的 ``cpp_starter`` 目录下的 ``cpp_starter.code-profile``.
+
+然后在左方选择【导入配置文件(Import Profile)】。
+
+切换至配置文件
+**************
+
+点击窗口左下角的【齿轮】，选择【配置文件(Profiles)】-【cpp_starter】。
 
 .. note::
 
-  下方有动图指导怎么操作。
-
-1. 打开全局设置文件：
-
-  - 点击窗口左下角的【齿轮】，选择【设置(settings)】，点击右上角第二栏第一个按钮【打开设置(Open Settings)】。
-
-2. 打开局部设置文件：
-
-  - 在左方侧边栏选择【资源管理器(Explorer)】，找到【.vscode】文件夹下的【settings.json】，打开。
-
-3. 复制局部设置文件中的内容：
-
-  - Windows：在打开的页面中【左键】，【Ctrl + A】全选，【Ctrl + C】复制。
-  - MacOS：在打开的页面中【左键】，【Command + A】全选，【Command + C】复制。
-
-4. 粘贴内容到全局设置文件中：
-
-  - Windows：切换到另一个【settings.json】，在打开的页面中【左键】，【Ctrl + A】全选，【Ctrl + V】粘贴。
-  - MacOS：切换到另一个【settings.json】，在打开的页面中【左键】，【Command + A】全选，【Command + V】粘贴。
-
-5. 删除局部设置文件：
-
-  【右击】侧边栏的【settings.json】，选择【删除(delete)】。
-
-.. figure:: /_img/VSCode_应用设置.gif
-
-   将设置应用到全局
-
-安装插件
-********
-
-在左方侧边栏点击【扩展(Extensions)】，在出现的窗口中搜索 ``@recommended``，点击【云朵形状的下载图标】。
-
-.. note::
-
-  如果未能找到，请首先检查前面 :ref:`download_and_unzip` 或者 :ref:`open_the_folder` 的步骤有无疏忽。
-
-观察下方，等所有插件右下角的【蓝色 install 按钮】消失变成【齿轮】，即安装全部完成。
-
-**关闭 VSCode。**
-
-.. figure:: /_img/VSCode_安装插件.png
-
-   安装插件
-
-.. note::
-
-   如果之前装过一个名为 **C/C++** 插件，会弹出冲突提示，请选择【Disable IntelliSense】。
-
-   .. figure:: /_img/插件冲突提示.jpeg
-
-     插件冲突提示
-
-为 CMake 选择编译器
-*******************
-
-重新启动 VSCode，【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``cmake configure`` 以找到【CMake: 配置】，【回车】。
-之后会弹出如下图选项。
-
-- Windows：选择 Clang 即可。
-- MacOS：系统自带有 Clang 编译器，请注意选择 **homebrew** 路径下的版本。
-
-.. figure:: /_img/MacOS_选择编译器.png
-
-   MacOS 选择 homebrew 路径下的编译器
+  此时齿轮旁显示 ``CP``，表明确实加载该配置文件；以后在使用中也请注意切换。
 
 配置完成
 ********
