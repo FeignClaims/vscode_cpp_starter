@@ -40,7 +40,7 @@
 
 代码检查工具 clang-tidy 的配置文件，辅助程序员写更优秀的代码。
 
-- 该文件实际并没有被使用而由 ``.clangd`` 文件代劳，这里给出来方便之后学习 CMake。
+- 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理。
 - 文档见 `Clang-Tidy 诊断选项列表`_。
 
 .clangd
