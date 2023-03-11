@@ -58,6 +58,19 @@
 
   此时齿轮旁显示 ``CP``，表明确实加载该配置文件；以后在使用中也请注意切换。
 
+为 CMake 选择编译器
+*******************
+
+重新启动 VSCode，【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``cmake configure`` 以找到【CMake: 配置】，【回车】。
+之后会弹出如下图选项。
+
+- Windows：选择 Clang 即可。
+- MacOS：系统自带有 Clang 编译器，请注意选择 **homebrew** 路径下的版本。
+
+.. figure:: /_img/MacOS_选择编译器.png
+
+   MacOS 选择 homebrew 路径下的编译器
+
 配置完成
 ********
 
