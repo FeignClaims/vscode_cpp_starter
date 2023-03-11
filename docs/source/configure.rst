@@ -64,7 +64,7 @@
 重新启动 VSCode，【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``cmake configure`` 以找到【CMake: 配置】，【回车】。
 之后会弹出如下图选项。
 
-- Windows：选择 Clang 即可。
+- Windows：选择 Clang 即可，请注意选择 **msys2 安装路径** （默认为 C:\\msys64 ）下的版本。
 - MacOS：系统自带有 Clang 编译器，请注意选择 **homebrew** 路径下的版本。
 
 .. figure:: /_img/MacOS_选择编译器.png
