@@ -40,12 +40,16 @@
   .. code-block:: bash
   
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+
+  .. code-block:: bash
+  
+    export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
   
 4. 在终端运行以下命令以安装 Homebrew / Linuxbrew。
 
   .. code-block:: bash
 
-    /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/Homebrew/install@HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
 
   .. note::
 

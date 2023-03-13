@@ -9,7 +9,7 @@
 project = 'Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)'
 copyright = '2022, FeignClaims'
 author = 'FeignClaims'
-release = 'v2.0.0'
+release = 'v2.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
