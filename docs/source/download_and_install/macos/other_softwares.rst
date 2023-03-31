@@ -7,7 +7,7 @@
 
   .. code-block:: bash
 
-    brew install llvm ninja
+    brew install llvm ninja git
 
   .. code-block:: bash
 
