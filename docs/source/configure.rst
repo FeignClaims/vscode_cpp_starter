@@ -49,6 +49,10 @@
 
 然后在左方选择【导入配置文件(Import Profile)】。
 
+.. note::
+
+  如果窗口左下角没有齿轮，请尝试通过【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``toggle activity bar`` 以找到【查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)】，【回车】。
+
 切换至配置文件
 **************
 
