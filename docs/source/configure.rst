@@ -71,6 +71,10 @@
 - Windows：选择 Clang 即可，请注意选择 **msys2 安装路径** （默认为 C:\\msys64 ）下的版本。
 - MacOS：系统自带有 Clang 编译器，请注意选择 **homebrew** 路径下的版本。
 
+.. note::
+
+  2023-04-27 左右，VSCode CMake Tools 有更新，这一步运行时可能卡在 ``[main] Configuring project: cpp_starter``。请尝试 **重新启动 VSCode** 或 **多次执行【CMake: 配置】**。
+
 .. figure:: /_img/MacOS_选择编译器.png
 
    MacOS 选择 homebrew 路径下的编译器
