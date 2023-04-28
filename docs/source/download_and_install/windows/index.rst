@@ -13,4 +13,5 @@ Windows
    vscode.rst
    msys2.rst
    llvm.rst
+   git.rst
    font.rst

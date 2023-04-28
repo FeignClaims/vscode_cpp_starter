@@ -30,6 +30,8 @@
 .. _`VSCode：我备份的安装包`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/VSCodeUserSetup-x64-1.76.0.exe
 .. _`MSYS2：通过官网下载`: https://www.msys2.org/
 .. _`MSYS2：我备份的安装包`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/msys2-x86_64-20230127.exe
+.. _`Git：通过官方下载`: https://git-scm.com/download/win
+.. _`Git：我备份的安装包`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/raw/master/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/Git-2.40.1-32-bit.exe
 .. _`清华大学开源软件镜像站`: https://mirrors.tuna.tsinghua.edu.cn/
 .. _`JetBrains Mono：通过官网下载`: https://github.com/JetBrains/JetBrainsMono/releases
 .. _`JetBrains Mono：我备份的文件`: https://gitee.com/FeignClaims/vscode-llvm-cpp-starter/tree/master/%E5%AD%97%E4%BD%93/JetBrains%20Mono
