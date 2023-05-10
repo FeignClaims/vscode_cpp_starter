@@ -155,6 +155,10 @@ mine/
 extensions.json
 =====================
 
+.. note::
+
+  该文件已不再使用，教程已改为使用 VSCode 的配置文件功能进行。
+
 该文件夹推荐的扩展，即配置操作时 ``@recommended`` 所搜索到的扩展。
 
 tasks.json
