@@ -43,7 +43,7 @@
 它所给出的警告一般会在警告信息最后给出一个蓝色链接，点击会转到一个网页，解释为什么有这个警告以及如何修复。
 
 - 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理。
-- 抑制方法：用 ``// NOLINT``` 抑制该行警告，用 ``// NOLINTNEXTLINE`` 抑制下一行警告，用 ``// NOLINTBEGIN`` 和 ``// NOLINTEND`` 抑制它们之间的警告。这些都是抑制 clang-tidy 相关所有警告，如果想要抑制一部分，参考官方文档 `Clang-Tidy 抑制诊断的方法`_。
+- 抑制方法：用 ``// NOLINT`` 抑制该行警告，用 ``// NOLINTNEXTLINE`` 抑制下一行警告，用 ``// NOLINTBEGIN`` 和 ``// NOLINTEND`` 抑制它们之间的警告。这些都是抑制 clang-tidy 相关所有警告，如果想要抑制一部分，参考官方文档 `Clang-Tidy 抑制诊断的方法`_。
 - 文档见 `Clang-Tidy 诊断选项列表`_。
 
 .clangd
