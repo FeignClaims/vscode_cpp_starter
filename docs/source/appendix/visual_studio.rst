@@ -1,9 +1,9 @@
-一个简单的 Visual Studio 配置方案
-*******************************
-
+#####################################
+附录5.一个简单的 Visual Studio 配置方案
+#####################################
 
 前言
-=====
+*****
 
 说是简单，但其实挺麻烦的；直接配置一个 VSCode 出来更好用；如果需要 Visual Studio 特有的一些诊断功能，可以将项目导入到 `Compiler Explorer - MSVC <https://godbolt.org/z/dG41xP6h3>`_ 中查看。
 
@@ -30,14 +30,14 @@
 - 更多更多的静态检查（懒，摸了）
 
 下载
-=====
+*****
 
 请自行去 `Visual Studio 官网 <https://visualstudio.microsoft.com/zh-hans/>`_ 下载 **Community 2022**。
 
 如果是 Mac，还是老老实实配置 VSCode 吧。
 
 安装
-=====
+*****
 
 在安装器中选择【使用 C++ 的桌面开发】，勾选到【适用于 Windows 的 C++ Clang 工具】为止。
 
@@ -50,12 +50,12 @@
   安装 Visual Studio
 
 配置
-=====
+*****
 
 新建一个 C++ 空项目。
 
 自动格式化代码
--------------
+=============
 
 在上方工具栏选择【工具(T)】-【选项(O)...】，在弹出的窗口中依次选择【文本编辑器】-【C/C++】-【代码样式】-【格式设置】。
 
@@ -76,7 +76,7 @@
 此后，通过【Ctrl + S】或工具栏手动保存代码时，代码都将格式化。
 
 更多的静态检查
--------------
+=============
 
 重新打开 Visual Studio 2022，并打开那个空项目， **创建一个 cpp 文件**。
 
@@ -119,10 +119,10 @@
 .. _`Visual Studio 附录`:
 
 附录
-=====
+*****
 
 MSVC 的命令行选项
------------------
+=================
 
 MSVC（即 Visual Studio 系列，不包括 VS Code）推荐的错误检查选项（摘自 `cppbestpractices: Use the Tools Available - compilers - MSVC <https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#msvc>`_）。
 

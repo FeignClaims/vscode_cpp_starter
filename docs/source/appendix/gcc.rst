@@ -1,5 +1,6 @@
-可我想要用 gcc
-**************
+#################
+附4.可我想要用 gcc
+#################
 
 
 请打开 VSCode 设置文件 ``.vscode/settings.json``，找到 ``"clangd.arguments"`` ，在其中插入 ``"--query-driver=你的gcc可执行文件路径"``。

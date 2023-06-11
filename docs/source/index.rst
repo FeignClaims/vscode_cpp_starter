@@ -24,7 +24,9 @@ Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
    download_and_install/index.rst
    configure.rst
    verify.rst
-   about_warnings.rst
-   explain.rst
-   others/index.rst
+   appendix/about_warnings.rst
+   appendix/explain.rst
+   appendix/learning.rst
+   appendix/gcc.rst
+   appendix/visual_studio.rst
    bibliography.rst
