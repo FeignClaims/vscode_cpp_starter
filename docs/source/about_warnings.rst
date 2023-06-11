@@ -80,5 +80,5 @@ clang-tidy 产生的警告
 参考文献
 =========
 
-- `Clang-Tidy 诊断选项列表`_。
-- `Clang-Tidy 抑制诊断的方法`_。
+- `Clang-Tidy 诊断选项列表`_
+- `Clang-Tidy 抑制诊断的方法`_
