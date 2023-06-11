@@ -55,9 +55,12 @@
 .. 参考文献
 .. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
 .. _`Clangd 官网`: https://clangd.llvm.org
+.. _`Clang 编译器官方文档`: https://clang.llvm.org/docs/index.html
 .. _`Clang 编译器诊断选项列表`: https://clang.llvm.org/docs/DiagnosticsReference.html
+.. _`Extra Clang Tools 官方文档`: https://clang.llvm.org/extra/index.html
 .. _`Clang-Format 配置选项列表`: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 .. _`Clang-Tidy 诊断选项列表`: https://clang.llvm.org/extra/clang-tidy/checks/list.html
-.. _`vscode-lldb 用户手册`: https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md
+.. _`Clang-Tidy 抑制诊断的方法`: https://clang.llvm.org/extra/clang-tidy/index.html#suppressing-undesired-diagnostics
+.. _`vscode-lldb 拓展用户手册`: https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md
 .. _`cppbestpractices: Use the Tools Available - compilers`: https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers
 .. _`hacking C++: Diagnostic Basics`: https://hackingcpp.com/cpp/diagnostics.html
