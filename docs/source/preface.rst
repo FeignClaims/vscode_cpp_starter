@@ -1,5 +1,5 @@
 #######
-1.前言
+0.前言
 #######
 
 
@@ -15,11 +15,11 @@
 
 #. 先 **傻瓜式** 地配置好软件：
 
-  - :doc:`download_and_install/index`
-  - :doc:`configure`
-  - :doc:`verify`
+  - :doc:`/download_and_install/index`
+  - :doc:`/configure`
+  - :doc:`/verify`
 
-#. 给出各配置的逐条 :doc:`explain`。
+#. 给出各配置的逐条 :doc:`/appendix/explain`。
 
 教程中所有的资源，都集成在了 Gitee 仓库中，在相应的位置会给出链接（蓝色字体，【左键】即可跳转）。
 

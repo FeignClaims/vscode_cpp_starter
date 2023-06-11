@@ -5,7 +5,7 @@
 
 摸了，以下为一些配置文件的说明，建议从上到下依次阅读。
 
-要想进阶，请参考 :doc:`special_announcement`。
+要想进阶，请参考 :doc:`/appendix/cmake_disclaimer`。
 
 .. code-block:: txt
 
@@ -40,7 +40,7 @@
 
 代码检查工具 clang-tidy 的配置文件，辅助程序员写更优秀的代码。
 
-有关它所产生的警告的解释，见于 :doc:`about_warnings`。
+有关它所产生的警告的解释，见于 :doc:`/appendix/about_warnings`。
 
 - 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理。
 - 文档见 `Clang-Tidy 诊断选项列表`_ 和 `Clang-Tidy 抑制诊断的方法`_ 等。
@@ -60,7 +60,7 @@ compile_commands.json
 - 根目录下的是该文件的快捷方式，以供 clangd 找到该文件。
 - 为减少初学者负担，此处编译信息是假定所有源文件最终编译成一个可执行文件，故编程时 clangd 给出的提示包含整个【cpp_starter】文件夹中的源代码信息；实际影响不大。
 - 由于 compile_commands.json 中只是分别存储单个源文件的编译信息，clangd 为了重构能作用于项目，只能假设是源文件来自同一个项目，故而重命名功能可能影响看似不相关的源文件。这主要问题来源于【cpp_starter】为学习之便管理了大量不相干的项目，实际项目中一般会使用名字空间来解决名字重复，影响不大。
-- CMake 的学习可参考 :doc:`special_announcement`。
+- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`。
 
 CMakeLists.txt
 ********************
@@ -68,7 +68,7 @@ CMakeLists.txt
 CMake 的项目配置文件，这里只用来生成 ``compile_commands.json``。
 
 - 为减少初学者负担，此处 CMake 假定所有源文件最终编译成一个可执行文件，故编程时 clangd 给出的提示包含整个【cpp_starter】文件夹中的源代码信息；实际影响不大。
-- CMake 的学习可参考 :doc:`special_announcement`。
+- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`。
 
 cmake/
 ***********
@@ -79,7 +79,7 @@ CMake 的分文件和一些脚本文件，分文件会在 ``CMakeLists.txt`` 中
 
 - 所使用的开源项目 `Github: aminya/project_options`_ 已预先下载。
 - 代码检查工具、文档生成工具等已禁用；在 ``mine/`` 文件夹下，有我使用的版本。
-- CMake 的学习可参考 :doc:`special_announcement`
+- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`
 
 ProjectOptions.cmake
 =============================
@@ -137,7 +137,7 @@ SymlinkCompileCommands.cmake
 mine/
 ***********
 
-我使用的版本，请结合 :doc:`special_announcement` 和 `Github: FeignClaims/cmake_starter_template`_ 学习
+我使用的版本，请结合 :doc:`/appendix/cmake_disclaimer` 和 `Github: FeignClaims/cmake_starter_template`_ 学习
 
 需要安装以下软件：
 

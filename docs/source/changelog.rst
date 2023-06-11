@@ -2,7 +2,7 @@
 更新日志
 ########
 
-配置更新方法见 :doc:`how_to_update`。
+配置更新方法见 :doc:`/how_to_update`。
 
 .. note::
 
@@ -10,6 +10,11 @@
 
 引入语义化版本后
 ****************
+
+Latest
+====================
+
+- 将 CMake 特别声明移入附录部分，并指出与项目管理相关。
 
 v3.1.3 - 2023-06-11
 =====================
@@ -144,7 +149,7 @@ v2.0.0 - 2023-03-07
 2023-01-03
 ============
 
-- 在 :doc:`special_announcement` 中新增我个人的 C++ 项目配置模板。
+- 在 :doc:`/appendix/cmake_disclaimer` 中新增我个人的 C++ 项目配置模板。
 - 更新默认 MyProjectOptions.cmake 设置。
 - 加入多彩的注释提示符。
 - 更新 settings.json：改善外观，让 CMake “如果已有缓存，则跳过配置环节”。
@@ -167,7 +172,7 @@ v2.0.0 - 2023-03-07
 2022-09-11
 ============
 
-- 将 CMake 源文件管理部分抽象成 ``cmake/StructureOnly.cmake``，从而允许为单源文件代码提供分析的同时管理 CMake 项目，并为未来可能做的 **利用 Conan 添加第三方库** （见 :doc:`todo`）提供接口，目前请通过 :doc:`special_announcement` 自行学习。
+- 将 CMake 源文件管理部分抽象成 ``cmake/StructureOnly.cmake``，从而允许为单源文件代码提供分析的同时管理 CMake 项目，并为未来可能做的 **利用 Conan 添加第三方库** （见 :doc:`/todo`）提供接口，目前请通过 :doc:`/appendix/cmake_disclaimer` 自行学习。
 
 2022-09-10
 ============
@@ -188,7 +193,7 @@ v2.0.0 - 2023-03-07
 2022-09-10
 ============
 
-- 在 :doc:`special_announcement` 部分新增一个开源项目 `Github: aminya/project_options`_。
+- 在 :doc:`/appendix/cmake_disclaimer` 部分新增一个开源项目 `Github: aminya/project_options`_。
 
 2022-08-27
 ============
@@ -203,13 +208,13 @@ v2.0.0 - 2023-03-07
 2022-08-20
 ============
 
-- 在 ``.vscode/launch.json`` 中增加了 CMake 项目用的 LLDB 调试配置，请注意 :doc:`special_announcement`。
+- 在 ``.vscode/launch.json`` 中增加了 CMake 项目用的 LLDB 调试配置，请注意 :doc:`/appendix/cmake_disclaimer`。
 
 2022-08-13
 ============
 
 - 新增了一个插件 `Error Lens`_，感谢 `【VS Code】四年功力 一刻掌握 速通 C++插件/终端美化/工程管理 懒人必备`_。
-- 新增了 :doc:`special_announcement`。
+- 新增了 :doc:`/appendix/cmake_disclaimer`。
 
 2022-07-08
 ============
