@@ -126,9 +126,10 @@ MSVC 的命令行选项
 
 MSVC（即 Visual Studio 系列，不包括 VS Code）推荐的错误检查选项（摘自 `cppbestpractices: Use the Tools Available - compilers - MSVC <https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#msvc>`_）。
 
-- 你应该默认启用的：``/W4 /w14640``
+- 你应该默认启用的：``/permissive- /W4 /w14640``
 - 根据需要添加
 
+  - ``/permissive-`` Enforces standards conformance.
   - ``/W4`` All reasonable warnings
   - ``/w14242`` 'identfier': conversion from 'type1' to 'type1', possible loss of data
   - ``/w14254`` 'operator': conversion from 'type1:field_bits' to 'type2:field_bits', possible loss of data
