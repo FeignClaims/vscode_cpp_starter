@@ -1,18 +1,18 @@
 #################
-附4.可我想要用 gcc
+附5.可我想要用 gcc
 #################
 
 .. warnings::
 
   本配置给出的编译、调试任务（ ``.vscode/`` 中）除 cmake 相关外均基于 clang，如果换用 gcc，则需要手动编辑这些配置。这里给出的设置，只是让 clangd 正常解析 gcc。
 
-点击窗口左下角的【齿轮】，选择【设置(settings)】，在弹出的窗口右上角选择【打开文件】，在打开的 ``settings.json`` 文件中找到 ``"clangd.arguments"`` ，在其中插入 ``"--query-driver=你的gcc可执行文件路径"``。
+点击窗口左下角的【齿轮】，选择【设置(settings)】，在弹出的窗口右上角选择【打开文件】-【打开当前配置文件设置】，在打开的 ``settings.json`` 文件中找到 ``"clangd.arguments"`` ，在其中插入 ``"--query-driver=你的gcc可执行文件路径"``。
 
 .. note::
 
   如果窗口左下角没有齿轮，请尝试通过【Ctrl + Shift + P】或【Command + Shift + P】打开命令菜单，输入 ``toggle activity bar`` 以找到【查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)】，【回车】。
 
-.. figure:: /_img/VSCode_打开设置.png
+.. figure:: /_img/VSCode_打开设置.gif
 
    打开设置
 

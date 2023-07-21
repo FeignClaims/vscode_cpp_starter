@@ -26,6 +26,7 @@ Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
    appendix/cmake_disclaimer.rst
    appendix/about_warnings.rst
    appendix/explain.rst
+   appendix/windows_chinese_issue.rst
    appendix/learning.rst
    appendix/gcc.rst
    appendix/visual_studio.rst
