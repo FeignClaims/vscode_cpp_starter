@@ -17,13 +17,12 @@
   +-- compile_commands.json
   +-- CMakeLists.txt
   +-- cmake/
-  |   +-- GetProjectOptions.cmake
-  |   +-- MyProjectOptions.cmake
+  |   +-- CustomizedProjectOptions.cmake
+  |   +-- ProjectOptions.cmake
   |   +-- StructureOnly.cmake
   |   +-- SymlinkCompileCommands.cmake (已删除, 其功能 PR 已到 project_options 中, 故无需独立添加)
   +-- mine/
   +-- .vscode/
-      +-- extensions.json
       +-- tasks.json
       +-- launch.json
   
@@ -86,7 +85,7 @@ ProjectOptions.cmake
 
 获取开源项目 `Github: aminya/project_options`_，考虑到网络条件，已预先下载到 ``project_options`` 文件夹中。
 
-MyProjectOptions.cmake
+CustomizedProjectOptions.cmake
 ============================
 
 对 ``project_options`` 进行自定义设置。
@@ -153,15 +152,6 @@ mine/
 *****************************
   
 该文件夹特定的 VSCode 配置，仅在当前文件夹下有效。
-
-extensions.json
-=====================
-
-.. note::
-
-  该文件已不再使用，教程已改为使用 VSCode 的配置文件功能进行。
-
-该文件夹推荐的扩展，即配置操作时 ``@recommended`` 所搜索到的扩展。
 
 tasks.json
 ================
