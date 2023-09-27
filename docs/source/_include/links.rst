@@ -21,11 +21,16 @@
 .. _`Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`: https://www.youtube.com/watch?v=eC9-iRN2b04
 .. _`Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`: https://www.youtube.com/watch?v=S4QSKLXdTtA
 .. _`More Modern CMake - Deniz Bahadir - Meeting C++ 2018`: https://www.youtube.com/watch?v=y7ndUhdQuU8
+.. _`Deep CMake for Library Authors - Craig Scott - CppCon 2019`: https://www.youtube.com/watch?v=m0DwB4OvDXk
+.. _`Oh No! More Modern CMake - Deniz Bahadir - Meeting C++ 2019`: https://www.youtube.com/watch?v=y9kSr5enrSk
+.. _`CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022`: https://www.youtube.com/watch?v=hkefPcWySzI
+.. _`import CMake - 2023 State of C++20 modules in CMake - Bill Hoffman - CppNow 2023`: https://www.youtube.com/watch?v=c563KgO-uf4
 .. _`CMake 官方文档`: https://cmake.org/cmake/help/latest/
 .. _`Modern CMake`: https://cliutils.gitlab.io/modern-cmake/
 .. _`More Modern CMake`: https://hsf-training.github.io/hsf-training-cmake-webpage/
 .. _`Effective Modern CMake`: https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1
 .. _`VSCode CMake 拓展用户手册`: https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
+.. _`preferred cmake project structure`: https://stackoverflow.com/questions/33534115/preferred-cmake-project-structure
 
 .. 下载和安装
 .. _`VSCode：通过官网下载`: https://code.visualstudio.com/

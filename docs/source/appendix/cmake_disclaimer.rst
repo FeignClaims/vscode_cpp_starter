@@ -21,6 +21,20 @@
 
 在设置中，我启用了实验性质的 FileAPI 功能，使得 ``include(xxx)`` 所包含的内容能得到分析， **但该分析仅对上一次配置有效**，即 **修改 ``CMakeLists.txt`` 后，必须重新配置 CMake 才能得到新的分析结果**。
 
+建议学习路线
+*************
+
+从上到下
+
+- `《Modern CMake for C++》`_
+- `Github: aminya/project_options`_
+- `Effective CMake - Daniel Pfeife - C++Now 2017`_
+- 私货，CMake + Conan
+
+  - `Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`_
+  - `Github: FeignClaims/cmake_starter_template`_
+- `CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022`_
+
 推荐读物
 ********
 
@@ -51,11 +65,16 @@
   - `Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`_
   - `Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`_
   - `More Modern CMake - Deniz Bahadir - Meeting C++ 2018`_
+  - `Deep CMake for Library Authors - Craig Scott - CppCon 2019`_
+  - `Oh No! More Modern CMake - Deniz Bahadir - Meeting C++ 2019`_
+  - `CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022`_
+  - `import CMake - 2023 State of C++20 modules in CMake - Bill Hoffman - CppNow 2023`_
 
-- 文档
+- 文档/文章
 
   - `CMake 官方文档`_
   - `Modern CMake`_
   - `More Modern CMake`_
   - `Effective Modern CMake`_
   - `VSCode CMake 拓展用户手册`_
+  - `preferred cmake project structure`_
