@@ -83,12 +83,12 @@ CMake 的分文件和一些脚本文件，分文件会在 ``CMakeLists.txt`` 中
 ProjectOptions.cmake
 =============================
 
-获取开源项目 `Github: aminya/project_options`_，考虑到网络条件，已预先下载到 ``project_options`` 文件夹中。
+提供获取开源项目 `Github: aminya/project_options`_ 的宏。
 
 CustomizedProjectOptions.cmake
 ============================
 
-对 ``project_options`` 进行自定义设置。
+从镜像获取 `Github: aminya/project_options`_ ，并对 ``project_options`` 进行自定义设置。
 
 - 禁用代码检查工具、文档生成工具等。
 - 启用更多的编译器诊断选项，这些选项会被保存到 ``compile_commands.json`` 中，提供给 clangd 进行解析。
