@@ -39,6 +39,8 @@
 
 代码检查工具 clang-tidy 的配置文件，辅助程序员写更优秀的代码。
 
+项目的 .clang-tidy 配置文件中还提供了一个如何强制除宏、模板参数外所有名字都采用 lower_case 形式的示例，从而说明 .clang-tidy 的一些检查是存在自定义设置的。
+
 有关它所产生的警告的解释，见于 :doc:`/appendix/about_warnings`。
 
 - 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理。
