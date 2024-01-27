@@ -3,7 +3,7 @@
 .. _`C++ 答疑室`: https://gitee.com/cpp_tutorial/question
 .. _`《计软智转专业指南》（仅基于 2020、2021 年考题）`: https://gitee.com/cpp_tutorial/weekly_question/raw/master/src/extra/计软智转专业指南.pdf
 .. _`我的 C++ 学习建议汇总`: https://gitee.com/FeignClaims/board#%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95
-.. _`我的 C++ 学习大纲`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/cpp/cpp_syllabus.pdf
+.. _`我的 C++ 学习大纲`: https://cpp_tutorial.gitee.io/board/personal_learning_map/main.html
 .. _`我的 C++ 浏览器书签`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/cpp/cpp_bookmarks.html
 .. _`C++ 核心准则`: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 
