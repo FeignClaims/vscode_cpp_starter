@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>附0.关于 CMake 及项目管理的声明 &mdash; Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB) v1.0.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=12f31cd9"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = '';</script>
+        <script>let toggleHintHide = '';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="附1.关于黄色警告" href="about_warnings.html" />
+    <link rel="prev" title="3.检验配置结果" href="../verify.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../meet_trouble.html">遇到问题？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../question_and_answer.html">C++ 答疑室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how_to_update.html">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">待办事项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">0.前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download_and_install/index.html">1.下载和安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configure.html">2.配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../verify.html">3.检验配置结果</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">附0.关于 CMake 及项目管理的声明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id17">提示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">插件相关</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">建议学习路线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">推荐读物</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="about_warnings.html">附1.关于黄色警告</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explain.html">附2.对配置文件的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_chinese_issue.html">附3.Windows 终端输出中文是乱码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning.html">附4.学习 C++ 的个人建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gcc.html">附5.可我想要用 gcc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visual_studio.html">附6.一个简单的 Visual Studio 配置方案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">参考文献及拓展阅读</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">附0.关于 CMake 及项目管理的声明</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/appendix/cmake_disclaimer.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id16">
+<h1>附0.关于 CMake 及项目管理的声明<a class="headerlink" href="#id16" title="Link to this heading"></a></h1>
+<section id="id17">
+<h2>提示<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<p>本教程并没有创建一个 C++ 项目，只是提供了一个配置好的开发/学习环境；为方便日常学习 C++，内置了运行/调试单个 <code class="docutils literal notranslate"><span class="pre">.cpp</span></code> 源代码（必须是这个后缀！）或整个文件夹的便捷脚本。</p>
+<p>如果需要配置项目，请自行学习 CMake，并修改根目录下的 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>。</p>
+<p>关于调试，2022 年 8 月 20 日以后，已在配置中给出了调试 CMake 项目的配置。</p>
+<p>建议参考 <a class="reference internal" href="../bibliography.html"><span class="doc">参考文献及拓展阅读</span></a> 给出的文档自行修改配置。</p>
+</section>
+<section id="id18">
+<h2>插件相关<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<p>目前教程给出的配置使用了 <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Tools</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Language</span> <span class="pre">Support</span></code> 扩展。</p>
+<p>在设置中，我启用了实验性质的 FileAPI 功能，使得 <code class="docutils literal notranslate"><span class="pre">include(xxx)</span></code> 所包含的内容能得到分析， <strong>但该分析仅对上一次配置有效</strong>，即 <strong>修改 ``CMakeLists.txt`` 后，必须重新配置 CMake 才能得到新的分析结果</strong>。</p>
+</section>
+<section id="id19">
+<h2>建议学习路线<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<p>从上到下</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.packtpub.com/product/modern-cmake-for-c/9781801070058">《Modern CMake for C++》</a></p></li>
+<li><p><a class="reference external" href="https://github.com/aminya/project_options">Github: aminya/project_options</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=bsXLMQ6WgIk">Effective CMake - Daniel Pfeife - C++Now 2017</a></p></li>
+<li><p>私货，CMake + Conan</p>
+<ul>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=S4QSKLXdTtA">Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018</a></p></li>
+<li><p><a class="reference external" href="https://github.com/FeignClaims/cmake_starter_template">Github: FeignClaims/cmake_starter_template</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=hkefPcWySzI">CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022</a></p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>推荐读物<a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>书籍</p>
+<ul>
+<li><p><a class="reference external" href="https://www.packtpub.com/product/modern-cmake-for-c/9781801070058">《Modern CMake for C++》</a></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/PacktPublishing/Modern-CMake-for-Cpp">Modern CMake for C++：代码</a></p></li>
+<li><p><a class="reference external" href="https://accu.org/bookreviews/2022/collyer_1988/">Modern CMake for C++：ACCU 书评</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://crascit.com/professional-cmake/">《Professional CMake》</a> <strong>（别用这本书入门！）</strong></p></li>
+</ul>
+</li>
+<li><p>开源项目</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/aminya/project_options">Github: aminya/project_options</a></p>
+<ul>
+<li><p>大幅简化 CMake 项目的基本构建流程，几步即可达到《Modern CMake for C++》最终效果，建议看完后尝试配置。</p></li>
+<li><p>本教程的配置方案已借用这个项目来搭建，以供 CMake 学习参考。</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/FeignClaims/cmake_starter_template">Github: FeignClaims/cmake_starter_template</a></p>
+<ul>
+<li><p>我基于 <code class="docutils literal notranslate"><span class="pre">aminya/project_options</span></code> 的 C++ 项目配置模板，使用 Conan 2.0 进行包管理。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>视频</p>
+<ul>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=bsXLMQ6WgIk">Effective CMake - Daniel Pfeife - C++Now 2017</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=eC9-iRN2b04">Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=S4QSKLXdTtA">Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=y7ndUhdQuU8">More Modern CMake - Deniz Bahadir - Meeting C++ 2018</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=m0DwB4OvDXk">Deep CMake for Library Authors - Craig Scott - CppCon 2019</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=y9kSr5enrSk">Oh No! More Modern CMake - Deniz Bahadir - Meeting C++ 2019</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=hkefPcWySzI">CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=c563KgO-uf4">import CMake - 2023 State of C++20 modules in CMake - Bill Hoffman - CppNow 2023</a></p></li>
+</ul>
+</li>
+<li><p>文档/文章</p>
+<ul>
+<li><p><a class="reference external" href="https://cmake.org/cmake/help/latest/">CMake 官方文档</a></p></li>
+<li><p><a class="reference external" href="https://cliutils.gitlab.io/modern-cmake/">Modern CMake</a></p></li>
+<li><p><a class="reference external" href="https://hsf-training.github.io/hsf-training-cmake-webpage/">More Modern CMake</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1">Effective Modern CMake</a></p></li>
+<li><p><a class="reference external" href="https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md">VSCode CMake 拓展用户手册</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/33534115/preferred-cmake-project-structure">preferred cmake project structure</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../verify.html" class="btn btn-neutral float-left" title="3.检验配置结果" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="about_warnings.html" class="btn btn-neutral float-right" title="附1.关于黄色警告" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, FeignClaims。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

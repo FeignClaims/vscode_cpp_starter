@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>字体 &mdash; Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB) v1.0.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=12f31cd9"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>let toggleHintShow = '';</script>
+        <script>let toggleHintHide = '';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="MacOS" href="../macos/index.html" />
+    <link rel="prev" title="Git" href="git.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../meet_trouble.html">遇到问题？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../question_and_answer.html">C++ 答疑室</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to_update.html">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">待办事项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preface.html">0.前言</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1.下载和安装</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Windows</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="vscode.html">VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="msys2.html">MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="llvm.html">利用 MSYS2 安装 LLVM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">字体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">安装方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">推荐的免费字体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../macos/index.html">MacOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../configure.html">2.配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../verify.html">3.检验配置结果</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/cmake_disclaimer.html">附0.关于 CMake 及项目管理的声明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/about_warnings.html">附1.关于黄色警告</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/explain.html">附2.对配置文件的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/windows_chinese_issue.html">附3.Windows 终端输出中文是乱码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/learning.html">附4.学习 C++ 的个人建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/gcc.html">附5.可我想要用 gcc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/visual_studio.html">附6.一个简单的 Visual Studio 配置方案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">参考文献及拓展阅读</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">1.下载和安装</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Windows</a></li>
+      <li class="breadcrumb-item active">字体</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/download_and_install/windows/font.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id16">
+<h1>字体<a class="headerlink" href="#id16" title="Link to this heading"></a></h1>
+<section id="id17">
+<h2>安装方法<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>以下两步，如果你的电脑上没有显示文件后缀，请均尝试一下。</p>
+</div>
+<ol class="arabic simple">
+<li><p>如果文件压缩为 <strong>.zip / .7z / .rar</strong> 文件，请【右键】该文件，然后选择【提取】以提取文件。</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>这是系统内置的解压缩方法，如果有其他压缩软件请随意。</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>【右键】 <strong>.ttf</strong> 或 <strong>.ttc</strong> 文件，然后选择【安装】或【为所有用户安装】。</p></li>
+</ol>
+</section>
+<section id="id18">
+<h2>推荐的免费字体<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<p>编辑器英文字体：JetBrains Mono</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/JetBrains/JetBrainsMono/releases">JetBrains Mono：通过官网下载</a></p></li>
+<li><p><a class="reference external" href="https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/JetBrains%20Mono">JetBrains Mono：我备份的文件</a> （分别点击进行下载）</p>
+<figure class="align-default" id="id19">
+<img alt="../../_images/JetBrainsMono_%E6%88%91%E5%A4%87%E4%BB%BD%E7%9A%84%E6%96%87%E4%BB%B6.png" src="../../_images/JetBrainsMono_%E6%88%91%E5%A4%87%E4%BB%BD%E7%9A%84%E6%96%87%E4%BB%B6.png" />
+<figcaption>
+<p><span class="caption-text">JetBrainsMono：我备份的文件，请分别点击下载</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<p>终端英文字体：MesloLGS NF</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ryanoasis/nerd-fonts/releases">MesloLGS NF：通过官网下载</a></p></li>
+<li><p><a class="reference external" href="https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/MesloLGS%20NF">MesloLGS NF：我备份的文件</a> （分别点击进行下载）</p></li>
+</ul>
+<p>中文字体：等距更纱黑体 SC</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/be5invis/Sarasa-Gothic/releases">等距更纱黑体 SC：通过官网下载</a></p></li>
+<li><p><a class="reference external" href="https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93">等距更纱黑体 SC：我备份的文件</a> （分别点击进行下载）</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="git.html" class="btn btn-neutral float-left" title="Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../macos/index.html" class="btn btn-neutral float-right" title="MacOS" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, FeignClaims。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
