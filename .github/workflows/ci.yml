@@ -1,4 +1,4 @@
-name: sync_to_gitee
+name: deploy_to_gitee
 on:
   pull_request:
   push:
@@ -6,7 +6,8 @@ on:
       - main
 
 jobs:
-  build_doc:
+  build:
+    if: ${{ !contains(github.event.head_commit.message, '[no deploy]') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,15 +36,19 @@ jobs:
           rm -rf build
           sphinx-build source build
 
+  commit:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9.1.3
         with:
           default_author: github_actions
           message: "[bot] Build gitee pages"
 
-  sync_and_publish:
+  sync:
     runs-on: ubuntu-latest
-    needs: build_doc
+    needs: commit
     steps:
       - name: Sync to gitee.com
         uses: wearerequired/git-mirror-action@v1.2.0
@@ -53,6 +58,10 @@ jobs:
           source-repo: git@github.com:FeignClaims/vscode_cpp_starter.git
           destination-repo: git@gitee.com:cpp_tutorial/vscode_cpp_starter.git
 
+  publish:
+    runs-on: ubuntu-latest
+    needs: sync
+    steps:
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@v1.4.2
         with:
