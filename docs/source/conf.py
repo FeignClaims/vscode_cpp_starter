@@ -14,7 +14,7 @@ release = 'v1.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_togglebutton', 'sphinx.ext.todo',
+extensions = ['sphinx_togglebutton', 'sphinx_last_updated_by_git', 'sphinx.ext.todo',
               'sphinx.ext.graphviz', 'sphinx.ext.extlinks', 'sphinx_rtd_theme']
 
 togglebutton_hint = ""
