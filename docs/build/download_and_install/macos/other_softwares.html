@@ -20,6 +20,16 @@
         <script src="../../_static/documentation_options.js?v=12f31cd9"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script>
+    (function () {
+    if (window.localStorage) {
+        if (!localStorage.getItem("firstLoad")) {
+        localStorage["firstLoad"] = true;
+        window.location.reload();
+        } else localStorage.removeItem("firstLoad");
+    }
+    })();
+    </script>
         <script>let toggleHintShow = '';</script>
         <script>let toggleHintHide = '';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
@@ -154,7 +164,9 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2024, FeignClaims。</p>
+    <p>&#169; 版权所有 2024, FeignClaims。
+      <span class="lastupdated">最后更新于 2024-01-28 04:15:26 +0000.
+      </span></p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
