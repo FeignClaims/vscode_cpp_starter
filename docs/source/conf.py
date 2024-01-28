@@ -31,6 +31,9 @@ rst_prolog = '\n'.join(
 
 language = 'zh_CN'
 
+html_copy_source = False
+html_show_sourcelink = False
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
