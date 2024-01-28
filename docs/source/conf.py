@@ -39,6 +39,7 @@ html_show_sourcelink = False
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_favicon = '_static/favicon.png'
 html_search_language = 'zh'
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
 git_last_updated_timezone = 'Asia/Shanghai'
