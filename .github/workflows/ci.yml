@@ -18,6 +18,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
 
       - name: Install sphinx
         shell: bash
