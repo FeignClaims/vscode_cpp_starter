@@ -39,7 +39,7 @@ html_show_sourcelink = False
 
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
-    'repository_url': 'https://github.com/FeignClaims/question_board',
+    'repository_url': 'https://github.com/FeignClaims/vscode_cpp_starter',
     'path_to_docs': 'docs/source/',
     'use_source_button': True,
     'use_edit_page_button': True,
