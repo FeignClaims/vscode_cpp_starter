@@ -1,5 +1,6 @@
 # Build directories and binary files
-/build/
+_build/
+build/
 out/
 cmake-build-*/
 conan-cache/
