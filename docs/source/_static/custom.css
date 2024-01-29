@@ -32,3 +32,10 @@ html {
 .toctree-wrapper li[class^="toctree-l"] > a {
   font-size: 1em;
 }
+
+.bd-article-container h3,
+.bd-article-container h4,
+.bd-article-container h5,
+.bd-article-container h6 {
+  font-weight: 500;
+}
