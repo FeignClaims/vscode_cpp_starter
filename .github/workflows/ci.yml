@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_commit:
     if: ${{ !contains(github.event.head_commit.message, '[no deploy]') }}
     runs-on: ubuntu-latest
     permissions:
@@ -36,10 +36,6 @@ jobs:
           rm -rf build
           sphinx-build source build
 
-  commit:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9.1.3
         with:
@@ -49,7 +45,7 @@ jobs:
   sync:
     if: ${{ always() }}
     runs-on: ubuntu-latest
-    needs: commit
+    needs: build_and_commit
     steps:
       - name: Sync to gitee.com
         uses: wearerequired/git-mirror-action@v1.2.0
