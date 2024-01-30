@@ -15,7 +15,7 @@ html_title = f'{project}'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['sphinx_togglebutton', 'sphinx_last_updated_by_git', 'sphinx.ext.todo',
-              'sphinx.ext.graphviz', 'sphinx.ext.extlinks']
+              'sphinx.ext.graphviz', 'sphinx.ext.extlinks', 'sphinx_copybutton']
 
 togglebutton_hint = ""
 togglebutton_hint_hide = ""
