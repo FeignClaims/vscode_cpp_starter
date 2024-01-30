@@ -48,7 +48,6 @@ jobs:
           message: "[bot] Build gitee pages"
 
   sync:
-    if: ${{ always() }}
     runs-on: ubuntu-latest
     needs: build_and_commit
     steps:
