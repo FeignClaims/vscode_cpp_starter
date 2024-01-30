@@ -1,8 +1,8 @@
 span.menuselection {
-  background-color: #dce7fc;
-  border: 1px solid #276be9;
+  background-color: var(--pst-color-info-bg);
+  border: 1px solid var(--pst-color-info);
   border-radius: 4px;
-  color: #276be9;
+  color: var(--pst-color-info);
   font-size: 80%;
   font-weight: 700;
   margin: auto 2px;
