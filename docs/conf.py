@@ -60,6 +60,7 @@ git_last_updated_timezone = 'Asia/Shanghai'
 
 def setup(app):
     app.add_css_file("custom.css")
+    app.add_css_file("monofont.css")
 
     FORCE_RELOAD_JS = """
     (function () {
