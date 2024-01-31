@@ -47,9 +47,19 @@ html_theme_options = {
     'show_prev_next': False,
     'show_nav_level': 0,
     'show_toc_level': 2,
-    "secondary_sidebar_items": {
-        "**": ["page-toc", "sourcelink"],
-    }
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/FeignClaims/vscode_cpp_starter",
+            "icon": "fa-brands fa-github",
+        },
+        {
+            "name": "部署状态",
+            "url": "https://github.com/FeignClaims/vscode_cpp_starter/actions/workflows/ci.yml",
+            "icon": "https://github.com/FeignClaims/vscode_cpp_starter/actions/workflows/ci.yml/badge.svg",
+            "type": "url",
+        }
+    ],
 }
 html_static_path = ['_static']
 html_favicon = '_static/favicon.png'
