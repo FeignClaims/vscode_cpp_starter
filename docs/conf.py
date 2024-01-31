@@ -61,15 +61,4 @@ git_last_updated_timezone = 'Asia/Shanghai'
 def setup(app):
     app.add_css_file("custom.css")
     app.add_css_file("monofont.css")
-
-    FORCE_RELOAD_JS = """
-    (function () {
-    if (window.localStorage) {
-        if (!localStorage.getItem("firstLoad")) {
-        localStorage["firstLoad"] = true;
-        window.location.reload();
-        } else localStorage.removeItem("firstLoad");
-    }
-    })();
-    """
-    app.add_js_file(None, body=FORCE_RELOAD_JS)
+    app.add_js_file("no_cache.js")
