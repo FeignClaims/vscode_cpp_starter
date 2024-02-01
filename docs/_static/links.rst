@@ -1,7 +1,7 @@
 .. _`Gitee 仓库`: https://gitee.com/cpp_tutorial/vscode_cpp_starter
 .. _`Gitee 仓库 Issues`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues
 .. _`C++ 答疑室`: https://gitee.com/cpp_tutorial/question
-.. _`我的 C++ 学习建议汇总`: https://cpp_tutorial.gitee.io/board/
+.. _`我的 C++ 学习建议汇总`: https://question-board.readthedocs.io/
 
 .. Issues
 .. _`Issue: 关于配置异常无输出`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I5PT6Y
