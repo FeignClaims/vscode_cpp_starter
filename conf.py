@@ -44,7 +44,7 @@ rst_prolog = '\n'.join(
     list(
         map(
             lambda filename: open(f'_static/{filename}', 'r', encoding="utf8").read(),
-            ['inline_cpp.rst', 'links.rst', 'verification.rst']))) + '\n'
+            ['inline_cpp.rst', 'links.rst']))) + '\n'
 
 language = 'zh_CN'
 
@@ -85,7 +85,13 @@ git_last_updated_timezone = 'Asia/Shanghai'
 html_baseurl = 'https://vscode-cpp-starter.readthedocs.io/'
 sitemap_filename = 'sitemapindex.xml'
 sitemap_url_scheme = '{link}'
-html_extra_path = ['robots.txt']
+html_extra_path = [
+    'robots.txt',
+    '_verification/31d972d70689239e1779c33936e0d894.txt',
+    '_verification/baidu_verify_codeva-aMWOWlH85u.html',
+    '_verification/google13ac7719c05e0aea.html',
+    '_verification/sogousiteverification.txt',
+]
 
 
 def setup(app):
