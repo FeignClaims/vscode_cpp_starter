@@ -48,14 +48,6 @@ html_show_sourcelink = False
 
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
-    'repository_url': 'https://github.com/FeignClaims/vscode_cpp_starter',
-    'path_to_docs': 'docs/',
-    'use_source_button': True,
-    'use_edit_page_button': True,
-    'use_issues_button': True,
-    'show_prev_next': False,
-    'show_nav_level': 0,
-    'show_toc_level': 2,
     "icon_links": [
         {
             "name": "GitHub",
@@ -69,6 +61,15 @@ html_theme_options = {
             "type": "url",
         }
     ],
+    "use_sidenotes": True,
+    'path_to_docs': 'docs/',
+    'repository_url': 'https://github.com/FeignClaims/vscode_cpp_starter',
+    'show_nav_level': 0,
+    'show_prev_next': False,
+    'show_toc_level': 2,
+    'use_edit_page_button': True,
+    'use_issues_button': True,
+    'use_source_button': True,
 }
 html_static_path = ['_static']
 html_favicon = '_static/favicon.png'
