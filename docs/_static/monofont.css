@@ -584,9 +584,14 @@
 
 @import url("//fonts.lpsub.com/css/sarasa-gothic-sc.css");
 
-*,
-*:before,
-*:after {
+code,
+kbd,
+pre,
+samp {
+  font-feature-settings: "calt" 1, "liga" 1, "ss04" 1, "ss06" 1, "ss13" 1;
+}
+
+.sig {
   font-feature-settings: "calt" 1, "liga" 1, "ss04" 1, "ss06" 1, "ss13" 1;
 }
 
