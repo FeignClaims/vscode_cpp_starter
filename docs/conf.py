@@ -79,6 +79,7 @@ html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
 git_last_updated_timezone = 'Asia/Shanghai'
 html_baseurl = 'https://vscode-cpp-starter.readthedocs.io/'
 sitemap_filename = 'sitemapindex.xml'
+sitemap_url_scheme = '{link}'
 html_extra_path = ['robots.txt']
 
 
