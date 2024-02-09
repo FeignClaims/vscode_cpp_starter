@@ -6,7 +6,7 @@
 
 要想进阶, 请参考 :doc:`/appendix/cmake_disclaimer`.
 
-.. code-block:: txt
+.. code-block:: text
 
   根目录
   |
@@ -154,7 +154,7 @@ mine/
 
 需要安装以下软件:
 
-.. code-block:: txt
+.. code-block:: text
 
   conan                 # 包管理工具
   include-what-you-use  # 缩写为 iwyu
