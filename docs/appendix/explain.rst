@@ -16,11 +16,10 @@
   +-- compile_commands.json
   +-- CMakeLists.txt
   +-- cmake/
+  |   +-- AddCode.cmake
   |   +-- CustomizedProjectOptions.cmake
   |   +-- ProjectOptions.cmake
-  |   +-- StructureOnly.cmake
-  |   +-- SymlinkCompileCommands.cmake (已删除, 其功能 PR 已到 project_options 中, 故无需独立添加)
-  +-- mine/
+  |   +-- SymlinkCompileCommands.cmake (已删除, 其功能已 PR 到 project_options 中, 故无需独立添加)
   +-- .vscode/
       +-- tasks.json
       +-- launch.json
@@ -61,7 +60,6 @@ compile_commands.json
 该文件在 CMake 进行配置操作后才生成, 存储源文件的编译信息, clangd 需要这些信息才能更好地解析代码和理清文件间的关系.
 
 - 根目录下的是该文件的快捷方式, 以供 clangd 找到该文件.
-- 为减少初学者负担, 此处编译信息是假定所有源文件最终编译成一个可执行文件, 故编程时 clangd 给出的提示包含整个 ``cpp_starter`` 文件夹中的源代码信息; 实际影响不大.
 - 由于 compile_commands.json 中只是分别存储单个源文件的编译信息, clangd 为了重构能作用于项目, 只能假设是源文件来自同一个项目, 故而重命名功能可能影响看似不相关的源文件. 这主要问题来源于 ``cpp_starter`` 为学习之便管理了大量不相干的项目, 实际项目中一般会使用名字空间来解决名字重复, 影响不大.
 - CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
 
@@ -69,9 +67,11 @@ compile_commands.json
 CMakeLists.txt
 ========================================================================================================================
 
-CMake 的项目配置文件, 这里只用来生成 ``compile_commands.json``.
+CMake 的项目配置文件, 整个项目所有程序都由它管理:
 
-- 为减少初学者负担, 此处 CMake 假定所有源文件最终编译成一个可执行文件, 故编程时 clangd 给出的提示包含整个 ``cpp_starter`` 文件夹中的源代码信息; 实际影响不大.
+- 它加载了 `Github: aminya/project_options`_, 我利用该仓库进行自定义, 使代码有了更多诊断.
+- 它生成 clangd 所需的 ``compile_commands.json``, 从而让 clangd 正常进行代码解析.
+- 它接受 ``add_code(程序名 源文件1 源文件2...)``, 从而添加新的程序.
 - CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
 
 ========================================================================================================================
@@ -80,11 +80,15 @@ cmake/
 
 CMake 的分文件和一些脚本文件, 分文件会在 ``CMakeLists.txt`` 中用 ``include(文件)`` 包含, 相当于 C++ 中的 ``#include``.
 
-考虑到读者的环境和网络条件，与我自用的版本有些差异:
+考虑到读者的环境和网络条件，与我自用的版本有些差异.
 
-- 所使用的开源项目 `Github: aminya/project_options`_ 已预先下载.
-- 代码检查工具、文档生成工具等已禁用; 在 ``mine/`` 文件夹下, 有我使用的版本.
 - CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
+
+------------------------------------------------------------------------------------------------------------------------
+AddCode.cmake
+------------------------------------------------------------------------------------------------------------------------
+
+为新手使用 CMake 进行简单包装, ``add_code(程序名 源文件1 源文件2...)`` 即可添加新的程序.
 
 ------------------------------------------------------------------------------------------------------------------------
 ProjectOptions.cmake
@@ -101,37 +105,7 @@ CustomizedProjectOptions.cmake
 - 禁用代码检查工具、文档生成工具等.
 - 启用更多的编译器诊断选项, 这些选项会被保存到 ``compile_commands.json`` 中, 提供给 clangd 进行解析.
 
-------------------------------------------------------------------------------------------------------------------------
-StructureOnly.cmake
-------------------------------------------------------------------------------------------------------------------------
-
-定义的 CMake 函数, 用于将源文件添加到 CMake 中, 并与 ``project_options`` 等链接, 最终这些信息会保存在 ``compile_commands.json`` 中被 clangd 使用.
-
-.. note::
-
-  这样加入 CMake 中的文件都假定最终编译成一个可执行文件, 故一般不能 **通过 CMake** 编译运行, 只是提供给 clangd 进行解析.
-
-函数如下所示, 其中 ``<xxx>`` 表示必须输入, ``[xxx]`` 表示可选输入.
-
-``structure_only([<DIRECTOIRES> <directory>...])``
-  将文件夹中的文件 (以 h hpp hh c cc cxx cpp 结尾) 加入 CMake 中.
-
-``structure_only_options([<LIBRARIES> <library>...] [<INCLUDES> <include>...])``
-  通用设置, 实际并没有使用.
-
-  - ``LIBRARIES``: structure_only 预链接的库
-  - ``INCLUDES``: structure_only 预包含的头文件文件夹
-
-例如，给出的配置将 ``src`` 和 ``test`` 文件夹下的文件加入 CMake 中:
-
-.. code-block:: cmake
-
-  include(StructureOnly)
-  structure_only(
-    DIRECTORIES
-    src
-    test
-  )
+  - 这些诊断选项参考了 `cppbestpractices: Use the Tools Available - compilers`_ 和 `hacking C++: Diagnostic Basics`_, 但为便于初学者学习, 部分非常严格的诊断未启用.
 
 ------------------------------------------------------------------------------------------------------------------------
 SymlinkCompileCommands.cmake
@@ -139,28 +113,12 @@ SymlinkCompileCommands.cmake
 
 .. note::
 
-  该文件已删除, 其功能 PR 已到 `Github: aminya/project_options`_ 中, 故无需独立添加.
+  该文件已删除, 其功能已 PR 到 `Github: aminya/project_options`_ 中, 故无需独立添加.
 
 在包含 (``include()``) 该文件的 ``CMakeLists.txt`` 文件所在目录下创建 ``compile_commands.json`` 的快捷方式.
 
 - 创建这个快捷方式便于 clangd 找到 ``compile_commands.json``, 兼容源外构建.
 - 仅当 CMake 生成器为 Makefiles 或 Ninja 时有效, 文中配置已默认设置为 Ninja. (用 ``cmake -S <source> -B <build> -G <generator>`` 来指定, ``cmake --help`` 可查看当前环境可用生成器.)
-
-========================================================================================================================
-mine/
-========================================================================================================================
-
-我使用的版本, 请结合 :doc:`/appendix/cmake_disclaimer` 和 `Github: FeignClaims/cmake_starter_template`_ 学习.
-
-需要安装以下软件:
-
-.. code-block:: text
-
-  conan                 # 包管理工具
-  include-what-you-use  # 缩写为 iwyu
-  ccache                # 通过缓存加快编译
-  doxygen               # 文档生成工具
-  cppcheck              # 一个代码检查工具
 
 ========================================================================================================================
 .vscode/
@@ -174,14 +132,8 @@ tasks.json
 
 该文件夹下能使用的任务, 如编译源文件等.
 
-- 其中配置的编译器诊断选项文档见 `Clang 编译器诊断选项列表`_, 这些编译选项在实际运行任务时会使用, 与 ``compile_commands.json`` 无关.
-- 这些诊断选项参考了 `cppbestpractices: Use the Tools Available - compilers`_ 和 `hacking C++: Diagnostic Basics`_.
-- 但为便于初学者学习, 部分非常严格的诊断未启用; 请参照 ``mine/`` 中的内容, 那是我使用的版本.
-
 ------------------------------------------------------------------------------------------------------------------------
 launch.json
 ------------------------------------------------------------------------------------------------------------------------
 
 该文件夹下能使用调试任务, 用于调试.
-
-- 这里预配置的调试任务很多都设置了 ``"preLaunchTask"``, 即在启动调试任务之前, 执行要求的 ``tasks.json`` 任务.
