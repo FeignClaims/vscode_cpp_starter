@@ -37,7 +37,7 @@ rst_prolog = '\n'.join(
     list(
         map(
             lambda filename: open(f'_static/{filename}', 'r', encoding="utf8").read(),
-            ['links.rst']))) + '\n'
+            ['inline_cpp.rst', 'links.rst', 'verification.rst']))) + '\n'
 
 language = 'zh_CN'
 

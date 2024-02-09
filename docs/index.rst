@@ -2,8 +2,9 @@
    :describe: VSCode 配置 C++ 的手把手教程
    :keywords: vscode, windows, macos, llvm, clangd, clang, cmake, lldb
 
+########################################################################################################################
 Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
-==========================================================================================
+########################################################################################################################
 
 .. toctree::
    :maxdepth: 2
@@ -12,8 +13,6 @@ Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
    meet_trouble.rst
    question_and_answer.rst
    how_to_update.rst
-   todo.rst
-   preface.rst
    download_and_install/index.rst
    configure.rst
    verify.rst
