@@ -31,6 +31,7 @@ extensions = [
 intersphinx_mapping = {
     "question_board": ("https://question-board.readthedocs.io/", None),
 }
+intersphinx_disabled_reftypes = ["*"]
 
 togglebutton_hint = ""
 togglebutton_hint_hide = ""
