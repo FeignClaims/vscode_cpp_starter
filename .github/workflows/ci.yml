@@ -12,9 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync to gitee.com
-        uses: wearerequired/git-mirror-action@v1.2.0
+        uses: Wandalen/wretry.action@v1.4.4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         with:
-          source-repo: git@github.com:FeignClaims/vscode_cpp_starter.git
-          destination-repo: git@gitee.com:cpp_tutorial/vscode_cpp_starter.git
+          attempt_limit: 3
+          action: wearerequired/git-mirror-action@v1.2.0
+          with: |
+            source-repo: git@github.com:FeignClaims/vscode_cpp_starter.git
+            destination-repo: git@gitee.com:cpp_tutorial/vscode_cpp_starter.git
