@@ -7,27 +7,8 @@
 .. _`Issue: 关于配置异常无输出`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I5PT6Y
 .. _`Issue: 添加断点无效`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I58LOQ
 
-.. CMake 推荐读物
-.. _`《Modern CMake for C++》`: https://www.packtpub.com/product/modern-cmake-for-c/9781801070058
-.. _`Modern CMake for C++: 代码`: https://github.com/PacktPublishing/Modern-CMake-for-Cpp
-.. _`Modern CMake for C++: ACCU 书评`: https://accu.org/bookreviews/2022/collyer_1988/
-.. _`《Professional CMake》`: https://crascit.com/professional-cmake/
-.. _`Github: aminya/project_options`: https://github.com/aminya/project_options
-.. _`Github: FeignClaims/cmake_starter_template`: https://github.com/FeignClaims/cmake_starter_template
-.. _`Effective CMake - Daniel Pfeife - C++Now 2017`: https://www.youtube.com/watch?v=bsXLMQ6WgIk
-.. _`Using Modern CMake Patterns to Enforce a Good Modular Design - Mathieu Ropert - CppCon 2017`: https://www.youtube.com/watch?v=eC9-iRN2b04
-.. _`Git, CMake, Conan - How to ship and reuse our C++ projects - Mateusz Pusz - CppCon 2018`: https://www.youtube.com/watch?v=S4QSKLXdTtA
-.. _`More Modern CMake - Deniz Bahadir - Meeting C++ 2018`: https://www.youtube.com/watch?v=y7ndUhdQuU8
-.. _`Deep CMake for Library Authors - Craig Scott - CppCon 2019`: https://www.youtube.com/watch?v=m0DwB4OvDXk
-.. _`Oh No! More Modern CMake - Deniz Bahadir - Meeting C++ 2019`: https://www.youtube.com/watch?v=y9kSr5enrSk
-.. _`CMake 2022 C++ Modules and More - Bill Hoffman - CppNow 2022`: https://www.youtube.com/watch?v=hkefPcWySzI
-.. _`import CMake - 2023 State of C++20 modules in CMake - Bill Hoffman - CppNow 2023`: https://www.youtube.com/watch?v=c563KgO-uf4
-.. _`CMake 官方文档`: https://cmake.org/cmake/help/latest/
-.. _`Modern CMake`: https://cliutils.gitlab.io/modern-cmake/
-.. _`More Modern CMake`: https://hsf-training.github.io/hsf-training-cmake-webpage/
-.. _`Effective Modern CMake`: https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1
-.. _`VSCode CMake 拓展用户手册`: https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
-.. _`preferred cmake project structure`: https://stackoverflow.com/questions/33534115/preferred-cmake-project-structure
+.. _`aminya/project_options`: https://github.com/aminya/project_options
+.. _`FeignClaims/cmake_starter_template`: https://github.com/FeignClaims/cmake_starter_template
 
 .. 下载和安装
 .. _`VSCode: 通过官网下载`: https://code.visualstudio.com/
@@ -64,5 +45,6 @@
 .. _`Clang-Tidy 诊断选项列表`: https://clang.llvm.org/extra/clang-tidy/checks/list.html
 .. _`Clang-Tidy 抑制诊断的方法`: https://clang.llvm.org/extra/clang-tidy/index.html#suppressing-undesired-diagnostics
 .. _`vscode-lldb 拓展用户手册`: https://github.com/vadimcn/vscode-lldb/blob/master/MANUAL.md
+.. _`VSCode CMake 拓展用户手册`: https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
 .. _`cppbestpractices: Use the Tools Available - compilers`: https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers
 .. _`hacking C++: Diagnostic Basics`: https://hackingcpp.com/cpp/diagnostics.html

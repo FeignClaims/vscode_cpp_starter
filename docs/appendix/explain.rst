@@ -1,10 +1,10 @@
 ************************************************************************************************************************
-附2.对配置文件的解释
+对配置文件的解释
 ************************************************************************************************************************
 
 摸了, 以下为一些配置文件的说明, 建议从上到下依次阅读.
 
-要想进阶, 请参考 :doc:`/appendix/cmake_disclaimer`.
+要想进阶, 请参考 :doc:`/appendix/learning`.
 
 .. code-block:: text
 
@@ -48,7 +48,7 @@
 
 项目的 .clang-tidy 配置文件中还提供了一个如何强制除宏、模板参数外所有名字都采用 lower_case 形式的示例, 从而说明 .clang-tidy 的一些检查是存在自定义设置的.
 
-有关它所产生的警告的解释, 见于 :doc:`/appendix/about_warnings`.
+有关它所产生的警告的解释, 见于 :doc:`/appendix/about_warnings/main`.
 
 - 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理.
 - 文档见 `Clang-Tidy 诊断选项列表`_ 和 `Clang-Tidy 抑制诊断的方法`_ 等.
@@ -69,7 +69,7 @@ compile_commands.json
 
 - 根目录下的是该文件的快捷方式, 以供 clangd 找到该文件.
 - 由于 compile_commands.json 中只是分别存储单个源文件的编译信息, clangd 为了重构能作用于项目, 只能假设是源文件来自同一个项目, 故而重命名功能可能影响看似不相关的源文件. 这主要问题来源于 ``cpp_starter`` 为学习之便管理了大量不相干的项目, 实际项目中一般会使用名字空间来解决名字重复, 影响不大.
-- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
+- CMake 的学习可参考 :doc:`/appendix/learning`.
 
 ========================================================================================================================
 CMakeLists.txt
@@ -77,10 +77,10 @@ CMakeLists.txt
 
 CMake 的项目配置文件, 整个项目所有程序都由它管理:
 
-- 它加载了 `Github: aminya/project_options`_, 我利用该仓库进行自定义, 使代码有了更多诊断.
+- 它加载了 `aminya/project_options`_, 我利用该仓库进行自定义, 使代码有了更多诊断.
 - 它生成 clangd 所需的 ``compile_commands.json``, 从而让 clangd 正常进行代码解析.
 - 它接受 ``add_code(程序名 源文件1 源文件2...)``, 从而添加新的程序.
-- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
+- CMake 的学习可参考 :doc:`/appendix/learning`.
 
 ========================================================================================================================
 cmake/
@@ -90,7 +90,7 @@ CMake 的分文件和一些脚本文件, 分文件会在 ``CMakeLists.txt`` 中�
 
 考虑到读者的环境和网络条件，与我自用的版本有些差异.
 
-- CMake 的学习可参考 :doc:`/appendix/cmake_disclaimer`.
+- CMake 的学习可参考 :doc:`/appendix/learning`.
 
 ------------------------------------------------------------------------------------------------------------------------
 AddCode.cmake
@@ -102,13 +102,13 @@ AddCode.cmake
 ProjectOptions.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
-提供获取开源项目 `Github: aminya/project_options`_ 的宏.
+提供获取开源项目 `aminya/project_options`_ 的宏.
 
 ------------------------------------------------------------------------------------------------------------------------
 CustomizedProjectOptions.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
-从镜像获取 `Github: aminya/project_options`_ , 并对 ``project_options`` 进行自定义设置.
+从镜像获取 `aminya/project_options`_ , 并对 ``project_options`` 进行自定义设置.
 
 - 禁用代码检查工具、文档生成工具等.
 - 启用更多的编译器诊断选项, 这些选项会被保存到 ``compile_commands.json`` 中, 提供给 clangd 进行解析.
@@ -121,7 +121,7 @@ SymlinkCompileCommands.cmake
 
 .. note::
 
-  该文件已删除, 其功能已 PR 到 `Github: aminya/project_options`_ 中, 故无需独立添加.
+  该文件已删除, 其功能已 PR 到 `aminya/project_options`_ 中, 故无需独立添加.
 
 在包含 (``include()``) 该文件的 ``CMakeLists.txt`` 文件所在目录下创建 ``compile_commands.json`` 的快捷方式.
 
