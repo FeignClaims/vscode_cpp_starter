@@ -96,7 +96,12 @@
 
 .. hint::
 
-  更好的方法是直接下载 VSCode 的 `配置文件`_, 用 Visual Studio 2022 按文件夹或按 CMake 项目打开, **配置结束**.
+  更好的方法是直接下载 VSCode 的 `配置文件`_ 并解压, 然后打开 Visual Studio 2022:
+  
+  - 按文件夹打开最里面的 cpp_starter 文件夹.
+  - 或按 CMake 项目打开 CMakeLists.txt 文件.
+
+  **配置结束**.
 
 重新打开 Visual Studio 2022, 并打开那个空项目, **创建一个 cpp 文件**.
 
