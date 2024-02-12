@@ -64,7 +64,8 @@ html_theme_options = {
         {
             "name": "Gitee",
             "url": "https://gitee.com/cpp_tutorial/vscode_cpp_starter",
-            "icon": "fa-brands fa-git-alt",
+            "icon": "https://simpleicons.org/icons/gitee.svg",
+            "type": "url",
         },
         {
             "name": "部署状态",
