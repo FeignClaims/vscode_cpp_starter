@@ -15,6 +15,7 @@ html_title = f'{project}'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'myst_parser',
     'sphinx.ext.extlinks',
     'sphinx.ext.graphviz',
     'sphinx.ext.intersphinx',
@@ -37,7 +38,7 @@ togglebutton_hint = ""
 togglebutton_hint_hide = ""
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['README.md', 'CONTRIBUTING.md']
 
 rst_prolog = '\n'.join(
     list(
