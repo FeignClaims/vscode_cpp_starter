@@ -62,6 +62,11 @@ html_theme_options = {
             "icon": "fa-brands fa-github",
         },
         {
+            "name": "Gitee",
+            "url": "https://gitee.com/cpp_tutorial/vscode_cpp_starter",
+            "icon": "fa-brands fa-git-alt",
+        },
+        {
             "name": "部署状态",
             "url": "https://readthedocs.org/projects/vscode-cpp-starter/",
             "icon": "https://readthedocs.org/projects/vscode-cpp-starter/badge/?version=latest",
