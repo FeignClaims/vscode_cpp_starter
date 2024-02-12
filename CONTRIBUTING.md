@@ -67,32 +67,7 @@
 
 对于 C++ 代码, 使用 `` :cpp:`代码` ``; 其他代码使用 ` ``代码`` ` 或根据 `_static/inline_cpp.rst` 自行添加语法.
 
-#### 代码块
-
-总是为代码块添加行号:
-
-```rest
-.. code-block:: cpp
-  :linenos:
-
-  /* 具体代码 */
-```
-
-```rest
-.. literalinclude:: 文件的相对路径
-  :language: cpp
-  :linenos:
-```
-
 ### 引用
-
-#### 在线代码
-
-请通过 [Compiler Explorer - 单文件](https://godbolt.org/z/jTY7jbrh4) 或 [Compiler Explorer 多文件](https://godbolt.org/z/38EK7hExj) 创建分享短链, 以 `` :godbolt:`分享码` `` 的形式引用 `https://godbolt.org/z/分享码`.
-
-#### C++ 核心准则
-
-请点击 [C++ 核心准则](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) 内容标题右边的链接符号, 复制对应的跳转链接, 以 `` :coreguidelines:`p3-express-intent` `` 的形式引用 `https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#p3-express-intent`.
 
 #### 外部链接
 

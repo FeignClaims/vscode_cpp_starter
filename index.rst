@@ -12,9 +12,15 @@ Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
 
 .. toctree::
   :maxdepth: 1
-  :caption: 教程内容
+  :caption: 关于文档
 
   meet_trouble.rst
+  CONTRIBUTING.md
+
+.. toctree::
+  :maxdepth: 1
+  :caption: 教程内容
+
   how_to_update.rst
   download_and_install_windows/index.rst
   download_and_install_macos/index.rst

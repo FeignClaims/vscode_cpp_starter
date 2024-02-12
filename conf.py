@@ -38,7 +38,7 @@ togglebutton_hint = ""
 togglebutton_hint_hide = ""
 
 templates_path = ['_templates']
-exclude_patterns = ['README.md', 'CONTRIBUTING.md']
+exclude_patterns = ['README.md']
 
 rst_prolog = '\n'.join(
     list(
