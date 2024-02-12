@@ -74,7 +74,6 @@ html_theme_options = {
         }
     ],
     "use_sidenotes": True,
-    'path_to_docs': 'docs/',
     'repository_url': 'https://github.com/FeignClaims/vscode_cpp_starter',
     'show_nav_level': 0,
     'show_prev_next': False,
