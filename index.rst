@@ -1,11 +1,11 @@
 .. meta::
   :describe: VSCode 配置 C++ 的手把手教程
-  :keywords: vscode, windows, macos, llvm, clangd, clang, cmake, lldb
+  :keywords: vscode, windows, macos, llvm, clangd, clang, cmake, lldb, clang-tidy, clang-format
 
 .. _main:
 
 ########################################################################################################################
-Windows/MacOS 上 VSCode 配置 C++: LLVM (Clang + Clangd + LLDB)
+Windows/MacOS 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake
 ########################################################################################################################
 
 如果有 C++ 相关问题, 可以前往 :ref:`我的 C++ 答疑室 <question_board:main>` 进行提问.
