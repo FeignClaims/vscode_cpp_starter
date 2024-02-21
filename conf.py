@@ -66,12 +66,6 @@ html_theme_options = {
             "name": "Gitee",
             "url": "https://gitee.com/cpp_tutorial/vscode_cpp_starter",
             "icon": "fa-custom fa-gitee",
-        },
-        {
-            "name": "部署状态",
-            "url": "https://readthedocs.org/projects/vscode-cpp-starter/",
-            "icon": "https://readthedocs.org/projects/vscode-cpp-starter/badge/?version=latest",
-            "type": "url",
         }
     ],
     "use_sidenotes": True,
