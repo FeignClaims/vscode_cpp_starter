@@ -38,30 +38,21 @@
 
 .. warning::
 
-  - **一行一行地** 复制 (:KBD:`Control`:KBD:`C`)、粘贴 (:KBD:`窗口内右键` 然后 :menuselection:`Paste` 而非 :KBD:`Control`:KBD:`V`! 如果习惯性按了, 先把出现的字符删除).
+  - **一块一块地** 复制 (:KBD:`Control`:KBD:`C`)、粘贴 (:KBD:`窗口内右键` 然后 :menuselection:`Paste` 而非 :KBD:`Control`:KBD:`V`! 如果习惯性按了, 先把出现的字符删除).
   - **多次** :KBD:`回车`! **多次** :KBD:`回车`! **多次** :KBD:`回车`!
   - 等待执行完毕后继续下一行. (确定执行完毕的方法见上文.)
 
 .. code-block:: bash
 
   export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-
-.. code-block:: bash
-
   export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-
-.. code-block:: bash
-
   export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-
-.. code-block:: bash
-
   export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
 ========================================================================================================================
 安装 Homebrew/Linuxbrew
 ========================================================================================================================
-  
+
 在终端运行以下命令以安装 Homebrew/Linuxbrew.
 
 .. code-block:: bash
@@ -89,13 +80,7 @@
 .. code-block:: bash
 
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
-
-.. code-block:: bash
-
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-
-.. code-block:: bash
-
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
 .. note::
@@ -117,23 +102,8 @@
 .. code-block:: bash
 
   echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.bash_profile
-
-.. code-block:: bash
-
   echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.bash_profile
-
-.. code-block:: bash
-
   echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.profile
-
-.. code-block:: bash
-
   echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.profile
-
-.. code-block:: bash
-
   echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.zprofile
-
-.. code-block:: bash
-
   echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.zprofile

@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Windows/MacOS 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake'
+project = 'Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake'
 copyright = '2024, FeignClaims'
 author = 'FeignClaims'
 html_title = f'{project}'
