@@ -16,10 +16,10 @@
   +-- compile_commands.json
   +-- CMakeLists.txt
   +-- cmake/
-  |   +-- AddCode.cmake
-  |   +-- CustomizedProjectOptions.cmake
-  |   +-- ProjectOptions.cmake
-  |   +-- SymlinkCompileCommands.cmake (已删除, 其功能已 PR 到 project_options 中, 故无需独立添加)
+  |   +-- add_code.cmake
+  |   +-- enable_customized_project_options.cmake
+  |   +-- fetch_project_options.cmake
+  |   +-- symlink_compile_commands.cmake (已删除, 其功能已 PR 到 project_options 中, 故无需独立添加)
   +-- .vscode/
       +-- tasks.json
       +-- launch.json
@@ -96,19 +96,19 @@ CMake 的分文件和一些脚本文件, 分文件会在 ``CMakeLists.txt`` 中�
 - CMake 的学习可参考 :doc:`/appendix/learning`.
 
 ------------------------------------------------------------------------------------------------------------------------
-AddCode.cmake
+add_code.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 为新手使用 CMake 进行简单包装, ``add_code(程序名 源文件1 源文件2...)`` 即可添加新的程序.
 
 ------------------------------------------------------------------------------------------------------------------------
-ProjectOptions.cmake
+fetch_project_options.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 提供获取开源项目 `aminya/project_options`_ 的宏.
 
 ------------------------------------------------------------------------------------------------------------------------
-CustomizedProjectOptions.cmake
+enable_customized_project_options.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 从镜像获取 `aminya/project_options`_ , 并对 ``project_options`` 进行自定义设置.
@@ -119,7 +119,7 @@ CustomizedProjectOptions.cmake
   - 这些诊断选项参考了 `cppbestpractices: Use the Tools Available - compilers`_ 和 `hacking C++: Diagnostic Basics`_, 但为便于初学者学习, 部分非常严格的诊断未启用.
 
 ------------------------------------------------------------------------------------------------------------------------
-SymlinkCompileCommands.cmake
+symlink_compile_commands.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 .. note::
