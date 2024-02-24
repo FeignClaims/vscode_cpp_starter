@@ -49,7 +49,6 @@ Ubuntu/Debian
 
   echo 'romkatv/powerlevel10k kind:fpath' >> ~/.zsh_plugins.txt
 
-  echo 'ohmyzsh/ohmyzsh path:plugins/autojump' >> ~/.zsh_plugins.txt
   echo 'ohmyzsh/ohmyzsh path:plugins/colored-man-pages' >> ~/.zsh_plugins.txt
   echo 'ohmyzsh/ohmyzsh path:plugins/colorize' >> ~/.zsh_plugins.txt
   echo 'ohmyzsh/ohmyzsh path:plugins/history' >> ~/.zsh_plugins.txt
