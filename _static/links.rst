@@ -32,6 +32,9 @@
 .. _`vscode-lldb: Breakpoints are not getting hit`: https://github.com/vadimcn/vscode-lldb/wiki/Breakpoints-are-not-getting-hit
 .. _`旧版教程`: https://blog.csdn.net/tyKuGengty/article/details/120119820
 .. _`cmake-toolchains`: https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html
+.. _`Conan Center`: https://conan.io/center
+.. _`Conan 2.0 Documentation`: https://docs.conan.io/2/
+.. _`Adding Packages to ConanCenter`: https://github.com/conan-io/conan-center-index/blob/master/docs/adding_packages/README.md
 
 .. 参考文献
 .. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
