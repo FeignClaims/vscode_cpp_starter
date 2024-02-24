@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-另.终端美化 (MacOS/Linux)
+另.终端美化
 ************************************************************************************************************************
 
 .. warning::
@@ -14,20 +14,56 @@
 安装前置软件
 ========================================================================================================================
 
+------------------------------------------------------------------------------------------------------------------------
+Windows
+------------------------------------------------------------------------------------------------------------------------
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+配置环境变量
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+打开 :menuselection:`我的电脑` (Win11 似乎改名为 :menuselection:`此电脑`), 在空白处 :KBD:`右键` 选择 :menuselection:`属性`.
+
+在弹出的窗口中点击 :menuselection:`高级系统设置`, 之后选择 :menuselection:`高级 --> 环境变量(N)...`.
+
+在弹出的窗口上方的 :menuselection:`用户变量` 中新建环境变量名为 ``HOME``, 并输入值为 ``%userprofile%``.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+安装软件
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+通过 :menuselection:`开始` 菜单 (一般在左下角, Win11 在中间位置), 或 **MSYS2 安装路径** (默认为 ``C:\\msys64``) 找到 **clang64** 或 **clang64.exe**.
+
+:KBD:`右键` 该文件, 选择 :menuselection:`以管理员身份运行`.
+
+.. code-block:: bash
+
+  pacman -S git zsh
+
+------------------------------------------------------------------------------------------------------------------------
 MacOS
-  .. code-block:: bash
+------------------------------------------------------------------------------------------------------------------------
 
-    brew install git
+.. code-block:: bash
 
+  brew install git
+
+------------------------------------------------------------------------------------------------------------------------
 Fedora
-  .. code-block:: bash
+------------------------------------------------------------------------------------------------------------------------
 
-    sudo dnf install git zsh
+.. code-block:: bash
 
+  sudo dnf install git zsh
+
+
+------------------------------------------------------------------------------------------------------------------------
 Ubuntu/Debian
-  .. code-block:: bash
+------------------------------------------------------------------------------------------------------------------------
 
-    sudo apt install git zsh
+.. code-block:: bash
+
+  sudo apt install git zsh
 
 ========================================================================================================================
 切换默认终端
@@ -49,16 +85,14 @@ Ubuntu/Debian
 
 .. code-block:: bash
 
-  echo 'ohmyzsh/ohmyzsh path:lib' >> ~/.zsh_plugins.txt
-
-  echo 'romkatv/powerlevel10k kind:fpath' >> ~/.zsh_plugins.txt
-
-  echo 'ohmyzsh/ohmyzsh path:plugins/colored-man-pages' >> ~/.zsh_plugins.txt
-  echo 'ohmyzsh/ohmyzsh path:plugins/colorize' >> ~/.zsh_plugins.txt
-  echo 'ohmyzsh/ohmyzsh path:plugins/history' >> ~/.zsh_plugins.txt
-  echo 'ohmyzsh/ohmyzsh path:plugins/magic-enter' >> ~/.zsh_plugins.txt
-  echo 'zdharma-continuum/fast-syntax-highlighting' >> ~/.zsh_plugins.txt
-  echo 'zsh-users/zsh-autosuggestions' >> ~/.zsh_plugins.txt
+  antidote install 'ohmyzsh/ohmyzsh path:lib'
+  antidote install 'romkatv/powerlevel10k kind:fpath'
+  antidote install 'ohmyzsh/ohmyzsh path:plugins/colored-man-pages'
+  antidote install 'ohmyzsh/ohmyzsh path:plugins/colorize'
+  antidote install 'ohmyzsh/ohmyzsh path:plugins/history'
+  antidote install 'ohmyzsh/ohmyzsh path:plugins/magic-enter'
+  antidote install 'zdharma-continuum/fast-syntax-highlighting'
+  antidote install 'zsh-users/zsh-autosuggestions'
 
 .. code-block:: bash
 
@@ -75,3 +109,9 @@ Ubuntu/Debian
 
 - `MesloLGS NF: 通过官网下载`_
 - `MesloLGS NF: 我备份的文件`_ (分别点击进行下载)
+
+========================================================================================================================
+重新打开终端
+========================================================================================================================
+
+重新打开终端, 将会卡住一定时间. 此后即可开始配置终端样式, 请自行阅读显示的选项选择.
