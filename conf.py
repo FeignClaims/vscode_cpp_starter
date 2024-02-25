@@ -86,7 +86,7 @@ html_baseurl = 'https://vscode-cpp-starter.readthedocs.io/'
 sitemap_filename = 'sitemapindex.xml'
 sitemap_url_scheme = '{link}'
 html_extra_path = [
-    'robots.txt',
+    '_static/robots.txt',
     '_verification/31d972d70689239e1779c33936e0d894.txt',
     '_verification/baidu_verify_codeva-aMWOWlH85u.html',
     '_verification/google13ac7719c05e0aea.html',
