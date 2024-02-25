@@ -107,3 +107,21 @@
   echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.profile
   echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"' >> ~/.zprofile
   echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"' >> ~/.zprofile
+
+========================================================================================================================
+设置 Homebrew 自动更新软件
+========================================================================================================================
+
+.. warning::
+
+  此部分在安装时需要确保网络可访问 github, 不行请跳过.
+
+.. code-block:: bash
+
+  brew tap homebrew/autoupdate
+
+安装好后, 使用 ``brew autoupdate --help`` 可查看命令说明, 以下是我使用的:
+
+.. code-block:: bash
+
+  brew autoupdate start --upgrade --greedy --cleanup --sudo
