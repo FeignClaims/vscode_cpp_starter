@@ -72,7 +72,7 @@ Ubuntu/Debian
 在 cpp_starter 中启用 conan
 ========================================================================================================================
 
-在 ``cpp_starter`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_conan2()``.
+在 ``cpp_starter`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_conan()``.
 
 .. code-block:: cmake
   :emphasize-lines: 5
@@ -82,7 +82,7 @@ Ubuntu/Debian
 
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   include(fetch_project_options)
-  run_conan2()
+  run_conan()
 
   project(cpp_starter LANGUAGES CXX)
 
