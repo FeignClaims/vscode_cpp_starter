@@ -35,6 +35,7 @@
 .. _`Conan Center`: https://conan.io/center
 .. _`Conan 2.0 Documentation`: https://docs.conan.io/2/
 .. _`Adding Packages to ConanCenter`: https://github.com/conan-io/conan-center-index/blob/master/docs/adding_packages/README.md
+.. _`Browse public vcpkg packages`: https://vcpkg.io/en/packages
 
 .. 参考文献
 .. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
