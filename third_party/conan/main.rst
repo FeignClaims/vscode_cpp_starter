@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-另.用 conan 安装第三方库
+使用 conan
 ************************************************************************************************************************
 
 .. warning::
@@ -158,14 +158,17 @@ Ubuntu/Debian
 下载并告知 CMake 第三方库的存在
 ------------------------------------------------------------------------------------------------------------------------
 
-在 ``cpp_starter`` 文件夹根目录中找到 ``conanfile.txt``, 在 ``[requires]`` 下方添加一行 ``fmt/10.2.1``:
+以库 ``fmt/10.2.1`` 和 ``range-v3/0.12.0`` 为例.
+
+在 ``cpp_starter`` 文件夹根目录中找到 ``conanfile.txt``, 在 ``[requires]`` 下方添加一行 ``fmt/10.2.1`` 和 ``range-v3/0.12.0``:
 
 .. code-block:: text
-  :emphasize-lines: 2
+  :emphasize-lines: 2-3
   :linenos:
 
   [requires]
   fmt/10.2.1
+  range-v3/0.12.0
 
   [generators]
   CMakeDeps
@@ -186,19 +189,21 @@ Ubuntu/Debian
 
 打开 ``CMakeLists.txt``, 找到 ``add_code_options``:
 
-- 在 ``DEPENDENCIES`` 下方添加包名 ``fmt``.
-- 在 ``LIBRARIES`` 下方添加目标名 ``fmt::fmt``.
+- 在 ``DEPENDENCIES`` 下方添加包名 ``fmt`` 和 ``range-v3``.
+- 在 ``LIBRARIES`` 下方添加目标名 ``fmt::fmt`` 和 ``range-v3::range-v3``.
 
 .. code-block:: cmake
-  :emphasize-lines: 3, 6
+  :emphasize-lines: 3-4, 7-8
   :linenos:
 
   add_code_options(
     DEPENDENCIES
     fmt
+    range-v3
 
     LIBRARIES
     fmt::fmt
+    range-v3::range-v3
 
     INCLUDES
     include
