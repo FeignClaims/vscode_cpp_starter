@@ -30,6 +30,7 @@ jobs:
       - name: Checkout docs
         uses: actions/checkout@v4.1.1
         with:
+          ssh-key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
           ref: docs
           path: docs
 
