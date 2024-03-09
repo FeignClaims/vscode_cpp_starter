@@ -34,6 +34,20 @@ jobs:
           ref: docs
           path: docs
 
+      - name: Replace question-board.readthedocs.io/ to cpp_tutorial.gitee.io/board/
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: "main/conf.py"
+          find: '"https://question-board.readthedocs.io/"'
+          replace: '"https://cpp_tutorial.gitee.io/board/"'
+
+      - name: Show mirror website
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: "main/index.rst"
+          find: "`本网站的国内网址 <https://cpp_tutorial.gitee.io/vscode_cpp_starter/>`_"
+          replace: "`本网站的国外网址 <https://vscode-cpp-starter.readthedocs.io/>`_"
+
       - name: Install sphinx
         shell: bash
         run: |

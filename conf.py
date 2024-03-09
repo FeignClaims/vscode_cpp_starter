@@ -30,7 +30,7 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    "question_board": ("https://question-board.readthedocs.io/", None),
+    "question_board": ("https://question-board.readthedocs.io/", "https://question-board.readthedocs.io/objects.inv"),
 }
 intersphinx_disabled_reftypes = ["*"]
 
