@@ -8,7 +8,7 @@
 Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan
 ########################################################################################################################
 
-`本网站的国内网址 <https://cpp_tutorial.gitee.io/vscode_cpp_starter/>`_
+`本网站的国内网址 (不支持搜索) <https://cpp_tutorial.gitee.io/vscode_cpp_starter/>`_
 
 如果有 C++ 相关问题, 可以前往 :ref:`我的 C++ 答疑室 <question_board:main>` 进行提问.
 
