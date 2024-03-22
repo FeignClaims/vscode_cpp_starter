@@ -143,10 +143,22 @@ symlink_compile_commands.cmake
 tasks.json
 ------------------------------------------------------------------------------------------------------------------------
 
-该文件夹下能使用的任务, 如编译源文件等.
+该文件夹下能使用的任务, 如编译源文件等, 目前配置有:
+
+:menuselection:`Clang-Tidy: fix current file`
+  使用 clang-tidy 修复当前文件.
 
 ------------------------------------------------------------------------------------------------------------------------
 launch.json
 ------------------------------------------------------------------------------------------------------------------------
 
-该文件夹下能使用调试任务, 用于调试.
+该文件夹下能使用调试任务, 用于调试, 目前配置有:
+
+:menuselection:`LLDB: debug the active target`
+  使用 LLDB 软件对 CMake *当前预运行的目标* 进行调试, 在此即对选择的 C++ 程序进行调试.
+
+:menuselection:`CMake: debug configuration`
+  对 CMake 的配置即 ``CMakeLists.txt`` 进行调试.
+
+:menuselection:`CMake: clean and debug configuration`
+  清理之前的 CMake 配置缓存, 并对 CMake 的配置即 ``CMakeLists.txt`` 进行调试.

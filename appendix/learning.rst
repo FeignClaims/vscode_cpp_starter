@@ -4,7 +4,7 @@ C++ 和 CMake 的学习建议
 
 本教程虽然使用 CMake 创建了一个学习用文件夹, 但只是为了提供一个配置好的开发/学习环境, 并不适合复杂的项目.
 
-如果需要配置项目, 请自行学习 CMake (可参考 :ref:`我的学习建议 <question_board:学习大纲_CMake>`), 并修改根目录下的 ``CMakeLists.txt``.
+如果需要配置项目, 请自行学习 CMake (可参考 :ref:`我的学习建议 <question_board:学习大纲_CMake>`) 和了解 VSCode 的 `CMake Tools 插件 <https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md>`_, 并修改根目录下的 ``CMakeLists.txt``.
 
 此外, 建议参考 :doc:`/appendix/bibliography` 给出的文档自行修改配置.
 
