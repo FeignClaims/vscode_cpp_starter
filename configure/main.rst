@@ -73,7 +73,12 @@
 为 CMake 选择编译器
 ========================================================================================================================
 
-重新启动 VSCode, :KBD:`Ctrl`:KBD:`Shift`:KBD:`P` 或 :KBD:`Command`:KBD:`Shift`:KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
+重新启动 VSCode,
+
+:KBD:`Ctrl`:KBD:`Shift`:KBD:`P` 或 :KBD:`Command`:KBD:`Shift`:KBD:`P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 扫描工具包`, :KBD:`回车`.
+
+:KBD:`Ctrl`:KBD:`Shift`:KBD:`P` 或 :KBD:`Command`:KBD:`Shift`:KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
+
 之后会弹出如下图选项:
 
 .. figure:: MacOS_选择编译器.png
