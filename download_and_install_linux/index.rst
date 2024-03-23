@@ -10,7 +10,7 @@
 
 .. warning::
 
-  **一块一块地** 复制 (:KBD:`Control`:KBD:`C`)、粘贴 (:KBD:`窗口内右键` 然后 :menuselection:`Paste` 而非 :KBD:`Control`:KBD:`V`! 如果习惯性按了, 先把出现的字符删除).
+  **一块一块地** 复制 (点击代码右上角按钮)、粘贴 (:KBD:`窗口内右键` 然后 :menuselection:`Paste` 而非 :KBD:`Control`:KBD:`V`! 如果习惯性按了, 先把出现的字符删除).
 
 .. code-block:: bash
   :caption: 查看操作系统
