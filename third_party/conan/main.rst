@@ -163,8 +163,11 @@ Ubuntu/Debian
 在 ``cpp_starter`` 文件夹根目录中找到 ``conanfile.txt``, 在 ``[requires]`` 下方添加一行 ``fmt/10.2.1`` 和 ``range-v3/0.12.0``:
 
 .. code-block:: text
-  :emphasize-lines: 2-3
+  :emphasize-lines: 5-6
   :linenos:
+
+  [layout]
+  cmake_layout
 
   [requires]
   fmt/10.2.1
