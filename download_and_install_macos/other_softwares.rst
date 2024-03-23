@@ -8,15 +8,11 @@
 
 .. code-block:: bash
 
-  brew install llvm ninja git
+  brew install llvm ninja git cmake dotnet
 
 .. code-block:: bash
 
-  brew install --cask visual-studio-code cmake
-
-.. code-block:: bash
-
-  pip3 install cmakelang
+  brew install --cask visual-studio-code
 
 配置 LLVM 的环境变量 (重开 :menuselection:`终端` 生效):
 
