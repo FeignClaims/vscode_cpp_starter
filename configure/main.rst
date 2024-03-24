@@ -49,7 +49,7 @@
 
 .. note::
 
-  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
+  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
 
 ========================================================================================================================
 切换至配置文件
@@ -89,9 +89,9 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
 重新启动 VSCode,
 
-:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 扫描工具包`, :KBD:`回车`.
+:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 扫描工具包`, :KBD:`回车`.
 
-:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
+:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
 
 之后会弹出如下图选项:
 
@@ -117,7 +117,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 配置完成
 ========================================================================================================================
 
-打开一个源文件或头文件, 通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
+打开一个源文件或头文件, 通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
 
 .. note::
 

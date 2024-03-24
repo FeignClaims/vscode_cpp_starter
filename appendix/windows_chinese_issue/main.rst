@@ -39,7 +39,7 @@ Windows 终端输出中文乱码问题
 
 .. note::
 
-  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看: 切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
+  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看: 切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
 
 .. figure:: VSCode_打开设置.gif
 
