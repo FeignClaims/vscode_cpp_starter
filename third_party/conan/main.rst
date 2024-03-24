@@ -176,7 +176,7 @@ Ubuntu/Debian
   [generators]
   CMakeDeps
 
-添加后, 重新配置 CMake, 此时 CMake 将会调用 conan 下载第三方库 (:KBD:`Ctrl`+:KBD:`Shift`+:KBD:`P` 或 :KBD:`Command ⌘`+:KBD:`Shift`+:KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`).
+添加后, 重新配置 CMake, 此时 CMake 将会调用 conan 下载第三方库 (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`).
 
 配置完成后, conan 将会提示我们如何在 CMake 中使用第三方库:
 

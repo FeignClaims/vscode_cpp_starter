@@ -49,7 +49,7 @@ clang-tidy 产生的警告
 
 在代码或错误信息中选择它, 将会弹出 **蓝色** 小灯泡样式 (黄色小灯泡为 clangd 提供的代码重构功能), 点击它即可进行修复.
 
-你也可以选中后按快捷键 :KBD:`Ctrl`+:KBD:`句号` 或 :KBD:`Command ⌘`+:KBD:`句号` 进行, 需要按 :KBD:`两次`.
+你也可以选中后按快捷键 :KBD:`Ctrl` + :KBD:`句号` 或 :KBD:`Command ⌘` + :KBD:`句号` 进行, 需要按 :KBD:`两次`.
 
 .. figure:: 可修复的变量未初始化警告.png
 
@@ -59,7 +59,7 @@ clang-tidy 产生的警告
 一键修复整个源文件中的警告
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-打开要修复的源文件, :KBD:`Ctrl`+:KBD:`Shift`+:KBD:`P` 或 :KBD:`Command ⌘`+:KBD:`Shift`+:KBD:`P` 打开命令菜单, 输入 ``task`` 找到 :menuselection:`任务: 运行任务(Tasks: Run Task)`, :KBD:`回车`, 在出现的界面中选择我配置的 :menuselection:`Clang-Tidy: fix current file`, :KBD:`回车`.
+打开要修复的源文件, :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command ⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``task`` 找到 :menuselection:`任务: 运行任务(Tasks: Run Task)`, :KBD:`回车`, 在出现的界面中选择我配置的 :menuselection:`Clang-Tidy: fix current file`, :KBD:`回车`.
 
 这么做运行时间可能比较长, 但相比于按键修复, **它甚至能自动添加头文件包含保护**.
 
