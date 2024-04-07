@@ -43,7 +43,7 @@
 
 点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> 导入配置文件...(Import Profile...)`.
 
-在弹出的窗口中, 选择你解压的 ``cpp_starter`` 目录下的 ``cpp_starter.code-profile``.
+在弹出的窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_starter`` 目录下的 ``cpp_starter.code-profile``.
 
 然后在左方选择 :menuselection:`导入配置文件(Import Profile)`.
 
