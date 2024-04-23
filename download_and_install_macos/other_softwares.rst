@@ -8,7 +8,7 @@
 
 .. code-block:: bash
 
-  brew install llvm ninja git cmake dotnet
+  brew install llvm ninja git cmake dotnet@6
 
 .. code-block:: bash
 

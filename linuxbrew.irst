@@ -60,4 +60,4 @@
 
 .. code-block:: bash
 
-  brew install llvm cmake ninja git
+  brew install llvm cmake ninja git dotnet@6
