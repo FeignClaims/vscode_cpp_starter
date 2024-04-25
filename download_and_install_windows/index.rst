@@ -20,5 +20,5 @@
   :maxdepth: 1
   :caption: 安装所需其他软件的两种方案
 
-  wsl/index.rst
   msys2/index.rst
+  wsl/index.rst
