@@ -6,7 +6,7 @@
 打开终端
 ========================================================================================================================
 
-通过 :menuselection:`开始` 菜单 (一般在左下角, Win11 在中间位置), 或 **MSYS2 安装路径** (默认为 ``C:\\msys64``) 找到 **clang64** 或 **clang64.exe**.
+通过 :menuselection:`开始` 菜单 (一般在左下角, Win11 在中间位置), 或 **MSYS2 安装路径** (默认为 ``C:\msys64``) 找到 **clang64** 或 **clang64.exe**.
 
 .. warning::
 
@@ -33,10 +33,6 @@
 .. code-block:: bash
 
   pacman -S mingw-w64-clang-x86_64-toolchain mingw-w64-clang-x86_64-cninja mingw-w64-clang-x86_64-python-six mingw-w64-clang-x86_64-python-pip
-
-.. code-block:: bash
-
-  pip install cmakelang
 
 .. code-block:: bash
 

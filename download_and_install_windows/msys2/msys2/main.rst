@@ -43,14 +43,14 @@
 此后, 根据 Windows 版本不同, 可能出现两种样式的界面:
 
 样式一
-  在原 **变量值** 尾部加入英语输入法下的分号 ``;`` 后，加入 ``C:\\msys64\\clang64\\bin`` (或 ``你在安装时自定义的 MSYS2 路径\\clang64\\bin``).
+  在原 **变量值** 尾部加入英语输入法下的分号 ``;`` 后，加入 ``C:\msys64\clang64\bin`` (或 ``你在安装时自定义的 MSYS2 路径\clang64\bin``).
 
   .. figure:: 环境变量样式一.png
 
     环境变量样式一
 
 样式二
-  点击 :menuselection:`新建(N)`, 再输入 ``C:\\msys64\\clang64\\bin`` (或 ``你在安装时自定义的 MSYS2 路径\\clang64\\bin``).
+  点击 :menuselection:`新建(N)`, 再输入 ``C:\msys64\clang64\bin`` (或 ``你在安装时自定义的 MSYS2 路径\clang64\bin``).
 
   .. figure:: 环境变量样式二.png
 

@@ -96,7 +96,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 之后会弹出如下图选项:
 
 - Windows WSL: 选择 Clang 即可, 请注意选择 **/home/linuxbrew** 下的版本.
-- Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\\msys64``) 下的版本.
+- Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\msys64``) 下的版本.
 - MacOS: 系统自带有 Clang 编译器, 请注意选择 **homebrew** 路径下的版本.
 
 .. tabs::
