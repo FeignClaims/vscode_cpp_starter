@@ -138,4 +138,5 @@
 .. code-block:: bash
 
   brew install pinentry-mac
+  mkdir -p /Users/feignclaims/Library/LaunchAgents
   brew autoupdate start --upgrade --greedy --cleanup --sudo
