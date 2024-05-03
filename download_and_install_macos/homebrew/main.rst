@@ -137,4 +137,5 @@
 
 .. code-block:: bash
 
+  brew install pinentry-mac
   brew autoupdate start --upgrade --greedy --cleanup --sudo
