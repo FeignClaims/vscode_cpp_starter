@@ -1,0 +1,22 @@
+html[data-theme="light"] {
+  --custom-color-seealso: #e6daf4;
+  --custom-color-seealso-text: #222832;
+  --custom-color-seealso-highlight: #4c2e70;
+}
+html[data-theme="dark"] {
+  --custom-color-seealso: #4c2e70;
+  --custom-color-seealso-text: #ced6dd;
+  --custom-color-seealso-highlight: #e6daf4;
+}
+
+div.admonition.seealso {
+  border-color: var(--custom-color-seealso-highlight);
+}
+div.admonition.seealso > .admonition-title {
+  background-color: var(--custom-color-seealso);
+  color: var(--custom-color-seealso-text);
+}
+div.admonition.seealso > .admonition-title:after {
+  color: var(--custom-color-seealso-highlight);
+  content: "\f02d";
+}
