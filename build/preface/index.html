@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="0.使用本教程能得到的功能" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="preface/" />
+<meta property="og:site_name" content="Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan" />
+<meta property="og:description" content="以下是对本教程所配置的 VSCode 额外拥有的功能的统计, 按照需要的 C++ 理解程度从上到下排序 ( 非常不完全, 仅列出对初学者帮助较大的功能中的少部分). 其他如 VSCode 的时间线等等本身就有的功能, 请自行探索、查询文档或网上教程. 代码拥有更丰富的字体和颜色: clangd 计算了各种语义符号, 允许用户在 VSCode 设置中用 editor.semanticToken..." />
+<meta name="description" content="以下是对本教程所配置的 VSCode 额外拥有的功能的统计, 按照需要的 C++ 理解程度从上到下排序 ( 非常不完全, 仅列出对初学者帮助较大的功能中的少部分). 其他如 VSCode 的时间线等等本身就有的功能, 请自行探索、查询文档或网上教程. 代码拥有更丰富的字体和颜色: clangd 计算了各种语义符号, 允许用户在 VSCode 设置中用 editor.semanticToken..." />
+
+    <title>0.使用本教程能得到的功能 &#8212; Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ae8a9af6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=cd85ae70"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/jquery.min.js?v=94f7166b"></script>
+    <script src="../_static/zoom-image.js?v=56ef8405"></script>
+    <script>let toggleHintShow = '';</script>
+    <script>let toggleHintHide = '';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'preface/index';</script>
+    <link rel="canonical" href="https://vscode-cpp-starter.readthedocs.io/preface/" />
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="1.下载和安装 (Windows)" href="../download_and_install_windows/" />
+    <link rel="prev" title="更新日志" href="../changelog/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="2025-08-10 14:01:09"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/FeignClaims/vscode_cpp_starter" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">关于文档</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../meet_trouble/">遇到问题?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING/">参与贡献</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">教程内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how_to_update/">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">更新日志</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">0.使用本教程能得到的功能</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_windows/">1.下载和安装 (Windows)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/msys2/">方案1.使用 MSYS2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/msys2/">安装 MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/llvm/">利用 MSYS2 安装 LLVM 等软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/environment/">配置 MSYS2 环境变量</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/wsl/">方案2.使用 WSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/wsl/">安装 WSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/linuxbrew/">安装 Linuxbrew 和其他软件</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_macos/">1.下载和安装 (MacOS)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/homebrew/">安装 Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/other_softwares/">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/font/">字体</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_linux/">1.下载和安装 (Linux)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/fedora/">操作系统: Fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/ubuntu_debian/">操作系统: Ubuntu/Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/x86_64/">架构: x86_64</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../configure/">2.配置</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../verify/">3.检验配置结果和实际使用</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../verify/format/">格式化代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/diagnostics/">观察诊断信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/run/">运行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/debug/">调试程序</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../add_your_program/">4.添加你自己的程序</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ai/">AI 辅助</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cursor/">Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cline/">Cline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/augment/">Augment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../third_party/">另.安装第三方库</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/vcpkg/">使用 vcpkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/conan/">使用 conan</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ohmyzsh/">另.终端美化</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../visual_studio/">另.Visual Studio 配置教程</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/preface/">使用本教程能得到的功能</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_template/">方案1.使用学习模板简单配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_template/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_manual/">方案2.手动配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_manual/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/appendix/">附录</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/learning/">C++ 和 CMake 的学习建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_warnings/">关于黄色警告和删除线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_inlay_hints/">关于代码中显示的额外信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/explain/">对学习模板的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/windows_chinese_issue/">Windows 终端输出中文乱码问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/choose_compiler/">更改所用的编译器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/my_font/">我个人的字体设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/bibliography/">参考文献及拓展阅读</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/blob/main/preface/index.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/edit/main/preface/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/issues/new?title=Issue%20on%20page%20%2Fpreface/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="创建议题"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="亮色"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="暗色"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>0.使用本教程能得到的功能</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">代码拥有更丰富的字体和颜色</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">代码行内显示警告和错误</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">自动添加头文件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">自动格式化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inlay-hints">代码中显示额外信息 (inlay hints)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">鼠标悬停显示代码信息</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">一键重命名标识符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">同时管理多个程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sanitizer">Sanitizer 检查下标越界等运行时错误</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">更多的静态检查和自动修复</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">显示可供调用的函数签名</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">代码结构导航</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">交叉引用</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">一键第三方库安装</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id9">
+<h1>0.使用本教程能得到的功能<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
+<p>以下是对本教程所配置的 VSCode 额外拥有的功能的统计, 按照需要的 C++ 理解程度从上到下排序 (<strong>非常不完全</strong>, 仅列出对初学者帮助较大的功能中的少部分). 其他如 VSCode 的时间线等等本身就有的功能, 请自行探索、查询文档或网上教程.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>附录中有解释这些内容具体是如何配置的, 又该如何更可控地使用. <strong>请在配置完成、有一定 C++ 基础后尝试阅读.</strong></p>
+</div>
+<section id="id10">
+<h2>代码拥有更丰富的字体和颜色<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>clangd 计算了各种语义符号, 允许用户在 VSCode 设置中用 <code class="docutils literal notranslate"><span class="pre">editor.semanticTokenColorCustomizations</span></code> 对各种语义的字体、颜色进行自定义.</p>
+<p>我于是利用 VSCode 默认的 Dark 和 Light 主题的互补色、相近色, 对变量、const 变量、成员变量、函数参数等各种内容进行了区分.</p>
+<figure class="align-default">
+<img alt="../_images/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E5%AD%97%E4%BD%93%E5%92%8C%E9%A2%9C%E8%89%B2.png" src="../_images/%E6%9B%B4%E4%B8%B0%E5%AF%8C%E7%9A%84%E5%AD%97%E4%BD%93%E5%92%8C%E9%A2%9C%E8%89%B2.png" />
+</figure>
+</section>
+<section id="id11">
+<h2>代码行内显示警告和错误<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>利用 Error Lens 插件, VSCode 将能在代码行内显示警告和错误, 这能大幅改善代码编写体验.</p>
+<figure class="align-default">
+<img alt="../_images/%E4%BB%A3%E7%A0%81%E8%A1%8C%E5%86%85%E6%98%BE%E7%A4%BA%E8%AD%A6%E5%91%8A%E5%92%8C%E9%94%99%E8%AF%AF.png" src="../_images/%E4%BB%A3%E7%A0%81%E8%A1%8C%E5%86%85%E6%98%BE%E7%A4%BA%E8%AD%A6%E5%91%8A%E5%92%8C%E9%94%99%E8%AF%AF.png" />
+</figure>
+</section>
+<section id="id12">
+<h2>自动添加头文件<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>clangd 提供了自动添加头文件功能: clangd 常常在我们编写代码时提供建议列表, 当我们通过 <kbd class="kbd docutils literal notranslate">回车</kbd> 选择建议列表中的项后, 它将自动添加对应的头文件.</p>
+<figure class="align-default">
+<img alt="../_images/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%A4%B4%E6%96%87%E4%BB%B6.gif" src="../_images/%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%A4%B4%E6%96%87%E4%BB%B6.gif" />
+</figure>
+</section>
+<section id="id13">
+<h2>自动格式化<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>clangd 为 VSCode 提供了 clang-format 支持, 因而在通过 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Command⌘</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> 或工具栏手动保存代码时, 代码将会被格式化.</p>
+<figure class="align-default">
+<img alt="../_images/%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96.gif" src="../_images/%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96.gif" />
+</figure>
+</section>
+<section id="inlay-hints">
+<h2>代码中显示额外信息 (inlay hints)<a class="headerlink" href="#inlay-hints" title="Link to this heading">#</a></h2>
+<p>clangd 会在代码间显示额外信息, 如 <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">if</span></code> 语句在哪结束、函数在哪结束、下标序号、类型推导结果等.</p>
+<figure class="align-default">
+<img alt="../_images/%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%98%BE%E7%A4%BA%E9%A2%9D%E5%A4%96%E4%BF%A1%E6%81%AF.png" src="../_images/%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%98%BE%E7%A4%BA%E9%A2%9D%E5%A4%96%E4%BF%A1%E6%81%AF.png" />
+</figure>
+</section>
+<section id="id14">
+<h2>鼠标悬停显示代码信息<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>clangd 提供了鼠标悬停显示代码信息功能: 当我们将鼠标放置在代码上时, 将会显示对应的信息.</p>
+<figure class="align-default">
+<img alt="../_images/%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%98%BE%E7%A4%BA%E4%BB%A3%E7%A0%81%E4%BF%A1%E6%81%AF.png" src="../_images/%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%98%BE%E7%A4%BA%E4%BB%A3%E7%A0%81%E4%BF%A1%E6%81%AF.png" />
+</figure>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>你也可以自定义快捷键在光标所在处显示代码信息.</p>
+</div>
+</section>
+<section id="id15">
+<h2>一键重命名标识符<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>clangd 提供了一键重命名标识符功能: 我们可以按 <kbd class="kbd docutils literal notranslate">F2</kbd> 对当前光标所在的标识符进行重命名, 这样代码中所有对它的使用都将被重命名.</p>
+<figure class="align-default">
+<img alt="../_images/%E4%B8%80%E9%94%AE%E9%87%8D%E5%91%BD%E5%90%8D%E6%A0%87%E8%AF%86%E7%AC%A6.gif" src="../_images/%E4%B8%80%E9%94%AE%E9%87%8D%E5%91%BD%E5%90%8D%E6%A0%87%E8%AF%86%E7%AC%A6.gif" />
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>该重命名功能在有些时候不能进行, 且不允许标识符被重命名为与 <em>当前位置可见的其他标识符</em> 相同的名字.</p>
+</div>
+</section>
+<section id="id16">
+<h2>同时管理多个程序<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<p>本配置采用 CMake 进行项目管理, 因此可以在一个项目中管理多个程序: 一个程序由一个包含 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">main</span><span class="p">()</span></code> 函数的主源文件和零或多个其他源文件构成. 这样一来, 我们不必新建一整个项目来进行下一个练习——我们只需要在本项目中再添加一个程序.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>请在完成配置后, 阅读 <a class="reference internal" href="../add_your_program/"><span class="doc">4.添加你自己的程序</span></a> 以了解如何添加新的程序.</p>
+</div>
+</section>
+<section id="sanitizer">
+<h2>Sanitizer 检查下标越界等运行时错误<a class="headerlink" href="#sanitizer" title="Link to this heading">#</a></h2>
+<p>本配置用 <a class="reference external" href="https://github.com/aminya/project_options">aminya/project_options</a> 为 CMake 完成项目配置, 并利用它默认启用了 address sanitizer 和 undefined behaviour sanitizer. 这意味着, 如果我们 <strong>实际运行程序</strong> 时遇到了下标越界、整型溢出等未定义行为, 程序将会报错并为我们提供相关信息.</p>
+<figure class="align-default">
+<img alt="../_images/sanitizer.png" src="../_images/sanitizer.png" />
+</figure>
+</section>
+<section id="id17">
+<h2>更多的静态检查和自动修复<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>clangd 为 VSCode 提供了 clang-tidy 支持, 将会在编写代码时实时调用 clang-tidy 进行静态检查. 它会对变量未初始化, <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">if</span></code> 中的 <code class="code highlight cpp docutils literal highlight-cpp"><span class="o">==</span></code> 写成了 <code class="code highlight cpp docutils literal highlight-cpp"><span class="o">=</span></code> 等上百种问题进行检查, 并为一些常见的问题提供了自动修复方法. 具体请在配置完成后参考 <a class="reference internal" href="../appendix/about_warnings/"><span class="doc">关于黄色警告和删除线</span></a>.</p>
+<p>此外, 我还相比于默认配置, 为编译器启动了更多的警告诊断.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>为了初学者不过于受影响, 我关闭了很多严格的警告. 如果想要开发一个成熟的项目而启用更多警告, 请在配置完成后参考 <a class="reference internal" href="../appendix/learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a> 和 <a class="reference internal" href="../appendix/bibliography/"><span class="doc">参考文献及拓展阅读</span></a>.</p>
+</div>
+</section>
+<section id="id18">
+<h2>显示可供调用的函数签名<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<p>在调用函数时, clangd 将会展示出目前可供调用的函数.</p>
+<figure class="align-default">
+<img alt="../_images/%E6%98%BE%E7%A4%BA%E5%8F%AF%E4%BE%9B%E8%B0%83%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D.gif" src="../_images/%E6%98%BE%E7%A4%BA%E5%8F%AF%E4%BE%9B%E8%B0%83%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D.gif" />
+</figure>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>你可以自定义快捷键来切换显示的函数签名, 就像动图里那样.</p>
+</div>
+</section>
+<section id="id19">
+<h2>代码结构导航<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<p>clangd 允许 VSCode 的大纲获知当前源文件的代码结构, 此外还提供了各种在代码结构中跳转的方法.</p>
+<figure class="align-default">
+<img alt="../_images/%E5%A4%A7%E7%BA%B2.png" src="../_images/%E5%A4%A7%E7%BA%B2.png" />
+</figure>
+</section>
+<section id="id20">
+<h2>交叉引用<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<p>变量会被声明和使用, 函数会被声明和调用…… clangd 支持在文件间或文件内查找符号被用在了其他哪些地方:</p>
+<ul class="simple">
+<li><p>通过 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左击</kbd></kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Command⌘</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左击</kbd></kbd>, 我们将能在鼠标点击的符号和它的定义之间跳转.</p></li>
+<li><p>通过 <kbd class="kbd docutils literal notranslate">F12</kbd>, 我们将能在光标所在的符号和它的定义之间跳转.</p></li>
+<li><p>通过 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">F12</kbd></kbd>, 我们将能在代码区域中打开一个小窗口, 临时地查看光标所在的符号的所有被使用地点.</p></li>
+<li><p>……</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>更多功能可通过在代码区域右键了解到.</p>
+</div>
+</section>
+<section id="id21">
+<h2>一键第三方库安装<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p>本配置用 <a class="reference external" href="https://github.com/aminya/project_options">aminya/project_options</a> 为 CMake 完成项目配置, 它支持几乎一键完成第三方库的安装和使用. 具体请在配置完成后参考 <a class="reference internal" href="../third_party/"><span class="doc">另.安装第三方库</span></a> 和配置好的文件夹中的 <code class="docutils literal notranslate"><span class="pre">请读我</span></code> 文件.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../changelog/"
+       title="上一页">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">更新日志</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../download_and_install_windows/"
+       title="下一页">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">1.下载和安装 (Windows)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">代码拥有更丰富的字体和颜色</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">代码行内显示警告和错误</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">自动添加头文件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">自动格式化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inlay-hints">代码中显示额外信息 (inlay hints)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">鼠标悬停显示代码信息</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">一键重命名标识符</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">同时管理多个程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sanitizer">Sanitizer 检查下标越界等运行时错误</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">更多的静态检查和自动修复</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">显示可供调用的函数签名</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">代码结构导航</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">交叉引用</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">一键第三方库安装</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： FeignClaims
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, FeignClaims.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  最后更新于 2025-08-10 14:01:09.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

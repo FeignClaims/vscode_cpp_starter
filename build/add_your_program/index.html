@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="4.添加你自己的程序" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="add_your_program/" />
+<meta property="og:site_name" content="Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan" />
+<meta property="og:description" content="程序: 所谓程序, 就是我们通过编写代码最终生成的, 可供设备运行的东西. 你所打开的 QQ、微信等都是一个独立的程序. 此处说 &quot;添加你自己的程序&quot;, 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 CMakeLists.txt 末尾加上一句 add_program(program_name source_file1 source_file2...), 就能添加一个..." />
+<meta name="description" content="程序: 所谓程序, 就是我们通过编写代码最终生成的, 可供设备运行的东西. 你所打开的 QQ、微信等都是一个独立的程序. 此处说 &quot;添加你自己的程序&quot;, 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 CMakeLists.txt 末尾加上一句 add_program(program_name source_file1 source_file2...), 就能添加一个..." />
+
+    <title>4.添加你自己的程序 &#8212; Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ae8a9af6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=cd85ae70"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/jquery.min.js?v=94f7166b"></script>
+    <script src="../_static/zoom-image.js?v=56ef8405"></script>
+    <script>let toggleHintShow = '';</script>
+    <script>let toggleHintHide = '';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'add_your_program/index';</script>
+    <link rel="canonical" href="https://vscode-cpp-starter.readthedocs.io/add_your_program/" />
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="AI 辅助" href="../ai/" />
+    <link rel="prev" title="调试程序" href="../verify/debug/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="2025-08-10 14:01:09"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/FeignClaims/vscode_cpp_starter" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">关于文档</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../meet_trouble/">遇到问题?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING/">参与贡献</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">教程内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how_to_update/">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface/">0.使用本教程能得到的功能</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_windows/">1.下载和安装 (Windows)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/msys2/">方案1.使用 MSYS2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/msys2/">安装 MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/llvm/">利用 MSYS2 安装 LLVM 等软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/environment/">配置 MSYS2 环境变量</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/wsl/">方案2.使用 WSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/wsl/">安装 WSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/linuxbrew/">安装 Linuxbrew 和其他软件</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_macos/">1.下载和安装 (MacOS)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/homebrew/">安装 Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/other_softwares/">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/font/">字体</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_linux/">1.下载和安装 (Linux)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/fedora/">操作系统: Fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/ubuntu_debian/">操作系统: Ubuntu/Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/x86_64/">架构: x86_64</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../configure/">2.配置</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../verify/">3.检验配置结果和实际使用</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../verify/format/">格式化代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/diagnostics/">观察诊断信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/run/">运行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/debug/">调试程序</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.添加你自己的程序</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ai/">AI 辅助</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cursor/">Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cline/">Cline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/augment/">Augment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../third_party/">另.安装第三方库</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/vcpkg/">使用 vcpkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/conan/">使用 conan</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ohmyzsh/">另.终端美化</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../visual_studio/">另.Visual Studio 配置教程</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/preface/">使用本教程能得到的功能</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_template/">方案1.使用学习模板简单配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_template/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_manual/">方案2.手动配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_manual/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/appendix/">附录</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/learning/">C++ 和 CMake 的学习建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_warnings/">关于黄色警告和删除线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_inlay_hints/">关于代码中显示的额外信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/explain/">对学习模板的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/windows_chinese_issue/">Windows 终端输出中文乱码问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/choose_compiler/">更改所用的编译器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/my_font/">我个人的字体设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/bibliography/">参考文献及拓展阅读</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/blob/main/add_your_program/index.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/edit/main/add_your_program/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/issues/new?title=Issue%20on%20page%20%2Fadd_your_program/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="创建议题"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="亮色"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="暗色"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4.添加你自己的程序</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">示例: 单个源文件组成的程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">示例: 多个源文件组成的程序</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id9">
+<h1>4.添加你自己的程序<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>本节仅对学习模板的使用进行简单解释. 与学习模板相关的更多内容请参考请参考 <a class="reference internal" href="../appendix/explain/"><span class="doc">对学习模板的解释</span></a> 和学习模板内的 <code class="docutils literal notranslate"><span class="pre">请读我</span></code> 文件.</p>
+</div>
+<section id="id10">
+<h2>程序<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>所谓程序, 就是我们通过编写代码最终生成的, 可供设备运行的东西. 你所打开的 QQ、微信等都是一个独立的程序.</p>
+<p>此处说 &quot;添加你自己的程序&quot;, 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 CMakeLists.txt 末尾加上一句 <code class="docutils literal notranslate"><span class="pre">add_program(program_name</span> <span class="pre">source_file1</span> <span class="pre">source_file2...)</span></code>, 就能添加一个名为 <code class="docutils literal notranslate"><span class="pre">program_name</span></code> 的程序, 它由 <code class="docutils literal notranslate"><span class="pre">source_file1</span></code>、 <code class="docutils literal notranslate"><span class="pre">source_file2</span></code> <strong>等</strong> (所以有个省略号! 不是说你也要输入这个省略号!) 源文件组成. 这些源代码文件内必须有且仅有一个 <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">main()</span></code> 函数, 它将作为程序执行的入口.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ul class="simple">
+<li><p>program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格!</p></li>
+<li><p>program_name 是唯一的, 多个 <code class="docutils literal notranslate"><span class="pre">add_program</span></code> 不要重复用同一个 program_name. 最好连 Test、test 这样只是大小写不同的情况都别出现.</p></li>
+<li><p>source_file1、source_file2 等源文件必须实际存在于你的电脑上!</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>负责管理项目结构的 CMake 会在 CMakeLists.txt 保存时自动重新配置, 而我设置了 VSCode 定时自动保存文件, 所以你在修改 CMakeLists.txt 时可能发现配置失败或右下角弹窗报错. <strong>不要紧张!</strong> 等整个 <code class="docutils literal notranslate"><span class="pre">add_program</span></code> 都写好再确定配置是否成功.</p>
+<p>当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败并报错.</p>
+</div>
+<p>这样添加之后, 你就可以像之前 <a class="reference internal" href="../verify/run/"><span class="doc">运行程序</span></a> 和 <a class="reference internal" href="../verify/debug/"><span class="doc">调试程序</span></a> 那样, 选择它、编译生成它、运行它、调试它.</p>
+<p>在 CMakeLists.txt 我添加了以下两个示例:</p>
+</section>
+<section id="id11">
+<h2>示例: 单个源文件组成的程序<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">add_program</span><span class="p">(</span><span class="s">example_single</span>
+<span class="linenos">2</span><span class="w">  </span><span class="s">src/example_single/main.cpp</span>
+<span class="linenos">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这段代码添加了一个名为 <code class="docutils literal notranslate"><span class="pre">example_single</span></code> 的程序, 它由 src/example_single/main.cpp 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.</p>
+<p>src/example_single/main.cpp 中有一个 <code class="code highlight cpp docutils literal highlight-cpp"><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span></code> 函数, 它就是该程序执行的入口:</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">src/example_single/main.cpp</span><a class="headerlink" href="#id13" title="Link to this code">#</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;add.hpp&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="linenos">7</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>由源代码可知, 该程序所做的不过是执行 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span></code> 一条语句.</p>
+<dl>
+<dt><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code></dt><dd><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code> 来自标准库 <code class="code highlight cpp docutils literal highlight-cpp"><span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;</span></code>, 我们通过 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span></code> 来包含 (include) 它.</p>
+<p>一个程序的代码可能不止一个人在写, 可能你写了一个函数命名为 game, 而别的人也写了一个函数命名为 game. 那么, 如何区分这两个函数呢? C++ 由此引入了名字空间的概念. <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code> 中的 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span></code> 就是表示使用 std 名字空间——标准库所在的名字空间——中的内容, 所以 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code> 就是说使用 std 名字空间中的 cout. 一些教材会在源代码最开始使用 <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span></code>, 这就是将 std 名字空间中的内容引入到全局名字空间, 进而可以省略 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span></code>, 直接使用 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">cout</span></code>.</p>
+<p>c 的意思是字符 (character), out 的意思是输出 (output), <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code> 的意思即输出字符. 而 <code class="code highlight cpp docutils literal highlight-cpp"><span class="o">&lt;&lt;</span></code> 就像是管道、箭头一样, 将你要输入的内容从右边流向 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span></code>, 因此常见的 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span></code> 是将右边的字符串流入到 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">cout</span></code> 中, 即输出 <code class="code highlight cpp docutils literal highlight-cpp"><span class="s">&quot;Hello World&quot;</span></code>.</p>
+</dd>
+<dt><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span></code></dt><dd><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span></code> 函数来自于 <code class="code highlight cpp docutils literal highlight-cpp"><span class="s">&quot;add.hpp&quot;</span></code>, 我们通过 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;add.hpp&quot;</span></code> 来包含它.</p>
+<p>通过 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Command⌘</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;add.hpp&quot;</span></code> 的文件名 <code class="code highlight cpp docutils literal highlight-cpp"><span class="s">&quot;add.hpp&quot;</span></code> 部分, 你可以跳转到对应的文件. 可见, 我们跳转到了 include/add.hpp, 这是我配置的公共头文件存放处, 放在此处的头文件将能被任意位置的源文件直接 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span></code>.</p>
+</dd>
+<dt><code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;add.hpp&quot;</span></code></dt><dd><p>该文件是头文件 (header file), 相比于源文件 (source file), 它旨在以 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span></code> 形式被包含到源文件中而被使用, 因此:</p>
+<ul class="simple">
+<li><p>它不需要被添加到 <code class="docutils literal notranslate"><span class="pre">add_program(&lt;program_name&gt;</span> <span class="pre">&lt;source_file1&gt;</span> <span class="pre">[source_file2...])</span></code> 中;</p></li>
+<li><p>为了被正确地 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span></code>, 它需要编写头文件保护 (见下文).</p></li>
+</ul>
+<p>打开该文件后, 可以看到以下内容:</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">include/add.hpp</span><a class="headerlink" href="#id14" title="Link to this code">#</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#ifndef ADD_HPP</span>
+<span class="linenos">2</span><span class="cp">#define ADD_HPP</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">5</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">lhs</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rhs</span><span class="p">;</span>
+<span class="linenos">6</span><span class="p">}</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<p>其中, 开头的 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#ifndef</span></code> 和 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#define</span></code>, 以及末尾的 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#endif</span></code> 行被称为头文件保护 (include guard). 头文件往往需要添加头文件保护从而避免重复地添加同一头文件.</p>
+<p>更多内容请阅读 <code class="docutils literal notranslate"><span class="pre">请读我</span></code> 文件和你的教材.</p>
+</dd>
+<dt><code class="code highlight cpp docutils literal highlight-cpp"><span class="sc">&#39;\n&#39;</span></code></dt><dd><p>这是换行字符 (newline). 一些教材中会用 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">endl</span></code> (endline) 表示换行, 但实际进行了多余操作, 具体请参考 <a class="reference external" href="https://feignclaims.github.io/question_board/faq/newline_character/#newline-character" title="（在 C++ 洋葱剥法交流群资料）"><span class="xref std std-ref">换行符号</span></a> 和你的教材 (? 真的会讲吗).</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h2>示例: 多个源文件组成的程序<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">add_program</span><span class="p">(</span><span class="s">example_multiple</span>
+<span class="linenos">2</span><span class="w">  </span><span class="s">src/example_multiple/main.cpp</span>
+<span class="linenos">3</span><span class="w">  </span><span class="s">src/example_multiple/hello.cpp</span>
+<span class="linenos">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这段代码添加了一个名为 <code class="docutils literal notranslate"><span class="pre">example_multiple</span></code> 的程序, 它由 src/example_multiple/main.cpp 和 src/example_multiple/hello.cpp 中.</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">src/example_multiple/main.cpp</span><a class="headerlink" href="#id15" title="Link to this code">#</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hello.hpp&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">  </span><span class="n">hello</span><span class="p">();</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>由源代码可知, 该程序的执行无非是以 <code class="code highlight cpp docutils literal highlight-cpp"><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span></code> 函数为入口, 调用 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">hello</span><span class="p">()</span></code> 函数.</p>
+<p>为什么 src/example_multiple/main.cpp 会知道有个 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">hello</span><span class="p">()</span></code> 函数呢? 因为 <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hello.hpp&quot;</span></code> 所包含的头文件中书写了该函数的声明, 但是可以注意到的是, <strong>该头文件中并没有定义 hello() 函数要干什么</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">src/example_multiple/hello.hpp</span><a class="headerlink" href="#id16" title="Link to this code">#</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#ifndef HELLO_HPP</span>
+<span class="linenos">2</span><span class="cp">#define HELLO_HPP</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="kt">void</span><span class="w"> </span><span class="nf">hello</span><span class="p">();</span><span class="w">  </span><span class="c1">// 这是 hello 函数, 但是它具体做什么?</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+<p>我们的程序是多个源文件的, 另一个源文件 src/example_multiple/hello.cpp 即定义了 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">hello</span><span class="p">()</span></code> 函数:</p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">src/example_multiple/hello.cpp</span><a class="headerlink" href="#id17" title="Link to this code">#</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hello.hpp&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">void</span><span class="w"> </span><span class="nf">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">7</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>由此, 该程序的执行就是以 <code class="code highlight cpp docutils literal highlight-cpp"><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span></code> 函数为入口, 调用 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">hello</span><span class="p">()</span></code> 函数, 该函数将会输出 <code class="code highlight cpp docutils literal highlight-cpp"><span class="s">&quot;hello world!</span><span class="se">\n</span><span class="s">&quot;</span></code>.</p>
+<p>回过头来看我们的 <code class="docutils literal notranslate"><span class="pre">add_program</span></code>:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">add_program</span><span class="p">(</span><span class="s">example_multiple</span>
+<span class="linenos">2</span><span class="w">  </span><span class="s">src/example_multiple/main.cpp</span><span class="w">   </span><span class="c"># 定义程序入口函数 main, 它调用 hello 函数.</span>
+<span class="linenos">3</span><span class="w">  </span><span class="s">src/example_multiple/hello.cpp</span><span class="w">  </span><span class="c"># 定义 hello 函数</span>
+<span class="linenos">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>那么, 如果我们再写一个源文件 hello2.cpp, 它将 <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">hello</span><span class="p">()</span></code> 函数定义为输出 <code class="code highlight cpp docutils literal highlight-cpp"><span class="s">&quot;hello c++!</span><span class="se">\n</span><span class="s">&quot;</span></code> 呢?</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;hello.hpp&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">void</span><span class="w"> </span><span class="nf">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;hello c++!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">7</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>我们自然可以用它和 <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code> 再组成一个程序:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">add_program</span><span class="p">(</span><span class="s">example_multiple</span>
+<span class="linenos">2</span><span class="w">  </span><span class="s">src/example_multiple/main.cpp</span><span class="w">   </span><span class="c"># 定义程序入口函数 main, 它调用 hello 函数.</span>
+<span class="linenos">3</span><span class="w">  </span><span class="s">src/example_multiple/hello.cpp</span><span class="w">  </span><span class="c"># 定义 hello 函数</span>
+<span class="linenos">4</span><span class="p">)</span>
+<span class="linenos">5</span><span class="nb">add_program</span><span class="p">(</span><span class="s">example_multiple2</span>
+<span class="linenos">6</span><span class="w">  </span><span class="s">src/example_multiple/main.cpp</span><span class="w">    </span><span class="c"># 同样用 main.cpp</span>
+<span class="linenos">7</span><span class="w">  </span><span class="s">src/example_multiple/hello2.cpp</span><span class="w">  </span><span class="c"># 用另一种方式定义 hello 函数</span>
+<span class="linenos">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这两个程序复用同一个 <code class="docutils literal notranslate"><span class="pre">main.cpp</span></code>, 而输出不同的结果.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../verify/debug/"
+       title="上一页">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">调试程序</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../ai/"
+       title="下一页">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">AI 辅助</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">示例: 单个源文件组成的程序</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">示例: 多个源文件组成的程序</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： FeignClaims
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, FeignClaims.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  最后更新于 2025-08-10 14:01:09.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

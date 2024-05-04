@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="对学习模板的解释" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="appendix/explain/" />
+<meta property="og:site_name" content="Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan" />
+<meta property="og:description" content="对整个项目的解释就不做了, 以下为一些学习模板的说明, 建议从上到下依次阅读. 要想进阶, 请参考 C++ 和 CMake 的学习建议. 学习模板: cpp_novice, ppp2_novice 或 ppp3_novice 实际上是泛用的, 任何支持 CMake 的软件均可使用. 例如, Visual Studio 2022 可以用以下任意一种方式使用该文件: 解压后按文件夹打开最里面的 ..." />
+<meta name="description" content="对整个项目的解释就不做了, 以下为一些学习模板的说明, 建议从上到下依次阅读. 要想进阶, 请参考 C++ 和 CMake 的学习建议. 学习模板: cpp_novice, ppp2_novice 或 ppp3_novice 实际上是泛用的, 任何支持 CMake 的软件均可使用. 例如, Visual Studio 2022 可以用以下任意一种方式使用该文件: 解压后按文件夹打开最里面的 ..." />
+
+    <title>对学习模板的解释 &#8212; Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=ae8a9af6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=cd85ae70"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/jquery.min.js?v=94f7166b"></script>
+    <script src="../../_static/zoom-image.js?v=56ef8405"></script>
+    <script>let toggleHintShow = '';</script>
+    <script>let toggleHintHide = '';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/explain';</script>
+    <link rel="canonical" href="https://vscode-cpp-starter.readthedocs.io/appendix/explain/" />
+    <link rel="icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../../genindex/" />
+    <link rel="search" title="搜索" href="../../search/" />
+    <link rel="next" title="Windows 终端输出中文乱码问题" href="../windows_chinese_issue/" />
+    <link rel="prev" title="关于代码中显示的额外信息" href="../about_inlay_hints/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="2025-08-10 14:01:09"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/FeignClaims/vscode_cpp_starter" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">关于文档</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../meet_trouble/">遇到问题?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING/">参与贡献</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">教程内容</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../how_to_update/">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preface/">0.使用本教程能得到的功能</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../download_and_install_windows/">1.下载和安装 (Windows)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../download_and_install_windows/msys2/">方案1.使用 MSYS2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/msys2/msys2/">安装 MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/msys2/llvm/">利用 MSYS2 安装 LLVM 等软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/msys2/environment/">配置 MSYS2 环境变量</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../download_and_install_windows/wsl/">方案2.使用 WSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/wsl/wsl/">安装 WSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../download_and_install_windows/wsl/linuxbrew/">安装 Linuxbrew 和其他软件</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../download_and_install_macos/">1.下载和安装 (MacOS)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_macos/homebrew/">安装 Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_macos/other_softwares/">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_macos/font/">字体</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../download_and_install_linux/">1.下载和安装 (Linux)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_linux/fedora/">操作系统: Fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_linux/ubuntu_debian/">操作系统: Ubuntu/Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download_and_install_linux/x86_64/">架构: x86_64</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configure/">2.配置</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../verify/">3.检验配置结果和实际使用</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../verify/format/">格式化代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../verify/diagnostics/">观察诊断信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../verify/run/">运行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../verify/debug/">调试程序</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../add_your_program/">4.添加你自己的程序</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ai/">AI 辅助</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ai/cursor/">Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai/cline/">Cline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ai/augment/">Augment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../third_party/">另.安装第三方库</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../third_party/vcpkg/">使用 vcpkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../third_party/conan/">使用 conan</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ohmyzsh/">另.终端美化</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../visual_studio/">另.Visual Studio 配置教程</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_studio/preface/">使用本教程能得到的功能</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../visual_studio/by_template/">方案1.使用学习模板简单配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/by_template/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../visual_studio/by_manual/">方案2.手动配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../visual_studio/by_manual/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_studio/appendix/">附录</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../learning/">C++ 和 CMake 的学习建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_warnings/">关于黄色警告和删除线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_inlay_hints/">关于代码中显示的额外信息</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">对学习模板的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows_chinese_issue/">Windows 终端输出中文乱码问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../choose_compiler/">更改所用的编译器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../my_font/">我个人的字体设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography/">参考文献及拓展阅读</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/blob/main/appendix/explain.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/edit/main/appendix/explain.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/issues/new?title=Issue%20on%20page%20%2Fappendix/explain.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="创建议题"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="亮色"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="暗色"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>对学习模板的解释</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">学习模板</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">.clang-format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">.clang-tidy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">.clangd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-commands-json">compile_commands.json</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmakelists-txt">CMakeLists.txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cache">.cache/</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmake">cmake/</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-program-cmake">add_program.cmake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cpp-novice-fetch-project-options-cmake">cpp_novice_fetch_project_options.cmake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cpp-novice-custom-project-options-cmake">cpp_novice_custom_project_options.cmake</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">.vscode/</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks-json">tasks.json</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-json">launch.json</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id9">
+<h1>对学习模板的解释<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
+<p>对整个项目的解释就不做了, 以下为一些学习模板的说明, 建议从上到下依次阅读.</p>
+<p>要想进阶, 请参考 <a class="reference internal" href="../learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>学习模板根目录
+|
++-- .clang-format
++-- .clang-tidy
++-- .clangd
++-- compile_commands.json
++-- CMakeLists.txt
++-- .cache/
++-- cmake/
+|   +-- add_program.cmake
+|   +-- cpp_novice_fetch_project_options.cmake
+|   +-- cpp_novice_project_options.cmake
+|
++-- .vscode/
+    +-- tasks.json
+    +-- launch.json
+</pre></div>
+</div>
+<section id="id10">
+<span id="id11"></span><h2>学习模板<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/raw/main/cpp_novice.zip">cpp_novice</a>, <a class="reference external" href="https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/raw/main/ppp2_novice.zip">ppp2_novice</a> 或 <a class="reference external" href="https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/raw/main/ppp3_novice.zip">ppp3_novice</a> 实际上是泛用的, 任何支持 CMake 的软件均可使用.</p>
+<p>例如, Visual Studio 2022 可以用以下任意一种方式使用该文件:</p>
+<ul class="simple">
+<li><p>解压后按文件夹打开最里面的 cpp_novice 文件夹.</p></li>
+<li><p>或解压后按 CMake 项目打开 CMakeLists.txt 文件.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>.clang-format<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>代码 <a class="reference external" href="https://feignclaims.github.io/question_board/formatter/#formatter" title="（在 C++ 洋葱剥法交流群资料）"><span class="xref std std-ref">自动格式化</span></a> 工具 clang-format 的配置文件.</p>
+<ul class="simple">
+<li><p>文档见 <a class="reference external" href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html">Clang-Format 配置选项列表</a>.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>.clang-tidy<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>代码检查工具 clang-tidy 的配置文件, 辅助程序员写更优秀的代码.</p>
+<p>项目的 .clang-tidy 配置文件中还提供了一个如何强制使命名满足特定格式的示例 (lower_case, CamelCase 等), 从而说明 .clang-tidy 的一些检查是存在自定义设置的.</p>
+<p>有关它所产生的警告的解释, 见于 <a class="reference internal" href="../about_warnings/"><span class="doc">关于黄色警告和删除线</span></a>. 为了避免对新手产生太大影响, 我禁用了很多严格的警告.</p>
+<ul class="simple">
+<li><p>此处 clangd 将 <code class="docutils literal notranslate"><span class="pre">.clang-tidy</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.clangd</span></code> 中的配置文件综合处理.</p></li>
+<li><p>文档见 <a class="reference external" href="https://clang.llvm.org/extra/clang-tidy/checks/list.html">Clang-Tidy 诊断选项列表</a> 和 <a class="reference external" href="https://clang.llvm.org/extra/clang-tidy/index.html#suppressing-undesired-diagnostics">Clang-Tidy 抑制诊断的方法</a> 等.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>.clangd<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>clangd 的配置文件. clangd 让 VSCode 能够解析 C++ 代码, 并为程序员提供内联提示、语法高亮等辅助功能. 实际上, CLion、Qt Creator 等软件也是使用的 clangd.</p>
+<p>clangd 为 VSCode 提供了 clang-tidy 支持, 将会在编写代码时实时调用 clang-tidy 进行静态检查. (但不支持某些 clang-tidy 功能如自动添加, 如果需要, 请通过 <a class="reference internal" href="#tasks-json"><span class="std std-ref">Clang-Tidy: fix current file</span></a> 对当前源文件使用 clang-tidy.)</p>
+<p>clangd 也为 VSCode 提供了 clang-format 支持, 因而在通过 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Command⌘</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd> 或工具栏手动保存代码时, 代码将会被格式化.</p>
+<ul class="simple">
+<li><p>文档见 <a class="reference external" href="https://clang.llvm.org/extra/clang-tidy/checks/list.html">Clang-Tidy 诊断选项列表</a> 和 <a class="reference external" href="https://clangd.llvm.org">Clangd 官网</a>.</p></li>
+</ul>
+</section>
+<section id="compile-commands-json">
+<h2>compile_commands.json<a class="headerlink" href="#compile-commands-json" title="Link to this heading">#</a></h2>
+<p>该文件在 CMake 进行配置操作后才生成, 存储源文件的编译信息, clangd 需要这些信息才能更好地解析代码和理清文件间的关系.</p>
+<ul class="simple">
+<li><p>根目录下的是该文件的快捷方式, 以供 clangd 找到该文件.</p></li>
+<li><p>由于 compile_commands.json 中只是分别存储单个源文件的编译信息, clangd 为了重构能作用于项目, 只能假设是源文件来自同一个项目, 故而重命名功能可能影响看似不相关的源文件. 这主要问题来源于 <code class="docutils literal notranslate"><span class="pre">cpp_novice</span></code> 为学习之便管理了大量不相干的项目, 实际项目中一般会使用名字空间来解决名字重复, 影响不大.</p></li>
+<li><p>CMake 的学习可参考 <a class="reference internal" href="../learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>CMake 默认情况下并不会生成 compile_commands.json, 只是我所提供的文件夹已经配置好了, 所以才生成. 具体请通过 <a class="reference internal" href="../learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a> 学习 CMake 来了解.</p>
+</div>
+</section>
+<section id="cmakelists-txt">
+<h2>CMakeLists.txt<a class="headerlink" href="#cmakelists-txt" title="Link to this heading">#</a></h2>
+<p>CMake 的项目配置文件, 整个项目所有程序都由它管理:</p>
+<ul class="simple">
+<li><p>它加载了 <a class="reference external" href="https://github.com/aminya/project_options">aminya/project_options</a>, 我利用该仓库进行自定义, 使代码有了更多诊断.</p></li>
+<li><p>它生成 clangd 所需的 <code class="docutils literal notranslate"><span class="pre">compile_commands.json</span></code>, 从而让 clangd 正常进行代码解析.</p></li>
+<li><p>它接受 <code class="docutils literal notranslate"><span class="pre">add_program(程序名</span> <span class="pre">源文件1</span> <span class="pre">源文件2...)</span></code>, 从而添加新的程序.</p></li>
+<li><p>CMake 的学习可参考 <a class="reference internal" href="../learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a>.</p></li>
+</ul>
+</section>
+<section id="cache">
+<h2>.cache/<a class="headerlink" href="#cache" title="Link to this heading">#</a></h2>
+<p>为了加快 clangd 的解析速度, 我在 .clangd 配置文件中为 clangd 启用了后台缓存, 而这些缓存存放在 .cache 文件夹中.</p>
+<p>在有些情况下 (软件更新、源文件大幅变动……), 你可能需要删除该文件夹并重启 clangd (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Command⌘</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> 打开命令菜单, 输入 <code class="docutils literal notranslate"><span class="pre">clangdr</span></code> 以找到 <span class="menuselection">clangd: Restart language server</span>, 回车).</p>
+</section>
+<section id="cmake">
+<h2>cmake/<a class="headerlink" href="#cmake" title="Link to this heading">#</a></h2>
+<p>CMake 的分文件和一些脚本文件, 分文件会在 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 中用 <code class="docutils literal notranslate"><span class="pre">include(文件)</span></code> 包含, 相当于 C++ 中的 <code class="docutils literal notranslate"><span class="pre">#include</span></code>.</p>
+<p>考虑到读者的环境和网络条件，与我自用的版本有些差异.</p>
+<ul class="simple">
+<li><p>CMake 的学习可参考 <a class="reference internal" href="../learning/"><span class="doc">C++ 和 CMake 的学习建议</span></a>.</p></li>
+</ul>
+<section id="add-program-cmake">
+<h3>add_program.cmake<a class="headerlink" href="#add-program-cmake" title="Link to this heading">#</a></h3>
+<p>为新手使用 CMake 进行简单包装, <code class="docutils literal notranslate"><span class="pre">add_program(程序名</span> <span class="pre">源文件1</span> <span class="pre">源文件2...)</span></code> 即可添加新的程序.</p>
+</section>
+<section id="cpp-novice-fetch-project-options-cmake">
+<h3>cpp_novice_fetch_project_options.cmake<a class="headerlink" href="#cpp-novice-fetch-project-options-cmake" title="Link to this heading">#</a></h3>
+<p>获取 <a class="reference external" href="https://github.com/aminya/project_options">aminya/project_options</a> 开源项目, 加入该项目允许使用者以较为简单的方式在 CMake 上配置 C++ 工具链.</p>
+</section>
+<section id="cpp-novice-custom-project-options-cmake">
+<h3>cpp_novice_custom_project_options.cmake<a class="headerlink" href="#cpp-novice-custom-project-options-cmake" title="Link to this heading">#</a></h3>
+<p>对 <a class="reference external" href="https://github.com/aminya/project_options">aminya/project_options</a> 进行自定义设置.</p>
+<ul class="simple">
+<li><p>禁止 clang-tidy、cppcheck 等代码检查工具随程序编译而自动进行, 因为它们让编译变的过慢了; clangd 将会在编写代码时实时使用 clang-tidy 进行静态检查. (但不支持某些 clang-tidy 功能如自动添加, 如果需要, 请通过 <a class="reference internal" href="#tasks-json"><span class="std std-ref">Clang-Tidy: fix current file</span></a> 对当前源文件使用 clang-tidy.)</p></li>
+<li><p>禁用文档生成工具.</p></li>
+<li><p>启用更多的编译器诊断选项, 这些选项会被保存到 <code class="docutils literal notranslate"><span class="pre">compile_commands.json</span></code> 中, 提供给 clangd 进行解析.</p>
+<ul>
+<li><p>这些诊断选项参考了 <a class="reference external" href="https://github.com/cpp-best-practices/cppbestpractices/blob/master/02-Use_the_Tools_Available.md#compilers">cppbestpractices: Use the Tools Available - compilers</a> 和 <a class="reference external" href="https://hackingcpp.com/cpp/diagnostics.html">hacking C++: Diagnostic Basics</a>, 但为便于初学者学习, 部分非常严格的诊断未启用.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h2>.vscode/<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>该文件夹特定的 VSCode 配置, 仅在当前文件夹下有效.</p>
+<section id="tasks-json">
+<span id="id16"></span><h3>tasks.json<a class="headerlink" href="#tasks-json" title="Link to this heading">#</a></h3>
+<p>该文件夹下能使用的任务, 如编译源文件等, 目前配置有:</p>
+<dl class="simple">
+<dt><span class="menuselection">Clang-Tidy: fix current file</span></dt><dd><p>使用 clang-tidy 修复当前文件.</p>
+</dd>
+</dl>
+</section>
+<section id="launch-json">
+<h3>launch.json<a class="headerlink" href="#launch-json" title="Link to this heading">#</a></h3>
+<p>该文件夹下能使用调试任务, 用于 <a class="reference external" href="https://feignclaims.github.io/question_board/debugger/#debugger" title="（在 C++ 洋葱剥法交流群资料）"><span class="xref std std-ref">调试</span></a>, 目前配置有:</p>
+<dl class="simple">
+<dt><span class="menuselection">LLDB: debug the active target</span></dt><dd><p>使用 LLDB 软件对 CMake <em>当前预运行的目标</em> 进行调试, 在此即对选择的 C++ 程序进行调试.</p>
+</dd>
+<dt><span class="menuselection">CMake: debug configuration</span></dt><dd><p>对 CMake 的配置即 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 进行调试.</p>
+</dd>
+<dt><span class="menuselection">CMake: clean and debug configuration</span></dt><dd><p>清理之前的 CMake 配置缓存, 并对 CMake 的配置即 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 进行调试.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../about_inlay_hints/"
+       title="上一页">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">关于代码中显示的额外信息</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../windows_chinese_issue/"
+       title="下一页">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Windows 终端输出中文乱码问题</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">学习模板</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">.clang-format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">.clang-tidy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">.clangd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-commands-json">compile_commands.json</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmakelists-txt">CMakeLists.txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cache">.cache/</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmake">cmake/</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-program-cmake">add_program.cmake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cpp-novice-fetch-project-options-cmake">cpp_novice_fetch_project_options.cmake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cpp-novice-custom-project-options-cmake">cpp_novice_custom_project_options.cmake</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">.vscode/</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks-json">tasks.json</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-json">launch.json</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： FeignClaims
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, FeignClaims.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  最后更新于 2025-08-10 14:01:09.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="另.终端美化" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="ohmyzsh/" />
+<meta property="og:site_name" content="Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan" />
+<meta property="og:description" content="我个人使用的终端外观, 安装前置软件: Windows (MSYS2): Windows 对 bash 或 zsh 的直接支持不太好, 不建议使用; 可考虑安装 Cmder 对终端进行美化. MacOS: Fedora: Ubuntu/Debian: 切换默认终端: 安装 antidote 并使用它安装插件: 安装字体: 为了使图标正确显示, 建议使用以下字体: MesloLGS NF: 通..." />
+<meta name="description" content="我个人使用的终端外观, 安装前置软件: Windows (MSYS2): Windows 对 bash 或 zsh 的直接支持不太好, 不建议使用; 可考虑安装 Cmder 对终端进行美化. MacOS: Fedora: Ubuntu/Debian: 切换默认终端: 安装 antidote 并使用它安装插件: 安装字体: 为了使图标正确显示, 建议使用以下字体: MesloLGS NF: 通..." />
+
+    <title>另.终端美化 &#8212; Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ae8a9af6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=cd85ae70"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/jquery.min.js?v=94f7166b"></script>
+    <script src="../_static/zoom-image.js?v=56ef8405"></script>
+    <script>let toggleHintShow = '';</script>
+    <script>let toggleHintHide = '';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ohmyzsh/index';</script>
+    <link rel="canonical" href="https://vscode-cpp-starter.readthedocs.io/ohmyzsh/" />
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="另.Visual Studio 配置教程" href="../visual_studio/" />
+    <link rel="prev" title="使用 conan" href="../third_party/conan/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="2025-08-10 14:01:09"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">跳转至主要内容</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>回到顶部</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="版本警告"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + Conan</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/FeignClaims/vscode_cpp_starter" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">搜索</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">关于文档</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../meet_trouble/">遇到问题?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING/">参与贡献</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">教程内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how_to_update/">如何更新？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface/">0.使用本教程能得到的功能</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_windows/">1.下载和安装 (Windows)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/msys2/">方案1.使用 MSYS2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/msys2/">安装 MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/llvm/">利用 MSYS2 安装 LLVM 等软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/msys2/environment/">配置 MSYS2 环境变量</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../download_and_install_windows/wsl/">方案2.使用 WSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/vscode/">安装 VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/git/">安装 Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/common/font/">安装字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/wsl/">安装 WSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download_and_install_windows/wsl/linuxbrew/">安装 Linuxbrew 和其他软件</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_macos/">1.下载和安装 (MacOS)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/homebrew/">安装 Homebrew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/other_softwares/">使用 Homebrew 安装 VSCode 和 LLVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_macos/font/">字体</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../download_and_install_linux/">1.下载和安装 (Linux)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/fedora/">操作系统: Fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/ubuntu_debian/">操作系统: Ubuntu/Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download_and_install_linux/x86_64/">架构: x86_64</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../configure/">2.配置</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../verify/">3.检验配置结果和实际使用</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../verify/format/">格式化代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/diagnostics/">观察诊断信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/run/">运行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify/debug/">调试程序</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../add_your_program/">4.添加你自己的程序</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ai/">AI 辅助</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cursor/">Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/cline/">Cline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ai/augment/">Augment</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../third_party/">另.安装第三方库</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/vcpkg/">使用 vcpkg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../third_party/conan/">使用 conan</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">另.终端美化</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../visual_studio/">另.Visual Studio 配置教程</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/preface/">使用本教程能得到的功能</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_template/">方案1.使用学习模板简单配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_template/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../visual_studio/by_manual/">方案2.手动配置</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/download_and_install/">下载和安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/common/configure_software/">对软件层次进行配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_studio/by_manual/configure_project/">对项目层次进行配置</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_studio/appendix/">附录</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">附录</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/learning/">C++ 和 CMake 的学习建议</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_warnings/">关于黄色警告和删除线</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/about_inlay_hints/">关于代码中显示的额外信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/explain/">对学习模板的解释</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/windows_chinese_issue/">Windows 终端输出中文乱码问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/choose_compiler/">更改所用的编译器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/my_font/">我个人的字体设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/bibliography/">参考文献及拓展阅读</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/blob/main/ohmyzsh/index.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/edit/main/ohmyzsh/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FeignClaims/vscode_cpp_starter/issues/new?title=Issue%20on%20page%20%2Fohmyzsh/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="创建议题"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="亮色"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="暗色"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>另.终端美化</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">安装前置软件</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-msys2">Windows (MSYS2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fedora">Fedora</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu-debian">Ubuntu/Debian</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">切换默认终端</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#antidote">安装 antidote 并使用它安装插件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">安装字体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zsh">重新打开 <code class="docutils literal notranslate"><span class="pre">zsh</span></code> 终端</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vim">扩展: vim 化终端命令行</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos-iterm2">MacOS 扩展: iTerm2</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id9">
+<h1>另.终端美化<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>请确保网络可访问 github (例如 &quot;steam++工具箱&quot; 中可以选择加速 github 访问).</p>
+</div>
+<figure class="align-default" id="id13">
+<img alt="../_images/%E7%BE%8E%E5%8C%96%E5%90%8E%E7%9A%84%E7%BB%88%E7%AB%AF.png" src="../_images/%E7%BE%8E%E5%8C%96%E5%90%8E%E7%9A%84%E7%BB%88%E7%AB%AF.png" />
+<figcaption>
+<p><span class="caption-text">我个人使用的终端外观</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id10">
+<h2>安装前置软件<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="windows-msys2">
+<h3>Windows (MSYS2)<a class="headerlink" href="#windows-msys2" title="Link to this heading">#</a></h3>
+<p>Windows 对 bash 或 zsh 的直接支持不太好, 不建议使用; 可考虑安装 Cmder 对终端进行美化.</p>
+</section>
+<section id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>git
+</pre></div>
+</div>
+</section>
+<section id="fedora">
+<h3>Fedora<a class="headerlink" href="#fedora" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>zsh
+</pre></div>
+</div>
+</section>
+<section id="ubuntu-debian">
+<h3>Ubuntu/Debian<a class="headerlink" href="#ubuntu-debian" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>zsh
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>切换默认终端<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chsh<span class="w"> </span>-s<span class="w"> </span><span class="k">$(</span>which<span class="w"> </span>zsh<span class="k">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>对于图形软件, 你还需要对对应的 <span class="menuselection">终端 (terminal)</span> 软件设置进行调整, 将使用的终端改为 <code class="docutils literal notranslate"><span class="pre">zsh</span></code>.</p>
+</div>
+</section>
+<section id="antidote">
+<h2>安装 antidote 并使用它安装插件<a class="headerlink" href="#antidote" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/mattmc3/antidote.git<span class="w"> </span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="p">~</span><span class="si">}</span>/.antidote
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;source ${ZDOTDIR:-~}/.antidote/antidote.zsh&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;autoload -Uz compinit &amp;&amp; compinit&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;antidote load&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;autoload -Uz promptinit &amp;&amp; promptinit &amp;&amp; prompt powerlevel10k&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">source</span><span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;ohmyzsh/ohmyzsh path:lib&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;romkatv/powerlevel10k kind:fpath&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;ohmyzsh/ohmyzsh path:plugins/colored-man-pages&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;ohmyzsh/ohmyzsh path:plugins/colorize&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;ohmyzsh/ohmyzsh path:plugins/history&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;ohmyzsh/ohmyzsh path:plugins/magic-enter&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;zdharma-continuum/fast-syntax-highlighting&#39;</span>
+antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;zsh-users/zsh-autosuggestions&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h2>安装字体<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>为了使图标正确显示, 建议使用以下字体:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip">MesloLGS NF: 通过官网下载</a></p></li>
+<li><p><a class="reference external" href="https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/tree/main/%E5%AD%97%E4%BD%93/MesloLGS%20NF">MesloLGS NF: 我备份的文件</a> (分别点击进行下载)</p></li>
+<li><p><a class="reference external" href="https://www.nerdfonts.com/font-downloads">其他带 NerdFont 图标的字体</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>对于图形软件, 你还需要对对应的 <span class="menuselection">终端 (terminal)</span> 软件设置进行调整, 将使用的字体改为 <code class="docutils literal notranslate"><span class="pre">MesloLGS</span> <span class="pre">NF</span></code>.</p>
+</div>
+</section>
+<section id="zsh">
+<h2>重新打开 <code class="docutils literal notranslate"><span class="pre">zsh</span></code> 终端<a class="headerlink" href="#zsh" title="Link to this heading">#</a></h2>
+<p>重新打开 <code class="docutils literal notranslate"><span class="pre">zsh</span></code> 终端, 将会卡住一定时间. 此后即可开始配置终端样式, 请自行阅读显示的选项选择.</p>
+</section>
+<section id="vim">
+<h2>扩展: vim 化终端命令行<a class="headerlink" href="#vim" title="Link to this heading">#</a></h2>
+<p>如果你习惯使用 vim, 则将终端也 vim 化将会非常方便. (如果不熟悉, 请考虑通过 <a class="reference external" href="https://feignclaims.github.io/question_board/learning_map/#id16" title="（在 C++ 洋葱剥法交流群资料）"><span class="xref std std-ref">个人学习大纲</span></a> 中的 &quot;计算机教育中缺失的一课&quot; 学习, 有了 vim 你将能脱离鼠标编程.)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>antidote<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;jeffreytse/zsh-vi-mode&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;# zsh vim cursor style&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</section>
+<section id="macos-iterm2">
+<h2>MacOS 扩展: iTerm2<a class="headerlink" href="#macos-iterm2" title="Link to this heading">#</a></h2>
+<p>相较于自带的终端, 安装 iTerm2 将会给你更好的终端使用体验.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>iterm2
+</pre></div>
+</div>
+<p>安装好后启动 iTerm2, 按提示将其设为默认终端.</p>
+<p>然后在屏幕左上方打开设置.</p>
+<figure class="align-default" id="id14">
+<img alt="../_images/iterm2_%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE.png" src="../_images/iterm2_%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE.png" />
+<figcaption>
+<p><span class="caption-text">打开设置</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>按下图设置字体为 <code class="docutils literal notranslate"><span class="pre">MesloLGS</span> <span class="pre">NF</span></code>:</p>
+<figure class="align-default" id="id15">
+<img alt="../_images/iterm2_%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93.png" src="../_images/iterm2_%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93.png" />
+<figcaption>
+<p><span class="caption-text">设置字体</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>此处的配置非常可供自定义, 我仅推荐一个极其常用的功能: 快捷键打开浮动终端.</p>
+<figure class="align-default" id="id16">
+<img alt="../_images/iterm2_%E6%89%93%E5%BC%80%E6%B5%AE%E5%8A%A8%E7%AA%97%E5%8F%A3%E8%AE%BE%E7%BD%AE.png" src="../_images/iterm2_%E6%89%93%E5%BC%80%E6%B5%AE%E5%8A%A8%E7%AA%97%E5%8F%A3%E8%AE%BE%E7%BD%AE.png" />
+<figcaption>
+<p><span class="caption-text">打开浮动窗口设置</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id17">
+<img alt="../_images/iterm2_%E8%AE%BE%E7%BD%AE%E6%B5%AE%E5%8A%A8%E7%AA%97%E5%8F%A3.png" src="../_images/iterm2_%E8%AE%BE%E7%BD%AE%E6%B5%AE%E5%8A%A8%E7%AA%97%E5%8F%A3.png" />
+<figcaption>
+<p><span class="caption-text">设置浮动窗口</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>此后, 在 iterm2 启动的情况下, 你可以用快捷键启动终端, <strong>这样启动的终端即使在全屏时也能无缝使用</strong>.</p>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p>你还可以 <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">dash</span></code> 软件, 它将允许你浮动地查看、搜索各种官方文档.</p>
+<figure class="align-default" id="id18">
+<img alt="../_images/dash_%E8%AE%BE%E7%BD%AE.png" src="../_images/dash_%E8%AE%BE%E7%BD%AE.png" />
+<figcaption>
+<p><span class="caption-text">设置</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id19">
+<img alt="../_images/dash_%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA.png" src="../_images/dash_%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA.png" />
+<figcaption>
+<p><span class="caption-text">使用演示</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../third_party/conan/"
+       title="上一页">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">使用 conan</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../visual_studio/"
+       title="下一页">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">另.Visual Studio 配置教程</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">安装前置软件</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-msys2">Windows (MSYS2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fedora">Fedora</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu-debian">Ubuntu/Debian</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">切换默认终端</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#antidote">安装 antidote 并使用它安装插件</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">安装字体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zsh">重新打开 <code class="docutils literal notranslate"><span class="pre">zsh</span></code> 终端</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vim">扩展: vim 化终端命令行</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos-iterm2">MacOS 扩展: iTerm2</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： FeignClaims
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, FeignClaims.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  最后更新于 2025-08-10 14:01:09.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
