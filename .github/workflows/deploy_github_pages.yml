@@ -1,4 +1,4 @@
-name: deploy_to_gitee
+name: deploy_github_pages
 on:
   pull_request:
   push:
@@ -10,11 +10,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_and_commit:
+  build_commit_and_publish:
     if: ${{ !contains(github.event.head_commit.message, '[no deploy]') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5.0.0
@@ -27,27 +29,27 @@ jobs:
           path: main
           fetch-depth: 0
 
-      - name: Checkout docs
+      - name: Checkout github_docs
         uses: actions/checkout@v4.1.1
         with:
           ssh-key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-          ref: docs
-          path: docs
+          ref: github_docs
+          path: github_docs
 
-      - name: Replace question-board.readthedocs.io/ to cpp_tutorial.gitee.io/board/
+      - name: Replace question-board.readthedocs.io/ to feignclaims.github.io/question_board/
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           include: "main/conf.py"
           find: '"https://question-board.readthedocs.io/"'
-          replace: '"https://cpp_tutorial.gitee.io/board/"'
+          replace: '"https://feignclaims.github.io/question_board/"'
           regex: false
 
       - name: Show mirror website
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           include: "main/index.rst"
-          find: "`本网站的国内网址 (不支持搜索) <https://cpp_tutorial.gitee.io/vscode_cpp_starter/>`_"
-          replace: "`本网站的国外网址 (支持搜索) <https://vscode-cpp-starter.readthedocs.io/>`_"
+          find: "`本网站的国外备用网址 (不支持搜索) <https://feignclaims.github.io/vscode_cpp_starter/>`_"
+          replace: "`本网站的国外主网址 (支持搜索) <https://vscode-cpp-starter.readthedocs.io/>`_"
           regex: false
 
       - name: Install sphinx
@@ -55,42 +57,28 @@ jobs:
         run: |
           pip install -r main/requirements.txt
 
-      - name: Build docs
+      - name: Build github_docs
         shell: bash
         run: |
-          rm -rf docs/build
-          sphinx-build main docs/build
+          rm -rf github_docs/build
+          sphinx-build main github_docs/build
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9.1.3
         with:
-          cwd: docs
+          cwd: github_docs
           commit: "--amend"
           push: "--force"
           default_author: github_actions
           message: "[bot] Build gitee pages"
 
-  sync:
-    runs-on: ubuntu-latest
-    needs: build_and_commit
-    steps:
-      - name: Sync to gitee.com
-        uses: wearerequired/git-mirror-action@v1.2.0
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-        with:
-          source-repo: git@github.com:FeignClaims/vscode_cpp_starter.git
-          destination-repo: git@gitee.com:cpp_tutorial/vscode_cpp_starter.git
+      - name: Setup Github Pages
+        uses: actions/configure-pages@v5
 
-  publish:
-    runs-on: ubuntu-latest
-    needs: sync
-    steps:
-      - name: Build Gitee Pages
-        uses: yanglbme/gitee-pages-action@v1.4.2
+      - name: Upload Github Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          gitee-username: FeignClaims
-          gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          gitee-repo: cpp_tutorial/vscode_cpp_starter
-          branch: docs
-          directory: build
+          path: "github_docs/build"
+
+      - name: Build Github Pages
+        uses: actions/deploy-pages@v4
