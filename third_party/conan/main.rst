@@ -69,10 +69,10 @@ Ubuntu/Debian
   pip3 install conan
 
 ========================================================================================================================
-在 cpp_starter 中启用 conan
+在 cpp_novice 中启用 conan
 ========================================================================================================================
 
-在 ``cpp_starter`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_conan()``.
+在 ``cpp_novice`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_conan()``.
 
 .. code-block:: cmake
   :emphasize-lines: 5
@@ -84,7 +84,7 @@ Ubuntu/Debian
   include(fetch_project_options)
   run_conan()
 
-  project(cpp_starter LANGUAGES CXX)
+  project(cpp_novice LANGUAGES CXX)
 
 ========================================================================================================================
 搜索第三方库
@@ -126,13 +126,13 @@ Ubuntu/Debian
 
 根据搜索结果, 我们找到了 ``fmt/10.2.1``. 假设这就是我们要使用的库.
 
-要使用它则需要在合适的位置添加它, 为此先要简单理解 ``cpp_starter`` 的项目管理是如何达成的.
+要使用它则需要在合适的位置添加它, 为此先要简单理解 ``cpp_novice`` 的项目管理是如何达成的.
 
 ------------------------------------------------------------------------------------------------------------------------
 添加原理
 ------------------------------------------------------------------------------------------------------------------------
 
-整个 ``cpp_starter`` 文件夹是用 CMake 进行的项目管理, 其配置文件即根目录下的 ``CMakeLists.txt``.
+整个 ``cpp_novice`` 文件夹是用 CMake 进行的项目管理, 其配置文件即根目录下的 ``CMakeLists.txt``.
 
 打开 ``CMakeLists.txt`` 你可以看到 ``add_code(...)`` 函数, 这是我为了新手使用方便, 对 CMake 进行的简化: 通过 ``add_code(<程序名> <源文件1> [源文件2]...)`` 即可添加一个名为 ``<程序名>`` 的程序.
 
@@ -160,7 +160,7 @@ Ubuntu/Debian
 
 以库 ``fmt/10.2.1`` 和 ``range-v3/0.12.0`` 为例.
 
-在 ``cpp_starter`` 文件夹根目录中找到 ``conanfile.txt``, 在 ``[requires]`` 下方添加一行 ``fmt/10.2.1`` 和 ``range-v3/0.12.0``:
+在 ``cpp_novice`` 文件夹根目录中找到 ``conanfile.txt``, 在 ``[requires]`` 下方添加一行 ``fmt/10.2.1`` 和 ``range-v3/0.12.0``:
 
 .. code-block:: text
   :emphasize-lines: 5-6

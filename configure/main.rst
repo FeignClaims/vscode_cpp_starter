@@ -23,11 +23,11 @@
 打开文件夹
 ========================================================================================================================
 
-打开 VSCode, 将解压得到的 cpp_starter 文件夹拖动到 VSCode 中.
+打开 VSCode, 将解压得到的 cpp_novice 文件夹拖动到 VSCode 中.
 
 .. note::
 
-  - 解压时, 有可能最终得到一个 cpp_starter 文件夹其中又包含一个 cpp_starter 文件夹的情况; 如果出现这种情况, 应该拖动的是内层的 cpp_starter 文件夹.
+  - 解压时, 有可能最终得到一个 cpp_novice 文件夹其中又包含一个 cpp_novice 文件夹的情况; 如果出现这种情况, 应该拖动的是内层的 cpp_novice 文件夹.
   - 拖动到右侧区域而非左边的侧边栏.
   - 不要自作主张用左上角菜单栏打开, 因为该菜单下有两个对应操作, 很容易犯错.
 
@@ -43,7 +43,7 @@
 
 点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> 导入配置文件...(Import Profile...)`.
 
-在弹出的窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_starter`` 目录下的 ``cpp_starter.code-profile``.
+在弹出的窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_novice`` 目录下的 ``cpp_novice.code-profile``.
 
 然后在左方选择 :menuselection:`导入配置文件(Import Profile)`.
 
@@ -55,7 +55,7 @@
 切换至配置文件
 ========================================================================================================================
 
-点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> cpp_starter`.
+点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> cpp_novice`.
 
 .. note::
 
@@ -69,7 +69,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
   VSCode 远程窗口 (例如 WSL) 专属步骤, 其他配置方案请忽略这一部分.
 
-:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_starter 文件夹.
+:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
 
 .. figure:: WSL_打开文件夹.png
 
@@ -111,7 +111,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
 .. note::
 
-  2023-04-27 左右, VSCode CMake Tools 有更新, 这一步运行时可能卡在 ``[main] Configuring project: cpp_starter``. 请尝试重新启动 VSCode 或多次执行 :menuselection:`CMake: 配置`.
+  2023-04-27 左右, VSCode CMake Tools 有更新, 这一步运行时可能卡在 ``[main] Configuring project: cpp_novice``. 请尝试重新启动 VSCode 或多次执行 :menuselection:`CMake: 配置`.
 
 ========================================================================================================================
 配置完成
@@ -127,7 +127,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
   刷新 Clangd
 
-你可以直接将这个 ``cpp_starter`` 文件夹作为学习 C++ 所用的文件夹, 将代码放入 ``src`` 子文件夹中.
+你可以直接将这个 ``cpp_novice`` 文件夹作为学习 C++ 所用的文件夹, 将代码放入 ``src`` 子文件夹中.
 
 运行和调试代码的方法见下文.
 
