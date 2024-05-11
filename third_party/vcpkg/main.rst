@@ -16,7 +16,7 @@
 在 cpp_novice 中启用 vcpkg
 ========================================================================================================================
 
-在 ``cpp_novice`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_vcpkg()``.
+在 ``cpp_novice`` 文件夹根目录中找到 ``CMakeLists.txt``, 在 ``include(cpp_novice_fetch_project_options)``, ``project(...)`` 之前添加一行 ``run_vcpkg()``.
 
 .. code-block:: cmake
   :emphasize-lines: 5
@@ -25,7 +25,7 @@
   cmake_minimum_required(VERSION 3.25)
 
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-  include(fetch_project_options)
+  include(cpp_novice_fetch_project_options)
   run_vcpkg()
 
   project(cpp_novice LANGUAGES CXX)
