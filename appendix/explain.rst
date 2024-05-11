@@ -17,8 +17,8 @@
   +-- CMakeLists.txt
   +-- cmake/
   |   +-- add_code.cmake
-  |   +-- enable_customized_project_options.cmake
-  |   +-- fetch_project_options.cmake
+  |   +-- cpp_novice_fetch_project_options.cmake
+  |   +-- cpp_novice_project_options.cmake
   |   +-- symlink_compile_commands.cmake (已删除, 其功能已 PR 到 project_options 中, 故无需独立添加)
   +-- .vscode/
       +-- tasks.json
@@ -104,13 +104,13 @@ add_code.cmake
 为新手使用 CMake 进行简单包装, ``add_code(程序名 源文件1 源文件2...)`` 即可添加新的程序.
 
 ------------------------------------------------------------------------------------------------------------------------
-fetch_project_options.cmake
+cpp_novice_fetch_project_options.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 提供获取开源项目 `aminya/project_options`_ 的宏.
 
 ------------------------------------------------------------------------------------------------------------------------
-enable_customized_project_options.cmake
+cpp_novice_custom_project_options.cmake
 ------------------------------------------------------------------------------------------------------------------------
 
 从镜像获取 `aminya/project_options`_ , 并对 ``project_options`` 进行自定义设置.
