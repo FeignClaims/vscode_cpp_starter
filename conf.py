@@ -27,6 +27,7 @@ extensions = [
     'sphinx_sitemap',
     'sphinx_tabs.tabs',
     'sphinx_togglebutton',
+    'sphinxext.opengraph',
 ]
 
 intersphinx_mapping = {

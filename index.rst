@@ -1,5 +1,5 @@
 .. meta::
-  :describe: VSCode 配置 C++ 的手把手教程
+  :description: VSCode 配置 C++ 的手把手教程，面向完全初学者，几乎无需电脑使用经验。
   :keywords: vscode, windows, macos, linux, llvm, clangd, clang, cmake, lldb, clang-tidy, clang-format, conan, zsh
 
 .. _main:

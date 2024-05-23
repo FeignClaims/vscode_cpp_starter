@@ -7,3 +7,4 @@ sphinx-tabs>=3.4.5
 sphinx_book_theme>=1.1.0
 sphinx_design>=0.0.5
 sphinx_togglebutton>=0.3.2
+sphinxext-opengraph>=0.9.1
