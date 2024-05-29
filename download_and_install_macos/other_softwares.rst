@@ -18,15 +18,7 @@
 
 .. code-block:: bash
 
-  echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
-
-.. code-block:: bash
-
-  echo 'export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"' >> ~/.zshrc
-
-.. code-block:: bash
-
-  echo 'export CPPFLAGS="-L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib"' >> ~/.zshrc
+  echo "export PATH=\"$(brew --prefix llvm)/bin:\$PATH\"" >> ~/.zshrc
 
 安装完成后, 你可以通过 :menuselection:`启动台` 点击图标启动 VSCode, 或按 :KBD:`Command⌘` + :KBD:`空格` 打开聚焦搜索, 搜索 ``code`` 以找到.
 
