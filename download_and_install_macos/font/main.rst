@@ -28,13 +28,7 @@
 
   该方法可能遇到网络问题, 但此后能随 ``brew upgrade --greedy`` 自动更新.
 
-首先加入字体安装：
-
-.. code-block:: bash
-
-  brew tap homebrew/cask-fonts
-
-然后与之前相同, 在 :menuselection:`终端` 输入 ``brew install xxx`` 即可. 在此即：
+与之前相同, 在 :menuselection:`终端` 输入 ``brew install xxx`` 即可. 在此即：
 
 .. code-block:: bash
 
