@@ -70,6 +70,14 @@ Ubuntu/Debian
 
 .. code-block:: bash
 
+  echo 'source ${ZDOTDIR:-~}/.antidote/antidote.zsh' >> ~/.zshrc
+  echo 'autoload -Uz compinit && compinit' >> ~/.zshrc
+  echo 'antidote load' >> ~/.zshrc
+  echo 'autoload -Uz promptinit && promptinit && prompt powerlevel10k' >> ~/.zshrc
+  source ~/.zshrc
+
+.. code-block:: bash
+
   antidote install 'ohmyzsh/ohmyzsh path:lib'
   antidote install 'romkatv/powerlevel10k kind:fpath'
   antidote install 'ohmyzsh/ohmyzsh path:plugins/colored-man-pages'
@@ -78,13 +86,6 @@ Ubuntu/Debian
   antidote install 'ohmyzsh/ohmyzsh path:plugins/magic-enter'
   antidote install 'zdharma-continuum/fast-syntax-highlighting'
   antidote install 'zsh-users/zsh-autosuggestions'
-
-.. code-block:: bash
-
-  echo 'source ${ZDOTDIR:-~}/.antidote/antidote.zsh' >> ~/.zshrc
-  echo 'autoload -Uz compinit && compinit' >> ~/.zshrc
-  echo 'antidote load' >> ~/.zshrc
-  echo 'autoload -Uz promptinit && promptinit && prompt powerlevel10k' >> ~/.zshrc
 
 ========================================================================================================================
 安装字体
