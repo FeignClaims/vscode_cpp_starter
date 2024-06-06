@@ -58,7 +58,7 @@
 
 .. code-block:: bash
 
-  sudo apt install cmake git ninja-build
+  sudo apt install cmake git ninja-build libstdc++-12-dev
 
 .. code-block:: bash
 
