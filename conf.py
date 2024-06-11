@@ -89,6 +89,7 @@ sitemap_url_scheme = '{link}'
 html_extra_path = [
     '_static/robots.txt',
     '_verification/31d972d70689239e1779c33936e0d894.txt',
+    '_verification/88951ca8b733406185ce1f4f9498a37e.txt',
     '_verification/baidu_verify_codeva-aMWOWlH85u.html',
     '_verification/google13ac7719c05e0aea.html',
     '_verification/sogousiteverification.txt',
