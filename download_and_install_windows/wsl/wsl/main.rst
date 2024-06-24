@@ -40,6 +40,10 @@
 
 运行后按提示重启电脑.
 
+.. note::
+
+  如果运行后提示 "功能名称 Microsoft-Hyper-V-Hypervisor 未知", 这并不影响后续内容, 直接重启电脑即可.
+
 .. code-block:: bash
 
   Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
