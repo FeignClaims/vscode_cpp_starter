@@ -6,5 +6,8 @@
   :maxdepth: 1
   :caption: 目录
 
+  ../common/vscode/main.rst
+  ../common/git/main.rst
+  ../common/font/main.rst
   wsl/main.rst
   linuxbrew/main.rst

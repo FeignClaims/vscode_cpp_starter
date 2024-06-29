@@ -10,15 +10,6 @@
 
 .. toctree::
   :maxdepth: 1
-  :caption: 共通部分
-
-  vscode/main.rst
-  git/main.rst
-  font/main.rst
-
-.. toctree::
-  :maxdepth: 1
-  :caption: 安装所需其他软件的两种方案
 
   msys2/index.rst
   wsl/index.rst
