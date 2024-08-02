@@ -96,7 +96,7 @@
 
 .. hint::
 
-  更好的方法是下载安装 `Git: 我备份的安装包`_, 然后直接下载 VSCode 的 `配置文件`_ 并解压, 然后打开 Visual Studio 2022:
+  更好的方法是下载安装 `Git: 通过官网下载`_, 然后直接下载 VSCode 的 `配置文件`_ 并解压, 然后打开 Visual Studio 2022:
 
   - 按文件夹打开最里面的 cpp_novice 文件夹.
   - 或按 CMake 项目打开 CMakeLists.txt 文件.

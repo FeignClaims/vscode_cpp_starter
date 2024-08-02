@@ -10,11 +10,8 @@
 
 .. 下载和安装
 .. _`VSCode: 通过官网下载`: https://code.visualstudio.com/download
-.. _`VSCode: 我备份的安装包`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/VSCodeUserSetup-x64-1.76.0.exe
 .. _`MSYS2: 通过官网下载`: https://www.msys2.org/
-.. _`MSYS2: 我备份的安装包`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/msys2-x86_64-20230127.exe
 .. _`Git: 通过官网下载`: https://git-scm.com/download/win
-.. _`Git: 我备份的安装包`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/Git-2.40.1-64-bit.exe
 .. _`Linux 内核更新包`: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 .. _`WSL 安装包`: https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2204-221101.AppxBundle
 .. _`清华大学开源软件镜像站`: https://mirrors.tuna.tsinghua.edu.cn/
