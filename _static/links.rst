@@ -9,7 +9,7 @@
 .. _`FeignClaims/cmake_starter_template`: https://github.com/FeignClaims/cmake_starter_template
 
 .. 下载和安装
-.. _`VSCode: 通过官网下载`: https://code.visualstudio.com/
+.. _`VSCode: 通过官网下载`: https://code.visualstudio.com/download
 .. _`VSCode: 我备份的安装包`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/VSCodeUserSetup-x64-1.76.0.exe
 .. _`MSYS2: 通过官网下载`: https://www.msys2.org/
 .. _`MSYS2: 我备份的安装包`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/Windows%20%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85/msys2-x86_64-20230127.exe
