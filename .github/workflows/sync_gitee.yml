@@ -1,4 +1,4 @@
-name: deploy_gitee_pages
+name: sync_gitee
 on:
   pull_request:
   push:
