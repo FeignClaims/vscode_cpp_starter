@@ -1,0 +1,15 @@
+name: "IndexNow"
+on:
+  schedule:
+  - cron:  '0 0,12 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: "https://vscode-cpp-starter.readthedocs.io/sitemapindex.xml"
+          key: ${{ secrets.INDEXNOW_KEY }}
