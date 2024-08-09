@@ -159,10 +159,10 @@ MacOS 扩展: iTerm2
 
   你还可以 ``brew install dash`` 软件, 它将允许你浮动地查看、搜索各种官方文档.
 
-  .. figre:: dash_设置.png
+  .. figure:: dash_设置.png
 
     设置
 
-  .. figre:: dash_使用演示.png
+  .. figure:: dash_使用演示.png
 
     使用演示
