@@ -6,7 +6,7 @@
 .. _`Issue: 添加断点无效`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I58LOQ
 
 .. _`aminya/project_options`: https://github.com/aminya/project_options
-.. _`FeignClaims/cmake_starter_template`: https://github.com/FeignClaims/cmake_starter_template
+.. _`FeignClaims/cpp_conan_template`: https://github.com/FeignClaims/cpp_conan_template
 
 .. 下载和安装
 .. _`VSCode: 通过官网下载`: https://code.visualstudio.com/download

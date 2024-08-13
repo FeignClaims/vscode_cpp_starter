@@ -8,7 +8,7 @@
 
 .. hint::
 
-  更推荐方法是通过 :ref:`我的学习建议 <question_board:学习大纲_CMake>` 学习 CMake + Conan, 按照 `FeignClaims/cmake_starter_template`_ 中所解释的编写 Conan profiles, 此后即能生成对应的工具链.
+  更推荐方法是通过 :ref:`我的学习建议 <question_board:学习大纲_CMake>` 学习 CMake + Conan, 按照 `FeignClaims/cpp_conan_template`_ 中所解释的编写 Conan profiles, 此后即能生成对应的工具链.
 
 点击状态栏上的 :menuselection:`🛠[你当前激活的编译器/预设]` 从而切换.
 

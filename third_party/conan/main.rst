@@ -223,4 +223,4 @@ Ubuntu/Debian
 - Conan 官方文档: `Conan 2.0 Documentation`_
 - 如何用 Conan 自定义包: `Adding Packages to ConanCenter`_
 - :doc:`/appendix/learning`
-- 我基于 conan 的项目模板: `FeignClaims/cmake_starter_template`_
+- 我基于 conan 的项目模板: `FeignClaims/cpp_conan_template`_
