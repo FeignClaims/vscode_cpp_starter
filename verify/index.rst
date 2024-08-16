@@ -8,6 +8,7 @@
   :maxdepth: 1
   :caption: 目录
 
+  format/main.rst
   diagnostics/main.rst
   run/main.rst
   debug/main.rst
