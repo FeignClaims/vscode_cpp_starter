@@ -16,6 +16,10 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
 
   本教程采用 **"先配置再解释"** 的风格, 如果有不影响配置的疑问, 请暂时搁置. 等配置好后再通过附录、:doc:`meet_trouble` 或联系我解决.
 
+.. error::
+
+  整个配置过程中请勿开启杀毒软件, 避免出现奇怪的问题.
+
 .. toctree::
   :maxdepth: 1
   :caption: 关于文档
