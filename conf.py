@@ -23,7 +23,6 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_design',
     'sphinx_examples',
-    'sphinx_last_updated_by_git',
     'sphinx_sitemap',
     'sphinx_tabs.tabs',
     'sphinx_togglebutton',
@@ -82,7 +81,6 @@ html_static_path = ['_static', '_theme']
 html_favicon = '_static/favicon.png'
 html_search_language = 'zh'
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
-git_last_updated_timezone = 'Asia/Shanghai'
 html_baseurl = 'https://vscode-cpp-starter.readthedocs.io/'
 sitemap_filename = 'sitemapindex.xml'
 sitemap_url_scheme = '{link}'
