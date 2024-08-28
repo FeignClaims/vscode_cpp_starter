@@ -8,7 +8,7 @@
 
 .. code-block:: text
 
-  根目录
+  配置文件根目录
   |
   +-- .clang-format
   +-- .clang-tidy
@@ -19,6 +19,7 @@
   |   +-- add_code.cmake
   |   +-- cpp_novice_fetch_project_options.cmake
   |   +-- cpp_novice_project_options.cmake
+  |
   +-- .vscode/
       +-- tasks.json
       +-- launch.json
