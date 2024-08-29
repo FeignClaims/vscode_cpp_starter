@@ -33,6 +33,7 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
 
   how_to_update.rst
   changelog.rst
+  prefix/main.rst
   download_and_install_windows/index.rst
   download_and_install_macos/index.rst
   download_and_install_linux/index.rst
