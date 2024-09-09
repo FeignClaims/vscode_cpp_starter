@@ -17,7 +17,7 @@
 .. _`清华大学开源软件镜像站`: https://mirrors.tuna.tsinghua.edu.cn/
 .. _`JetBrains Mono: 通过官网下载`: https://github.com/JetBrains/JetBrainsMono/releases
 .. _`JetBrains Mono: 我备份的文件`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/JetBrains%20Mono
-.. _`MesloLGS NF: 通过官网下载`: https://github.com/ryanoasis/nerd-fonts/releases
+.. _`MesloLGS NF: 通过官网下载`: https://www.nerdfonts.com/font-downloads
 .. _`MesloLGS NF: 我备份的文件`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/MesloLGS%20NF
 .. _`等距更纱黑体 SC: 通过官网下载`: https://github.com/be5invis/Sarasa-Gothic/releases
 .. _`等距更纱黑体 SC: 我备份的文件`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/tree/main/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
