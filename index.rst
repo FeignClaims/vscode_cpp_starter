@@ -53,4 +53,5 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
   appendix/explain.rst
   appendix/windows_chinese_issue/main.rst
   appendix/choose_compiler/main.rst
+  appendix/my_font.rst
   appendix/bibliography.rst
