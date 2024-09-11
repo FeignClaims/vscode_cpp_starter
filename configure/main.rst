@@ -41,9 +41,19 @@
 导入配置文件
 ========================================================================================================================
 
-点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> 导入配置文件...(Import Profile...)`.
+.. note::
 
-在弹出的窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_novice`` 目录下的 ``cpp_novice.code-profile``.
+  2024-09 更新的 VSCode 1.93 更改了配置文件界面, 如果你使用的是老版本, 请点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)` 来更新你的 VSCode.
+
+点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)`.
+
+在弹出的窗口中, 点击蓝色按钮右边的下三角下拉按钮, 选择 :menuselection:`导入配置文件...(Import Profile...)`.
+
+.. figure:: VSCode_导入配置文件.png
+
+  导入配置文件
+
+然后, 在弹出的新窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_novice`` 目录下的 ``cpp_novice.code-profile``.
 
 然后在左方选择 :menuselection:`导入配置文件(Import Profile)`.
 
