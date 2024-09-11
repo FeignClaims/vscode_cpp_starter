@@ -47,6 +47,10 @@
 
 点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)`.
 
+.. note::
+
+  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
+
 在弹出的窗口中, 点击蓝色按钮右边的下三角下拉按钮, 选择 :menuselection:`导入配置文件...(Import Profile...)`.
 
 .. figure:: VSCode_导入配置文件.png
@@ -55,17 +59,23 @@
 
 然后, 在弹出的新窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_novice`` 目录下的 ``cpp_novice.code-profile``.
 
-然后在左方选择 :menuselection:`导入配置文件(Import Profile)`.
+然后在窗口中点击 :menuselection:`创建` 来完成该配置文件的导入.
 
-.. note::
+.. figure:: VSCode_确定创建导入的配置文件.png
 
-  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
+  确定创建导入的配置文件
 
 ========================================================================================================================
 切换至配置文件
 ========================================================================================================================
 
-点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuselection:`配置文件(Profiles) --> cpp_novice`.
+点击窗口左下角的 :menuselection:`齿轮`, 选择 :menuseolection:`配置文件(Profiles)`.
+
+在弹出的窗口中, 点击 cpp_novice 旁的 :menuselection:`对勾符号✓` 从而切换为使用 cpp_novice 配置文件. 此外, 你还能点击 cpp_novice, 然后在右侧选择让它作为默认配置.
+
+.. figure:: VSCode_切换配置文件.png
+
+  切换配置文件
 
 .. note::
 
