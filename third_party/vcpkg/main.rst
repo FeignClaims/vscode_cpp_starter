@@ -56,12 +56,12 @@
 
 整个 ``cpp_novice`` 文件夹是用 CMake 进行的项目管理, 其配置文件即根目录下的 ``CMakeLists.txt``.
 
-打开 ``CMakeLists.txt`` 你可以看到 ``add_code(...)`` 函数, 这是我为了新手使用方便, 对 CMake 进行的简化: 通过 ``add_code(<程序名> <源文件1> [源文件2]...)`` 即可添加一个名为 ``<程序名>`` 的程序.
+打开 ``CMakeLists.txt`` 你可以看到 ``add_program(...)`` 函数, 这是我为了新手使用方便, 对 CMake 进行的简化: 通过 ``add_program(<程序名> <源文件1> [源文件2]...)`` 即可添加一个名为 ``<程序名>`` 的程序.
 
 .. code-block:: cmake
   :linenos:
 
-  add_code(example_multiple         # 程序名为 example_multiple
+  add_program(example_multiple         # 程序名为 example_multiple
     src/example_multiple/main.cpp   # 源文件 1
     src/example_multiple/hello.cpp  # 源文件 2
   )
@@ -110,7 +110,7 @@
 
 我为了新手使用方便, 对这个流程进行了简化.
 
-打开 ``CMakeLists.txt``, 找到 ``add_code_options``:
+打开 ``CMakeLists.txt``, 找到 ``add_program_options``:
 
 - 在 ``DEPENDENCIES`` 下方添加包名 ``fmt`` 和 ``range-v3``.
 - 在 ``LIBRARIES`` 下方添加目标名 ``fmt::fmt``, ``range-v3::meta``, ``range-v3::concepts`` 和 ``range-v3::range-v3``.
@@ -119,7 +119,7 @@
   :emphasize-lines: 3-4, 7-10
   :linenos:
 
-  add_code_options(
+  add_program_options(
     DEPENDENCIES
     fmt
     range-v3
@@ -134,7 +134,7 @@
     include
   )
 
-此后, 所有用 ``add_code`` 添加的程序均能使用该第三方库.
+此后, 所有用 ``add_program`` 添加的程序均能使用该第三方库.
 
 ========================================================================================================================
 扩展阅读
