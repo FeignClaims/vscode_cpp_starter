@@ -12,9 +12,11 @@
 
 .. warning::
 
-  program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格!
+  program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格! source_file1、source_file2 等源文件必须实际存在于你的电脑上.
 
-一旦添加了这样一个程序, 你就可以像之前演示的那样, 选择它、编译生成它、运行它.
+添加这样一个程序后, 你需要对 CMake 重新配置 (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.). 当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败 **并报错**.
+
+重新配置后, 你就可以像之前 :doc:`/verify/run/main` 和 :doc:`/verify/debug/main` 那样, 选择它、编译生成它、运行它、调试它.
 
 在 ``CMakeLists.txt`` 我添加了以下两个示例:
 
