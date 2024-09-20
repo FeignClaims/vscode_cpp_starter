@@ -137,7 +137,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 配置完成
 ========================================================================================================================
 
-打开一个源文件或头文件, 通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
+打开 test 文件夹下的 main.cpp, 通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
 
 .. note::
 
