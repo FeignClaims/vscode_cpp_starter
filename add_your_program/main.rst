@@ -12,7 +12,9 @@
 
 .. warning::
 
-  program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格! source_file1、source_file2 等源文件必须实际存在于你的电脑上.
+  - program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格!
+  - program_name 是唯一的, 多个 ``add_program`` 不要重复用同一个 program_name. 最好连 Test、test 这样只是大小写不同的情况都别出现.
+  - source_file1、source_file2 等源文件必须实际存在于你的电脑上!
 
 添加这样一个程序后, 你需要对 CMake 重新配置 (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.). 当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败 **并报错**.
 
