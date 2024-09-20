@@ -8,7 +8,11 @@
 
 所谓程序, 就是我们通过编写代码最终生成的, 可供设备运行的东西. 你所打开的 QQ、微信等都是一个独立的程序.
 
-此处说 "添加你自己的程序", 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 ``CMakeLists.txt`` 末尾加上一句 ``add_program(<program_name> <source_file1> [source_file2...])``, 就能添加一个名为 ``program_name`` 的程序, 它由 ``source_file1``、 ``source_file2`` 等源文件组成. 这些源代码文件内必须有且仅有一个 ``int main()`` 函数, 它将作为程序执行的入口.
+此处说 "添加你自己的程序", 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 ``CMakeLists.txt`` 末尾加上一句 ``add_program(program_name source_file1 source_file2...)``, 就能添加一个名为 ``program_name`` 的程序, 它由 ``source_file1``、 ``source_file2`` **等** (所以有个省略号! 不是说你也要输入这个省略号!) 源文件组成. 这些源代码文件内必须有且仅有一个 ``int main()`` 函数, 它将作为程序执行的入口.
+
+.. warning::
+
+  program_name、source_file1、source_file2 等等都不要有中文、特殊字符或者空格!
 
 一旦添加了这样一个程序, 你就可以像之前演示的那样, 选择它、编译生成它、运行它.
 
