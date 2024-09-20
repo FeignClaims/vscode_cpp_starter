@@ -126,6 +126,8 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 - Windows WSL: 选择 Clang 即可, 请注意选择 **/home/linuxbrew** 下的版本.
 - Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\msys64``) 下的版本.
 - MacOS: 系统自带有 Clang 编译器, 请注意选择 **homebrew** 路径下的版本.
+- Linux: 选择 Clang 即可.
+- 如果没有找到对应的编译器, 很可能是你在 "1.下载和安装" 时遗漏了步骤, 请 Windows MSYS2 尤其检查一下之前步骤中环境变量有没有设置上.
 
 .. tabs::
 
@@ -140,6 +142,14 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 .. note::
 
   2023-04-27 左右, VSCode CMake Tools 有更新, 这一步运行时可能卡在 ``[main] Configuring project: cpp_novice``. 请尝试重新启动 VSCode 或多次执行 :menuselection:`CMake: 配置`.
+
+.. note::
+
+  ``cmake configure`` 所带来的 :menuselection:`CMake: 配置` 如果失败, 请复查之前有没有遗漏步骤, 并在 **删除 build 文件夹后** 重新尝试执行 ``cmake configure``.
+
+  .. figure:: CMake配置失败.png
+
+    CMake 配置失败
 
 ========================================================================================================================
 配置完成
