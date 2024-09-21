@@ -25,7 +25,9 @@
 .. _`中科大源: 使用科大源安装 homebrew / linuxbrew`: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
 
 .. 配置
-.. _`配置文件`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/cpp_novice.zip
+.. _`cpp_novice`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/cpp_novice.zip
+.. _`ppp2_novice`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/ppp2_novice.zip
+.. _`ppp3_novice`: https://gitee.com/cpp_tutorial/vscode_cpp_starter_resource/raw/main/ppp3_novice.zip
 
 .. 其他引用
 .. _`Error Lens`: https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
