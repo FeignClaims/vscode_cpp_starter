@@ -8,7 +8,7 @@
 
 所谓程序, 就是我们通过编写代码最终生成的, 可供设备运行的东西. 你所打开的 QQ、微信等都是一个独立的程序.
 
-此处说 "添加你自己的程序", 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 ``CMakeLists.txt`` 末尾加上一句 ``add_program(program_name source_file1 source_file2...)``, 就能添加一个名为 ``program_name`` 的程序, 它由 ``source_file1``、 ``source_file2`` **等** (所以有个省略号! 不是说你也要输入这个省略号!) 源文件组成. 这些源代码文件内必须有且仅有一个 ``int main()`` 函数, 它将作为程序执行的入口.
+此处说 "添加你自己的程序", 就是要指明你的程序需要叫什么, 由哪些源文件组成. 为此, 你只需要在 CMakeLists.txt 末尾加上一句 ``add_program(program_name source_file1 source_file2...)``, 就能添加一个名为 ``program_name`` 的程序, 它由 ``source_file1``、 ``source_file2`` **等** (所以有个省略号! 不是说你也要输入这个省略号!) 源文件组成. 这些源代码文件内必须有且仅有一个 ``int main()`` 函数, 它将作为程序执行的入口.
 
 .. warning::
 
@@ -16,11 +16,15 @@
   - program_name 是唯一的, 多个 ``add_program`` 不要重复用同一个 program_name. 最好连 Test、test 这样只是大小写不同的情况都别出现.
   - source_file1、source_file2 等源文件必须实际存在于你的电脑上!
 
-添加这样一个程序后, 你需要对 CMake 重新配置 (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.). 当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败 **并报错**.
+.. note::
 
-重新配置后, 你就可以像之前 :doc:`/verify/run/main` 和 :doc:`/verify/debug/main` 那样, 选择它、编译生成它、运行它、调试它.
+  负责管理项目结构的 CMake 会在 CMakeLists.txt 保存时自动重新配置, 而我设置了 VSCode 定时自动保存文件, 所以你在修改 CMakeLists.txt 时可能发现配置失败或右下角弹窗报错. **不要紧张!** 等整个 ``add_program`` 都写好再确定配置是否成功.
 
-在 ``CMakeLists.txt`` 我添加了以下两个示例:
+  当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败并报错.
+
+这样添加之后, 你就可以像之前 :doc:`/verify/run/main` 和 :doc:`/verify/debug/main` 那样, 选择它、编译生成它、运行它、调试它.
+
+在 CMakeLists.txt 我添加了以下两个示例:
 
 ========================================================================================================================
 示例: 单个源文件组成的程序
@@ -33,13 +37,13 @@
     test/main.cpp
   )
 
-这段代码添加了一个名为 ``example_single`` 的程序, 它由 ``src/example_single/main.cpp`` 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.
+这段代码添加了一个名为 ``example_single`` 的程序, 它由 src/example_single/main.cpp 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.
 
-``src/example_single/main.cpp`` 中有一个 :cpp:`int main()` 函数, 它就是该程序执行的入口:
+src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该程序执行的入口:
 
 .. code-block:: cpp
   :linenos:
-  :caption: ``src/example_single/main.cpp``
+  :caption: src/example_single/main.cpp
 
   #include "add.hpp"
 
@@ -61,7 +65,7 @@
 :cpp:`add(5, 3)`
   :cpp:`add(5, 3)` 函数来自于 :cpp:`"add.hpp"`, 我们通过 :cpp:`#include "add.hpp"` 来包含它.
 
-  通过 :KBD:`Ctrl` + :KBD:`鼠标左键` 或 :KBD:`Command⌘` + :KBD:`鼠标左键` :cpp:`#include "add.hpp"` 的文件名 :cpp:`"add.hpp"` 部分, 你可以跳转到对应的文件. 可见, 我们跳转到了 ``include/add.hpp``, 这是我配置的公共头文件存放处, 放在此处的头文件将能被任意位置的源文件直接 :cpp:`#include`.
+  通过 :KBD:`Ctrl` + :KBD:`鼠标左键` 或 :KBD:`Command⌘` + :KBD:`鼠标左键` :cpp:`#include "add.hpp"` 的文件名 :cpp:`"add.hpp"` 部分, 你可以跳转到对应的文件. 可见, 我们跳转到了 include/add.hpp, 这是我配置的公共头文件存放处, 放在此处的头文件将能被任意位置的源文件直接 :cpp:`#include`.
 
 :cpp:`#include "add.hpp"`
   该文件是头文件 (header file), 相比于源文件 (source file), 它旨在以 :cpp:`#include` 形式被包含到源文件中而被使用, 因此:
@@ -73,7 +77,7 @@
 
   .. code-block:: cpp
     :linenos:
-    :caption: ``include/add.hpp``
+    :caption: include/add.hpp
 
     #ifndef ADD_HPP
     #define ADD_HPP
@@ -103,12 +107,12 @@
     src/example_multiple/hello.cpp
   )
 
-这段代码添加了一个名为 ``example_multiple`` 的程序, 它由 ``src/example_multiple/main.cpp`` 和 ``src/example_multiple/hello.cpp`` 中.
+这段代码添加了一个名为 ``example_multiple`` 的程序, 它由 src/example_multiple/main.cpp 和 src/example_multiple/hello.cpp 中.
 
 
 .. code-block:: cpp
   :linenos:
-  :caption: ``src/example_multiple/main.cpp``
+  :caption: src/example_multiple/main.cpp
 
   #include "hello.hpp"
 
@@ -118,11 +122,11 @@
 
 由源代码可知, 该程序的执行无非是以 :cpp:`int main()` 函数为入口, 调用 :cpp:`hello()` 函数.
 
-为什么 ``src/example_multiple/main.cpp`` 会知道有个 :cpp:`hello()` 函数呢? 因为 :cpp:`#include "hello.hpp"` 所包含的头文件中书写了该函数的声明, 但是可以注意到的是, **该头文件中并没有定义 hello() 函数要干什么**.
+为什么 src/example_multiple/main.cpp 会知道有个 :cpp:`hello()` 函数呢? 因为 :cpp:`#include "hello.hpp"` 所包含的头文件中书写了该函数的声明, 但是可以注意到的是, **该头文件中并没有定义 hello() 函数要干什么**.
 
 .. code-block:: cpp
   :linenos:
-  :caption: ``src/example_multiple/hello.hpp``
+  :caption: src/example_multiple/hello.hpp
 
   #ifndef HELLO_HPP
   #define HELLO_HPP
@@ -131,11 +135,11 @@
 
   #endif
 
-我们的程序是多个源文件的, 另一个源文件 ``src/example_multiple/hello.cpp`` 即定义了 :cpp:`hello()` 函数:
+我们的程序是多个源文件的, 另一个源文件 src/example_multiple/hello.cpp 即定义了 :cpp:`hello()` 函数:
 
 .. code-block:: cpp
   :linenos:
-  :caption: ``src/example_multiple/hello.cpp``
+  :caption: src/example_multiple/hello.cpp
 
   #include "hello.hpp"
 
@@ -157,7 +161,7 @@
     src/example_multiple/hello.cpp  # 定义 hello 函数
   )
 
-那么, 如果我们再写一个源文件 ``hello2.cpp``, 它将 :cpp:`hello()` 函数定义为输出 :cpp:`"hello c++!\\n"` 呢?
+那么, 如果我们再写一个源文件 hello2.cpp, 它将 :cpp:`hello()` 函数定义为输出 :cpp:`"hello c++!\\n"` 呢?
 
 .. code-block:: cpp
   :linenos:
