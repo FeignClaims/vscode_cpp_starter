@@ -22,7 +22,7 @@
 
 打开 Visual Studio 2022:
 
-- 按文件夹打开最里面的 cpp_novice 文件夹.
+- 按文件夹打开最里面的 cpp_novice 文件夹. 当然, 你可能得到的是 ppp2_novice 或 ppp3_novice 文件夹.
 - 或按 CMake 项目打开 CMakeLists.txt 文件.
 
 **配置结束**.
