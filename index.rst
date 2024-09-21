@@ -42,7 +42,7 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
   add_your_program/main.rst
   third_party/index.rst
   ohmyzsh/main.rst
-  visual_studio/main.rst
+  visual_studio/index.rst
 
 .. toctree::
   :maxdepth: 1
