@@ -77,6 +77,8 @@ CMake 状态栏
 
 根据上面的描述, 要运行 test, 我们将 *当前预生成的目标* 和 *当前预运行的目标* 均设置为 :menuselection:`[test]`, 点击 :menuselection:`▶播放按钮` 或按快捷键 :KBD:`Shift` + :KBD:`F5` 即可.
 
+如果配置成功, VSCode 将会打开 :menuselection:`终端`, 运行程序, 并输出 :cpp:`true`.
+
 .. hint::
 
   CMake Tools 扩展除状态栏提供的功能外, 还提供了非常多的功能, 建议通过 `VSCode CMake 拓展用户手册`_ 学习.
