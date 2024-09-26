@@ -124,6 +124,18 @@ WSL 专属步骤: 用 WSL 打开该文件夹
   配置 CMake
     :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
 
+.. note::
+
+  如果配置失败或没有找到对应的编译器, 请
+
+  1. 复查之前 (包括 "1.下载和安装") 有没有遗漏步骤, Windows MSYS2 要尤其检查一下之前步骤中环境变量有没有设置上;
+  2. **删除 build 文件夹** (如果有的话);
+  3. 重新扫描工具包、选择工具包和配置 CMake.
+
+  .. figure:: CMake配置失败.png
+
+    CMake 配置失败
+
 - Windows WSL: 选择 Clang 即可, 请注意选择 **/home/linuxbrew** 下的版本.
 - Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\msys64``) 下的版本.
 - MacOS: 系统自带有 Clang 编译器, 请注意选择 **homebrew** 路径下的版本.
@@ -145,22 +157,6 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
   [cmake] -- Configuring done (??.??s)  <- 显示的时间可能不同
   [cmake] -- Generating done (??.??s)
-
-.. note::
-
-  如果配置失败或没有找到对应的编译器, 请
-
-  1. 复查之前 (包括 "1.下载和安装") 有没有遗漏步骤, Windows MSYS2 要尤其检查一下之前步骤中环境变量有没有设置上;
-  2. **删除 build 文件夹** (如果有的话);
-  3. 重新扫描工具包、选择工具包和配置 CMake.
-
-  .. figure:: CMake配置失败.png
-
-    CMake 配置失败
-
-.. note::
-
-  2023-04-27 左右, VSCode CMake Tools 有更新, 这一步运行时可能卡在 ``[main] Configuring project: cpp_novice``. 请尝试重新启动 VSCode 或多次执行 :menuselection:`CMake: 配置`.
 
 ========================================================================================================================
 配置完成
