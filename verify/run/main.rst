@@ -51,7 +51,7 @@ CMake 状态栏
   点击即可对 *当前预生成的目标* 进行编译生成.
 
 :menuselection:`[all]`
-  *当前预生成的目标*. 点击可以切换, :menuselection:`[all]` 表示编译生成所有目标. **建议不要使用 [all]**, 从而避免用 `ppp2_novice`_ 和 `ppp3_novice`_ 时出现问题.
+  *当前预生成的目标*. 点击可以切换, :menuselection:`[all]` 表示编译生成所有目标. **建议不要使用 [all]**, 从而避免用 `ppp2_novice`_ 和 `ppp3_novice`_ 时因为默认没安装需要的第三方库而出现问题.
 
   .. figure:: cmake选择生成目标.png
   
