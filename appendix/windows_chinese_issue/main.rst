@@ -35,6 +35,11 @@ Windows 终端输出中文乱码问题
         "${env:windir}/System32/cmd.exe"
       ]
     },
+    "PowerShell": {
+      "args": ["-NoExit", "chcp 65001 > $null"],  // 新增加的行
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    },
   },
 
 .. note::
