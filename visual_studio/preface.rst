@@ -2,7 +2,9 @@
 使用本教程能得到的功能
 ************************************************************************************************************************
 
-说是简单, 但其实挺麻烦的, 直接配置一个 VSCode 出来更好用. 如果需要 Visual Studio 特有的一些诊断功能, 可以将项目导入到 `Compiler Explorer - MSVC <https://godbolt.org/z/dG41xP6h3>`_ 中查看.
+.. hint::
+
+  相比起配置 Visual Studio, 建议直接配置 :ref:`VSCode <main>` 出来会更好用. 如果需要 Visual Studio 特有的一些诊断功能, 可以将项目导入到 `Compiler Explorer - MSVC <https://godbolt.org/z/EbWjP7j44>`_ 中查看.
 
 方案基于 Visual Studio 2022 配置.
 
