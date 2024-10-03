@@ -192,4 +192,4 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
 
 .. seealso::
 
-  更多请参考 ``请读我`` 文件.
+  与学习模板相关的更多内容请参考请参考 :doc:`appendix/explain` 和学习模板内的 ``请读我`` 文件.
