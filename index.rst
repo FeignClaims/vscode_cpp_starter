@@ -50,6 +50,7 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
 
   appendix/learning.rst
   appendix/about_warnings/main.rst
+  appendix/about_inlay_hints.rst
   appendix/explain.rst
   appendix/windows_chinese_issue/main.rst
   appendix/choose_compiler/main.rst

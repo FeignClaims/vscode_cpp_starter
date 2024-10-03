@@ -91,7 +91,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
   VSCode 远程窗口 (例如 WSL) 专属步骤, 其他配置方案请忽略这一部分.
 
-:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
+:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
 
 .. figure:: WSL_打开文件夹.png
 
