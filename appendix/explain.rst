@@ -15,6 +15,7 @@
   +-- .clangd
   +-- compile_commands.json
   +-- CMakeLists.txt
+  +-- .cache/
   +-- cmake/
   |   +-- add_program.cmake
   |   +-- cpp_novice_fetch_project_options.cmake
@@ -94,6 +95,14 @@ CMake 的项目配置文件, 整个项目所有程序都由它管理:
 - 它生成 clangd 所需的 ``compile_commands.json``, 从而让 clangd 正常进行代码解析.
 - 它接受 ``add_program(程序名 源文件1 源文件2...)``, 从而添加新的程序.
 - CMake 的学习可参考 :doc:`/appendix/learning`.
+
+========================================================================================================================
+.cache/
+========================================================================================================================
+
+为了加快 clangd 的解析速度, 我在 .clangd 配置文件中为 clangd 启用了后台缓存, 而这些缓存存放在 .cache 文件夹中.
+
+在有些情况下 (软件更新、源文件大幅变动……), 你可能需要删除该文件夹并重启 clangd (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 回车).
 
 ========================================================================================================================
 cmake/
