@@ -38,7 +38,7 @@
   :linenos:
 
   add_program(example_single
-    test/main.cpp
+    src/example_single/main.cpp
   )
 
 这段代码添加了一个名为 ``example_single`` 的程序, 它由 src/example_single/main.cpp 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.
