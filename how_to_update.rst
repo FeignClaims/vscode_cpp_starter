@@ -56,7 +56,7 @@ Linux
 
 .. code-block:: bash
 
-  sudo apt update && sudo apt upgrade
+  sudo apt update && sudo apt upgrade && pipx upgrade-all --include-injected
 
 .. code-block:: bash
 

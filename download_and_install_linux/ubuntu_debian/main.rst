@@ -58,7 +58,15 @@
 
 .. code-block:: bash
 
-  sudo apt install cmake git ninja-build libstdc++-12-dev
+  sudo apt install cmake git ninja-build libstdc++-12-dev pipx ccache
+
+.. code-block:: bash
+
+  pipx ensurepath
+
+.. code-block:: bash
+
+  pipx install conan
 
 .. code-block:: bash
 

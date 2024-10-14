@@ -32,7 +32,7 @@
 
 .. code-block:: bash
 
-  pacman -S mingw-w64-clang-x86_64-toolchain mingw-w64-clang-x86_64-cninja mingw-w64-clang-x86_64-python-six mingw-w64-clang-x86_64-python-pip
+  pacman -S mingw-w64-clang-x86_64-toolchain mingw-w64-clang-x86_64-cninja mingw-w64-clang-x86_64-python-six mingw-w64-clang-x86_64-python-pip mingw-w64-clang-x86_64-python-conan mingw-w64-clang-x86_64-ccache git
 
 .. code-block:: bash
 
