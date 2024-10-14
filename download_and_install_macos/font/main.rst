@@ -51,7 +51,7 @@
 - `JetBrains Mono: 通过官网下载`_
 - `JetBrains Mono: 我备份的文件`_ (分别点击进行下载)
 
-  .. figure:: JetBrainsMono_我备份的文件.png
+  .. figure:: /JetBrainsMono_我备份的文件.png
 
     JetBrainsMono: 我备份的文件, 请分别点击下载
 
