@@ -28,7 +28,7 @@ Windows (MSYS2)
 
 .. code-block:: bash
 
-  pacman -S mingw-w64-python-conan
+  pacman -S mingw-w64-clang-x86_64-python-conan
 
 ------------------------------------------------------------------------------------------------------------------------
 MacOS
