@@ -63,7 +63,7 @@
 .clangd
 ========================================================================================================================
 
-clangd 的配置文件, 为程序员提供内联提示、语法高亮等辅助功能.
+clangd 的配置文件. clangd 让 VSCode 能够解析 C++ 代码, 并为程序员提供内联提示、语法高亮等辅助功能. 实际上, CLion、Qt Creator 等软件也是使用的 clangd.
 
 clangd 为 VSCode 提供了 clang-tidy 支持, 将会在编写代码时实时调用 clang-tidy 进行静态检查. (但不支持某些 clang-tidy 功能如自动添加, 如果需要, 请通过 :ref:`Clang-Tidy: fix current file <tasks_json>` 对当前源文件使用 clang-tidy.)
 
