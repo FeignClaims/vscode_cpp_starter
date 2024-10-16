@@ -2,7 +2,7 @@
 我个人的字体设置
 ************************************************************************************************************************
 
-与教程所使用的字体不同, 我个人使用的是付费字体 Monolisa 并在其中添加了 NerdFont 图标. 即,
+与教程所使用的字体不同, 我个人使用的是付费字体 Monolisa 并在其中添加了 `NerdFont <daylinmorgan/monolisa-nerdfont-patch: Patching MonoLisa with NerdFont Symbols>`_ 图标. 即,
 
 .. code-block:: json
   :linenos:
