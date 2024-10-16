@@ -109,7 +109,22 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 为 CMake 选择编译器
 ========================================================================================================================
 
-重新启动 VSCode, 如果前面的操作无误, 将会弹出如下图选项: (在备注后面)
+重新启动 VSCode, 如果前面的操作无误, 将会弹出如下图选项: (如果失败, 请看下面的备注)
+
+- Windows WSL: 选择 Clang 即可, 请注意选择 **/home/linuxbrew** 下的版本.
+- Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\msys64``) 下的版本.
+- MacOS: 系统自带有 Clang 编译器, 请注意选择 **homebrew** 路径下的版本.
+- Linux: 选择 Clang 即可.
+
+.. tabs::
+
+  .. tab:: Windows WSL 选择编译器
+
+    .. figure:: WSL_选择编译器.png
+
+  .. tab:: MacOS 选择编译器
+
+    .. figure:: MacOS_选择编译器.png
 
 .. note::
 
@@ -135,21 +150,6 @@ WSL 专属步骤: 用 WSL 打开该文件夹
   .. figure:: CMake配置失败.png
 
     CMake 配置失败
-
-- Windows WSL: 选择 Clang 即可, 请注意选择 **/home/linuxbrew** 下的版本.
-- Windows MSYS2: 选择 Clang 即可, 请注意选择 **msys2 安装路径** (默认为 ``C:\msys64``) 下的版本.
-- MacOS: 系统自带有 Clang 编译器, 请注意选择 **homebrew** 路径下的版本.
-- Linux: 选择 Clang 即可.
-
-.. tabs::
-
-  .. tab:: Windows WSL 选择编译器
-
-    .. figure:: WSL_选择编译器.png
-
-  .. tab:: MacOS 选择编译器
-
-    .. figure:: MacOS_选择编译器.png
 
 如果配置成功, :menuselection:`输出` 中将会显示有以下两行:
 
