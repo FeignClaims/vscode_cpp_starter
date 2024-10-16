@@ -13,7 +13,10 @@
 样式一
   在原 **变量值** 尾部加入英语输入法下的分号 ``;`` 后，加入 ``C:\msys64\clang64\bin`` (或 ``你在安装时自定义的 MSYS2 路径\clang64\bin``).
 
-  以同样方式加入 ``C:\msys64\usr\bin`` (或 ``你在安装时自定义的 MSYS2 路径\usr\bin``) 和 ``C:\msys64`` (或 ``你在安装时自定义的 MSYS2 路径``).
+  以同样方式加入
+
+  - ``C:\msys64\usr\bin`` (或 ``你在安装时自定义的 MSYS2 路径\usr\bin``)
+  - ``C:\msys64`` (或 ``你在安装时自定义的 MSYS2 路径``).
 
   .. figure:: 环境变量样式一.png
 
@@ -22,7 +25,10 @@
 样式二
   点击 :menuselection:`新建(N)`, 再输入 ``C:\msys64\clang64\bin`` (或 ``你在安装时自定义的 MSYS2 路径\clang64\bin``).
 
-  以同样方式加入 ``C:\msys64\usr\bin`` (或 ``你在安装时自定义的 MSYS2 路径\usr\bin``) 和 ``C:\msys64`` (或 ``你在安装时自定义的 MSYS2 路径``).
+  以同样方式加入
+
+  - ``C:\msys64\usr\bin`` (或 ``你在安装时自定义的 MSYS2 路径\usr\bin``)
+  - ``C:\msys64`` (或 ``你在安装时自定义的 MSYS2 路径``).
 
   .. figure:: 环境变量样式二.png
 
