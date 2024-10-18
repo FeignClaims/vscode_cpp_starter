@@ -12,9 +12,28 @@
   - 请 linux 和 wsl 额外安装 libc++ 和 libc++abi:
     - ubuntu: ``sudo apt install libc++-dev libc++abi-dev``
     - fedora: ``sudo dnf install libcxx-devel libcxxabi-devel``
+  - 请 macos、linux 和 wsl 额外安装 lld:
+    - macos、wsl、linux x86_64 方案: ``brew install lld``
+    - ubuntu
+
+      .. code-block:: bash
+
+        symlink_latest_version() {
+          local binary="$1"
+          local latest_version=$(ls -1 "/usr/bin/clang"-* 2>/dev/null | grep -oE '[0-9]+' | sort -V | tail -n 1)
+          if [ -n "$latest_version" ]; then
+              sudo ln -sf "/usr/bin/$binary-$latest_version" "/usr/bin/$binary"
+              echo "Symlink created: $binary-$latest_version -> $binary"
+          else
+              echo "No installed versions of $binary found."
+          fi
+        }
+        symlink_latest_version "lld"
+
+    - fedora: ``sudo dnf install lld``
 
 学习模板更新
-  - 强制 clang 在 linux 和 wsl 上使用 libc++ 而不是 libstdc++
+  - 强制 clang 在 linux 和 wsl 上使用 libc++ + lld 而不是 libstdc++
 
 ========================================================================================================================
 2024/09/30

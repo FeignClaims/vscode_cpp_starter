@@ -76,6 +76,7 @@ Linux
   symlink_latest_version "clang-format"
   symlink_latest_version "clangd"
   symlink_latest_version "lldb"
+  symlink_latest_version "lld"
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 架构: x86_64
