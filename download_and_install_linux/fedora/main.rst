@@ -30,7 +30,7 @@
 
 .. code-block:: bash
 
-  sudo dnf install llvm clang clang-tools-extra lldb cmake ninja-build git conan ccache
+  sudo dnf install llvm clang clang-tools-extra lldb cmake ninja-build git conan ccache libcxx-devel libcxxabi-devel
 
 .. note::
 

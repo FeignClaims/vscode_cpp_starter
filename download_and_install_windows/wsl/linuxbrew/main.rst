@@ -48,6 +48,6 @@
 
 .. code-block:: bash
 
-  sudo apt install build-essential procps curl file git
+  sudo apt install build-essential procps curl file git libc++-dev libc++abi-dev
 
 .. include:: /linuxbrew.irst
