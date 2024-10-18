@@ -8,7 +8,7 @@
 
 .. code-block:: bash
 
-  brew install llvm lld ninja git cmake conan ccache dotnet@6
+  brew install llvm ninja git cmake conan ccache dotnet@6
 
 .. code-block:: bash
 
