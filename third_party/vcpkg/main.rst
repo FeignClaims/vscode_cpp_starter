@@ -96,7 +96,7 @@
     ]
   }
 
-添加后, 重新配置 CMake, 此时 CMake 将会自动下载 vcpkg, 并用它下载第三方库 (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`).
+添加后, 以某种方式清除 cmake 缓存并重新配置你 IDE 中的 cmake (例如, 你也许可以删除 build 或 out 文件夹, 并重启软件或在命令菜单用 ``cmake configure``), 此时 CMake 将会自动下载 vcpkg, 并用它下载第三方库.
 
 配置完成后, vcpkg 将会提示我们如何在 CMake 中使用第三方库:
 
