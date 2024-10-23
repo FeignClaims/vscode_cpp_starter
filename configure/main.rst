@@ -69,6 +69,12 @@
 
   此时齿轮旁显示 ``CP``, 表明确实加载该配置文件; 以后在使用中也请注意切换.
 
+切换后, 用于调试程序的 CodeLLDB 插件将会下载它所需的包. 在它下载完之前, 我们无法调试程序, 但这不影响我们继续配置.
+
+.. figure:: VSCode_CodeLLDB下载package.png
+
+    CodeLLDB 下载所需的包
+
 .. note::
 
   切换配置文件后, 右下角可能弹出如下通知, 询问你是否安装 clangd (Would you like to download and install clangd x.x.x?), **请不要安装!** 我们已经通过其他方式安装好了 clangd, 而 VSCode 提示的版本存在一定的问题, 会导致之后步骤中配置失败.
@@ -89,7 +95,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
 .. danger::
 
-  VSCode 远程窗口 (例如 WSL) 专属步骤, 其他配置方案请忽略这一部分.
+  VSCode 远程窗口 (例如 WSL) 专属步骤, 其他配置方案请忽略这一部分 **往下接着看**.
 
 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
 
