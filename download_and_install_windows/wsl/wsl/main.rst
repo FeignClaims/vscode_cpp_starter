@@ -6,7 +6,7 @@
 以管理员身份打开 PowerShell
 ========================================================================================================================
 
-按 :KBD:`Win⊞` + :KBD:`X`, 然后选择 :menuselection:`Windows PowerShell (管理员)(A)` 从而以管理员身份打开 PowerShell.
+按 :KBD:`Win⊞-X`, 然后选择 :menuselection:`Windows PowerShell (管理员)(A)` 从而以管理员身份打开 PowerShell.
 
 .. figure:: 以管理员身份打开 PowerShell.png
 

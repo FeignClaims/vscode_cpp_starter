@@ -20,6 +20,6 @@
 
   echo "export PATH=\"$(brew --prefix llvm)/bin:\$PATH\"" >> ~/.zshrc
 
-安装完成后, 你可以通过 :menuselection:`启动台` 点击图标启动 VSCode, 或按 :KBD:`Command⌘` + :KBD:`空格` 打开聚焦搜索, 搜索 ``code`` 以找到.
+安装完成后, 你可以通过 :menuselection:`启动台` 点击图标启动 VSCode, 或按 :KBD:`Command⌘-空格` 打开聚焦搜索, 搜索 ``code`` 以找到.
 
 此后, 你可以随时在 :menuselection:`终端` 输入 ``brew upgrade --greedy`` 更新这些软件.

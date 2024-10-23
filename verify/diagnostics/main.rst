@@ -11,7 +11,7 @@
 
   诊断信息
 
-此外, 代码高亮软件 clangd 还提供了一些内嵌提示, 你可以通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``inlay`` 以找到 :menuselection:`clangd: Toggle inlay hints`, :KBD:`回车` 来开启或关闭:
+此外, 代码高亮软件 clangd 还提供了一些内嵌提示, 你可以通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``inlay`` 以找到 :menuselection:`clangd: Toggle inlay hints`, :KBD:`回车` 来开启或关闭:
 
 .. tabs::
 

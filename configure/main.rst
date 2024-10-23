@@ -37,7 +37,7 @@
 
 .. note::
 
-  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
+  如果窗口左下角没有齿轮, 请尝试通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``toggle activity bar`` 以找到 :menuselection:`查看：切换活动栏可见性(View: Toggle Activity Bar Visibility)`, :KBD:`回车`.
 
 在弹出的窗口中, 点击蓝色按钮右边的下三角下拉按钮, 选择 :menuselection:`导入配置文件...(Import Profile...)`.
 
@@ -97,7 +97,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 
   VSCode 远程窗口 (例如 WSL) 专属步骤, 其他配置方案请忽略这一部分 **往下接着看**.
 
-:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
+:KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``wsl open`` 以找到 :menuselection:`WSL: 在 WSL 中打开文件夹...`, :KBD:`回车`, 并选择该 cpp_novice 文件夹.
 
 .. figure:: WSL_打开文件夹.png
 
@@ -137,13 +137,13 @@ WSL 专属步骤: 用 WSL 打开该文件夹
   如果没有弹出, 请
 
   扫描工具包
-    :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 扫描工具包`, :KBD:`回车`.
+    :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 扫描工具包`, :KBD:`回车`.
 
   选择工具包
-    :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 选择工具包`, :KBD:`回车`.
+    :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``cmake kit`` 以找到 :menuselection:`CMake: 选择工具包`, :KBD:`回车`.
 
   配置 CMake
-    :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
+    :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``cmake configure`` 以找到 :menuselection:`CMake: 配置`, :KBD:`回车`.
 
 .. note::
 
@@ -168,7 +168,7 @@ WSL 专属步骤: 用 WSL 打开该文件夹
 配置完成
 ========================================================================================================================
 
-打开 test 文件夹下的 main.cpp, 通过 :KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
+打开 test 文件夹下的 main.cpp, 通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 从而刷新配置.
 
 .. note::
 

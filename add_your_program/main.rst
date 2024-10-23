@@ -69,7 +69,7 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
 :cpp:`add(5, 3)`
   :cpp:`add(5, 3)` 函数来自于 :cpp:`"add.hpp"`, 我们通过 :cpp:`#include "add.hpp"` 来包含它.
 
-  通过 :KBD:`Ctrl` + :KBD:`鼠标左键` 或 :KBD:`Command⌘` + :KBD:`鼠标左键` :cpp:`#include "add.hpp"` 的文件名 :cpp:`"add.hpp"` 部分, 你可以跳转到对应的文件. 可见, 我们跳转到了 include/add.hpp, 这是我配置的公共头文件存放处, 放在此处的头文件将能被任意位置的源文件直接 :cpp:`#include`.
+  通过 :KBD:`Ctrl-鼠标左键` 或 :KBD:`Command⌘-鼠标左键` :cpp:`#include "add.hpp"` 的文件名 :cpp:`"add.hpp"` 部分, 你可以跳转到对应的文件. 可见, 我们跳转到了 include/add.hpp, 这是我配置的公共头文件存放处, 放在此处的头文件将能被任意位置的源文件直接 :cpp:`#include`.
 
 :cpp:`#include "add.hpp"`
   该文件是头文件 (header file), 相比于源文件 (source file), 它旨在以 :cpp:`#include` 形式被包含到源文件中而被使用, 因此:

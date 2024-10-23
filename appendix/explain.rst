@@ -67,7 +67,7 @@ clangd 的配置文件. clangd 让 VSCode 能够解析 C++ 代码, 并为程序�
 
 clangd 为 VSCode 提供了 clang-tidy 支持, 将会在编写代码时实时调用 clang-tidy 进行静态检查. (但不支持某些 clang-tidy 功能如自动添加, 如果需要, 请通过 :ref:`Clang-Tidy: fix current file <tasks_json>` 对当前源文件使用 clang-tidy.)
 
-clangd 也为 VSCode 提供了 clang-format 支持, 因而在通过 :KBD:`Ctrl` + :KBD:`S` 或 :KBD:`Command⌘` + :KBD:`S` 或工具栏手动保存代码时, 代码将会被格式化.
+clangd 也为 VSCode 提供了 clang-format 支持, 因而在通过 :KBD:`Ctrl-S` 或 :KBD:`Command⌘-S` 或工具栏手动保存代码时, 代码将会被格式化.
 
 - 文档见 `Clang-Tidy 诊断选项列表`_ 和 `Clangd 官网`_.
 
@@ -102,7 +102,7 @@ CMake 的项目配置文件, 整个项目所有程序都由它管理:
 
 为了加快 clangd 的解析速度, 我在 .clangd 配置文件中为 clangd 启用了后台缓存, 而这些缓存存放在 .cache 文件夹中.
 
-在有些情况下 (软件更新、源文件大幅变动……), 你可能需要删除该文件夹并重启 clangd (:KBD:`Ctrl` + :KBD:`Shift` + :KBD:`P` 或 :KBD:`Command⌘` + :KBD:`Shift` + :KBD:`P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 回车).
+在有些情况下 (软件更新、源文件大幅变动……), 你可能需要删除该文件夹并重启 clangd (:KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``clangdr`` 以找到 :menuselection:`clangd: Restart language server`, 回车).
 
 ========================================================================================================================
 cmake/
