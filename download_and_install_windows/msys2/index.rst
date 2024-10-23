@@ -10,5 +10,5 @@
   ../common/git/main.rst
   ../common/font/main.rst
   msys2/main.rst
-  environment/main.rst
   llvm/main.rst
+  environment/main.rst
