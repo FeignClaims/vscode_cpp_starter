@@ -77,6 +77,14 @@
 
 .. note::
 
+  如果 CodeLLDB 下载失败, 请点击按钮手动下载, 然后通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``vsix`` 以找到 :menuselection:`扩展: 从 VSIX 安装...`, :KBD:`回车`, 在弹出的窗口中选择刚刚点击按钮下载到的文件.
+
+  .. figure:: VSCode_CodeLLDB下载package失败.png
+
+      CodeLLDB 下载所需的包失败
+
+.. warning::
+
   切换配置文件后, 右下角可能弹出如下通知, 询问你是否安装 clangd (Would you like to download and install clangd x.x.x?), **请不要安装!** 我们已经通过其他方式安装好了 clangd, 而 VSCode 提示的版本存在一定的问题, 会导致之后步骤中配置失败.
 
   .. figure:: VSCode_被推荐安装clangd.png
