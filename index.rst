@@ -18,6 +18,10 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
 
 .. error::
 
+  **请按目录中的标号, 从 0 开始阅读教程!** 目录中数字标志的部分都做完, 才算是完成配置. 安装了 VSCode 并不意味着你可以跳过 "1.下载和安装"!
+
+.. error::
+
   整个配置过程中请勿开启杀毒软件, 避免出现奇怪的问题.
 
 .. toctree::
