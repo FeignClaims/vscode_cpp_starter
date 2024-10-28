@@ -58,7 +58,7 @@
 
 .. code-block:: bash
 
-  sudo apt install cmake git ninja-build libstdc++-12-dev pipx ccache libc++-dev libc++abi-dev curl zip unzip tar
+  sudo apt install cmake git ninja-build libstdc++-12-dev pipx ccache libc++-dev libc++abi-dev curl zip unzip tar ninja-build
 
 .. code-block:: bash
 

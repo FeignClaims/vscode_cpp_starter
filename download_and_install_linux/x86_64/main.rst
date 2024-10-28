@@ -9,7 +9,7 @@
 Debian 或 Ubuntu
   .. code-block:: bash
 
-    sudo apt-get install build-essential procps curl file git zip libc++-dev libc++abi-dev
+    sudo apt-get install build-essential procps curl file git zip ninja-build libc++-dev libc++abi-dev
 
 Fedora, CentOS 或 Red Hat
   .. code-block:: bash
