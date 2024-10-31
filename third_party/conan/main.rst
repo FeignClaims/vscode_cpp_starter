@@ -4,7 +4,7 @@
 
 .. warning::
 
-  请确保网络可访问 github.
+  请确保网络可访问 github (例如 "steam++工具箱" 中可以选择加速 github 访问).
 
 .. hint::
 

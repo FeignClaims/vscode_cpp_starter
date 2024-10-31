@@ -31,7 +31,7 @@
 
 .. note::
 
-  2024-09 更新的 VSCode 1.93 更改了配置文件界面, 如果你使用的是老版本, 请点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)` 来更新你的 VSCode.
+  2024-09 更新的 VSCode 1.93 更改了配置文件界面. 如果你使用的是老版本, 请点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)` 来更新你的 VSCode.
 
 点击窗口左下角的 :menuselection:`齿轮`, 点击 :menuselection:`配置文件(Profiles)`.
 
@@ -77,13 +77,15 @@
 
 .. note::
 
-  如果 CodeLLDB 下载失败, 请点击按钮手动下载, 然后通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``vsix`` 以找到 :menuselection:`扩展: 从 VSIX 安装...`, :KBD:`回车`, 在弹出的窗口中选择刚刚点击按钮下载到的文件.
+  CodeLLDB 所需的包需要通过 github 下载, 因此很容易下载失败. 如果 CodeLLDB 下载失败, 请查询如何成功访问 github (例如 "steam++工具箱" 中可以选择加速 github 访问) 然后重启 VSCode.
+  
+  或者如果你觉得自己网络没有问题, 你可以尝试点击按钮手动下载, 然后通过 :KBD:`Ctrl-Shift-P` 或 :KBD:`Command⌘-Shift-P` 打开命令菜单, 输入 ``vsix`` 以找到 :menuselection:`扩展: 从 VSIX 安装...`, :KBD:`回车`, 在弹出的窗口中选择刚刚点击按钮下载到的文件.
 
   .. figure:: VSCode_CodeLLDB下载package失败.png
 
       CodeLLDB 下载所需的包失败
 
-.. warning::
+.. error::
 
   切换配置文件后, 右下角可能弹出如下通知, 询问你是否安装 clangd (Would you like to download and install clangd x.x.x?), **请不要安装!** 我们已经通过其他方式安装好了 clangd, 而 VSCode 提示的版本存在一定的问题, 会导致之后步骤中配置失败.
 

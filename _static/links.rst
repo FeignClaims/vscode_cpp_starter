@@ -33,6 +33,7 @@
 .. _`Conan 2.0 Documentation`: https://docs.conan.io/2/
 .. _`Adding Packages to ConanCenter`: https://github.com/conan-io/conan-center-index/blob/master/docs/adding_packages/README.md
 .. _`Browse public vcpkg packages`: https://vcpkg.io/en/packages
+.. _`《如何修改Windows系统中文账号名为英文，解决游戏报错问题》by 游戏圣地`: https://www.bilibili.com/video/BV1w24y1t7WY
 
 .. 参考文献
 .. _`VSCode 变量参考`: https://code.visualstudio.com/docs/editor/variables-reference
