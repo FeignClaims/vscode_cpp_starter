@@ -61,11 +61,6 @@ html_theme_options = {
             "name": "GitHub",
             "url": "https://github.com/FeignClaims/vscode_cpp_starter",
             "icon": "fa-brands fa-github",
-        },
-        {
-            "name": "Gitee",
-            "url": "https://gitee.com/cpp_tutorial/vscode_cpp_starter",
-            "icon": "fa-custom fa-gitee",
         }
     ],
     "use_sidenotes": True,
@@ -96,4 +91,3 @@ html_extra_path = [
 
 def setup(app):
     app.add_css_file("theme.css")
-    app.add_js_file("gitee_icon.js")

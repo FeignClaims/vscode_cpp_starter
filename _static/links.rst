@@ -1,9 +1,4 @@
-.. _`Gitee 仓库`: https://gitee.com/cpp_tutorial/vscode_cpp_starter
 .. _`Gitee 仓库 Issues`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues
-
-.. Issues
-.. _`Issue: 关于配置异常无输出`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I5PT6Y
-.. _`Issue: 添加断点无效`: https://gitee.com/cpp_tutorial/vscode_cpp_starter/issues/I58LOQ
 
 .. _`aminya/project_options`: https://github.com/aminya/project_options
 .. _`FeignClaims/cpp_conan_template`: https://github.com/FeignClaims/cpp_conan_template
