@@ -85,6 +85,10 @@
 
       CodeLLDB 下载所需的包失败
 
+  .. figure:: VSCode_CodeLLDB下载package失败时的输出.png
+
+      CodeLLDB 下载所需的包失败时的输出
+
 .. error::
 
   切换配置文件后, 右下角可能弹出如下通知, 询问你是否安装 clangd (Would you like to download and install clangd x.x.x?), **请不要安装!** 我们已经通过其他方式安装好了 clangd, 而 VSCode 提示的版本存在一定的问题, 会导致之后步骤中配置失败.
