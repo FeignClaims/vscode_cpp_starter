@@ -32,6 +32,7 @@ jobs:
       - name: Checkout github_docs
         uses: actions/checkout@v4.1.1
         with:
+          ssh-key: ${{ secrets.RSA_PRIVATE_KEY }}
           ref: github_docs
           path: github_docs
 
