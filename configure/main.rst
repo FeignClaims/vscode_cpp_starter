@@ -45,7 +45,7 @@
 
   导入配置文件
 
-然后, 在弹出的新窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 ``cpp_novice`` 目录下的 ``cpp_novice.code-profile``.
+然后, 在弹出的新窗口中, 点击 :menuselection:`选择文件...`, 然后选择你解压的 cpp_novice 文件夹下的 ``cpp_novice.code-profile``.
 
 然后在窗口中点击 :menuselection:`创建` 来完成该配置文件的导入.
 
