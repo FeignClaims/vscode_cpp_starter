@@ -22,7 +22,7 @@
 
   .. tab:: 鼠标悬停
 
-    你也可以用 :KBD:`Ctrl-K Ctrl-I` 或 :KBD:`Command⌘-K Command⌘-I` 打开光标位置的悬停提示 (editor.action.showHover), 但这默认快捷键很复杂, 建议查询并修改快捷键.
+    除了鼠标悬停, 你也可以用 :KBD:`Ctrl-K Ctrl-I` 或 :KBD:`Command⌘-K Command⌘-I` 打开光标位置的悬停提示 (editor.action.showHover), 但这默认快捷键很复杂, 建议查询并修改快捷键.
 
     .. figure:: 鼠标悬停.png
 
