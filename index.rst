@@ -44,6 +44,7 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
   configure/main.rst
   verify/index.rst
   add_your_program/main.rst
+  cursor/main.rst
   third_party/index.rst
   ohmyzsh/main.rst
   visual_studio/index.rst
