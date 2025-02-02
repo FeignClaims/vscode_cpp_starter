@@ -56,20 +56,21 @@ html_show_sourcelink = False
 
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
-    "icon_links": [
+    'icon_links': [
         {
-            "name": "GitHub",
-            "url": "https://github.com/FeignClaims/vscode_cpp_starter",
-            "icon": "fa-brands fa-github",
+            'name': 'GitHub',
+            'url': 'https://github.com/FeignClaims/vscode_cpp_starter',
+            'icon': 'fa-brands fa-github',
         }
     ],
-    "use_sidenotes": True,
     'repository_url': 'https://github.com/FeignClaims/vscode_cpp_starter',
+    'search_as_you_type': True,
     'show_nav_level': 0,
     'show_prev_next': True,
     'show_toc_level': 2,
     'use_edit_page_button': True,
     'use_issues_button': True,
+    'use_sidenotes': True,
     'use_source_button': True,
 }
 html_static_path = ['_static', '_theme']
