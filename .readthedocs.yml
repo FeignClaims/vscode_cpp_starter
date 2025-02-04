@@ -10,6 +10,7 @@ build:
 
 sphinx:
   configuration: conf.py
+  builder: dirhtml
 
 python:
   install:
