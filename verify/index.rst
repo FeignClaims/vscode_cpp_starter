@@ -2,7 +2,7 @@
 3.检验配置结果和实际使用
 ************************************************************************************************************************
 
-从左边侧边栏打开 test/main.cpp (test 文件夹下的 main.cpp 文件), 以下操作均在 test/main.cpp 中进行.
+从左边侧边栏打开 test/index.cpp (test 文件夹下的 main.cpp 文件), 以下操作均在 test/index.cpp 中进行.
 
 .. figure:: 左边侧边栏.png
 
@@ -22,7 +22,7 @@
   :maxdepth: 1
   :caption: 目录
 
-  format/main.rst
-  diagnostics/main.rst
-  run/main.rst
-  debug/main.rst
+  format/index
+  diagnostics/index
+  run/index
+  debug/index

@@ -11,5 +11,5 @@
 .. toctree::
   :maxdepth: 1
 
-  msys2/index.rst
-  wsl/index.rst
+  msys2/index
+  wsl/index

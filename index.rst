@@ -37,27 +37,27 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
 
   how_to_update.rst
   changelog.rst
-  preface/main.rst
-  download_and_install_windows/index.rst
-  download_and_install_macos/index.rst
-  download_and_install_linux/index.rst
-  configure/main.rst
-  verify/index.rst
-  add_your_program/main.rst
-  cursor/main.rst
-  third_party/index.rst
-  ohmyzsh/main.rst
-  visual_studio/index.rst
+  preface/index
+  download_and_install_windows/index
+  download_and_install_macos/index
+  download_and_install_linux/index
+  configure/index
+  verify/index
+  add_your_program/index
+  cursor/index
+  third_party/index
+  ohmyzsh/index
+  visual_studio/index
 
 .. toctree::
   :maxdepth: 1
   :caption: 附录
 
   appendix/learning.rst
-  appendix/about_warnings/main.rst
-  appendix/about_inlay_hints/main.rst
+  appendix/about_warnings/index
+  appendix/about_inlay_hints/index
   appendix/explain.rst
-  appendix/windows_chinese_issue/main.rst
-  appendix/choose_compiler/main.rst
+  appendix/windows_chinese_issue/index
+  appendix/choose_compiler/index
   appendix/my_font.rst
   appendix/bibliography.rst

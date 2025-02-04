@@ -6,9 +6,9 @@
   :maxdepth: 1
   :caption: 目录
 
-  ../common/vscode/main.rst
-  ../common/git/main.rst
-  ../common/font/main.rst
-  msys2/main.rst
-  llvm/main.rst
-  environment/main.rst
+  ../common/vscode/index
+  ../common/git/index
+  ../common/font/index
+  msys2/index
+  llvm/index
+  environment/index

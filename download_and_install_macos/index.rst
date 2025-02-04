@@ -12,6 +12,6 @@
   :maxdepth: 1
   :caption: 目录
 
-  homebrew/main.rst
+  homebrew/index
   other_softwares.rst
-  font/main.rst
+  font/index

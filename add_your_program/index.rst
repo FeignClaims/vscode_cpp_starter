@@ -26,7 +26,7 @@
 
   当然, 如果你添加了实际不存在的文件作为源文件, CMake 会配置失败并报错.
 
-这样添加之后, 你就可以像之前 :doc:`/verify/run/main` 和 :doc:`/verify/debug/main` 那样, 选择它、编译生成它、运行它、调试它.
+这样添加之后, 你就可以像之前 :doc:`/verify/run/index` 和 :doc:`/verify/debug/index` 那样, 选择它、编译生成它、运行它、调试它.
 
 在 CMakeLists.txt 我添加了以下两个示例:
 
@@ -38,16 +38,16 @@
   :linenos:
 
   add_program(example_single
-    src/example_single/main.cpp
+    src/example_single/index.cpp
   )
 
-这段代码添加了一个名为 ``example_single`` 的程序, 它由 src/example_single/main.cpp 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.
+这段代码添加了一个名为 ``example_single`` 的程序, 它由 src/example_single/index.cpp 源代码——src 文件夹里的 example_single 文件夹里的 main.cpp 源文件——组成.
 
-src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该程序执行的入口:
+src/example_single/index.cpp 中有一个 :cpp:`int main()` 函数, 它就是该程序执行的入口:
 
 .. code-block:: cpp
   :linenos:
-  :caption: src/example_single/main.cpp
+  :caption: src/example_single/index.cpp
 
   #include "add.hpp"
 
@@ -107,16 +107,16 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
   :linenos:
 
   add_program(example_multiple
-    src/example_multiple/main.cpp
+    src/example_multiple/index.cpp
     src/example_multiple/hello.cpp
   )
 
-这段代码添加了一个名为 ``example_multiple`` 的程序, 它由 src/example_multiple/main.cpp 和 src/example_multiple/hello.cpp 中.
+这段代码添加了一个名为 ``example_multiple`` 的程序, 它由 src/example_multiple/index.cpp 和 src/example_multiple/hello.cpp 中.
 
 
 .. code-block:: cpp
   :linenos:
-  :caption: src/example_multiple/main.cpp
+  :caption: src/example_multiple/index.cpp
 
   #include "hello.hpp"
 
@@ -126,7 +126,7 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
 
 由源代码可知, 该程序的执行无非是以 :cpp:`int main()` 函数为入口, 调用 :cpp:`hello()` 函数.
 
-为什么 src/example_multiple/main.cpp 会知道有个 :cpp:`hello()` 函数呢? 因为 :cpp:`#include "hello.hpp"` 所包含的头文件中书写了该函数的声明, 但是可以注意到的是, **该头文件中并没有定义 hello() 函数要干什么**.
+为什么 src/example_multiple/index.cpp 会知道有个 :cpp:`hello()` 函数呢? 因为 :cpp:`#include "hello.hpp"` 所包含的头文件中书写了该函数的声明, 但是可以注意到的是, **该头文件中并没有定义 hello() 函数要干什么**.
 
 .. code-block:: cpp
   :linenos:
@@ -161,7 +161,7 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
   :linenos:
 
   add_program(example_multiple
-    src/example_multiple/main.cpp   # 定义程序入口函数 main, 它调用 hello 函数.
+    src/example_multiple/index.cpp   # 定义程序入口函数 main, 它调用 hello 函数.
     src/example_multiple/hello.cpp  # 定义 hello 函数
   )
 
@@ -184,11 +184,11 @@ src/example_single/main.cpp 中有一个 :cpp:`int main()` 函数, 它就是该�
   :linenos:
 
   add_program(example_multiple
-    src/example_multiple/main.cpp   # 定义程序入口函数 main, 它调用 hello 函数.
+    src/example_multiple/index.cpp   # 定义程序入口函数 main, 它调用 hello 函数.
     src/example_multiple/hello.cpp  # 定义 hello 函数
   )
   add_program(example_multiple2
-    src/example_multiple/main.cpp    # 同样用 main.cpp
+    src/example_multiple/index.cpp    # 同样用 main.cpp
     src/example_multiple/hello2.cpp  # 用另一种方式定义 hello 函数
   )
 

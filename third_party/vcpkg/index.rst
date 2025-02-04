@@ -62,7 +62,7 @@
   :linenos:
 
   add_program(example_multiple         # 程序名为 example_multiple
-    src/example_multiple/main.cpp   # 源文件 1
+    src/example_multiple/index.cpp   # 源文件 1
     src/example_multiple/hello.cpp  # 源文件 2
   )
 
@@ -89,7 +89,7 @@
   :linenos:
 
   {
-    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/index/docs/vcpkg.schema.json",
     "dependencies": [
       "fmt",
       "range-v3"

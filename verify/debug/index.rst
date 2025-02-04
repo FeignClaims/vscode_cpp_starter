@@ -29,9 +29,9 @@ VSCode 只是通用的编辑器, 并不知道你会如何进行调试或运行, 
 
 根据上面的描述, 要调试 test, 我们将 *当前预生成的目标* 和 *当前预运行的目标* 均设置为 :menuselection:`[test]`, 点击 :menuselection:`运行和调试 --> ▶播放按钮` 或按快捷键 :KBD:`F5` 即可.
 
-当然, 在调试前, 我们需要在 test 程序对应的源文件 :cpp:`test/main.cpp` 中设置断点:
+当然, 在调试前, 我们需要在 test 程序对应的源文件 :cpp:`test/index.cpp` 中设置断点:
 
-1. 点开 ``test/main.cpp``.
+1. 点开 ``test/index.cpp``.
 2. 选择要中断的行, 通过 :KBD:`左击` 行号左边空白区域设置断点, 例如设置在第 7 行 :cpp:`int x{};` 处.
 
 .. figure:: 设置断点.png

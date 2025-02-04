@@ -4,7 +4,7 @@
 
 观察 ``int main()`` 函数内的 ``int x{};``, ``x`` 下方应有黄线.
 
-- 黄色的信息为警告, 表示代码写得可能不够好, 如何处理见于 :doc:`/appendix/about_warnings/main`.
+- 黄色的信息为警告, 表示代码写得可能不够好, 如何处理见于 :doc:`/appendix/about_warnings/index`.
 - 红色的信息为错误, 表示代码无法运行.
 
 .. figure:: 诊断信息示例.png

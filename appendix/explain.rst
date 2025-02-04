@@ -54,7 +54,7 @@
 
 项目的 .clang-tidy 配置文件中还提供了一个如何强制使命名满足特定格式的示例 (lower_case, CamelCase 等), 从而说明 .clang-tidy 的一些检查是存在自定义设置的.
 
-有关它所产生的警告的解释, 见于 :doc:`/appendix/about_warnings/main`. 为了避免对新手产生太大影响, 我禁用了很多严格的警告.
+有关它所产生的警告的解释, 见于 :doc:`/appendix/about_warnings/index`. 为了避免对新手产生太大影响, 我禁用了很多严格的警告.
 
 - 此处 clangd 将 ``.clang-tidy`` 和 ``.clangd`` 中的配置文件综合处理.
 - 文档见 `Clang-Tidy 诊断选项列表`_ 和 `Clang-Tidy 抑制诊断的方法`_ 等.

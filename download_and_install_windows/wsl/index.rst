@@ -6,8 +6,8 @@
   :maxdepth: 1
   :caption: 目录
 
-  ../common/vscode/main.rst
-  ../common/git/main.rst
-  ../common/font/main.rst
-  wsl/main.rst
-  linuxbrew/main.rst
+  ../common/vscode/index
+  ../common/git/index
+  ../common/font/index
+  wsl/index
+  linuxbrew/index

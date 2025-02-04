@@ -8,6 +8,6 @@
   :maxdepth: 1
 
   preface.rst
-  by_template/index.rst
-  by_manual/index.rst
+  by_template/index
+  by_manual/index
   appendix.rst

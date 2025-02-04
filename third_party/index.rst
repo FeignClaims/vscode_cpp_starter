@@ -6,8 +6,8 @@
   :maxdepth: 1
   :caption: 选择包管理器
 
-  vcpkg/main.rst
-  conan/main.rst
+  vcpkg/index
+  conan/index
 
 .. hint::
 

@@ -46,11 +46,11 @@
   :maxdepth: 1
   :caption: 基于操作系统的教程
 
-  fedora/main.rst
-  ubuntu_debian/main.rst
+  fedora/index
+  ubuntu_debian/index
 
 .. toctree::
   :maxdepth: 1
   :caption: 基于架构的教程
 
-  x86_64/main.rst
+  x86_64/index
