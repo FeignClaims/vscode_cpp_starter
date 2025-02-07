@@ -16,7 +16,7 @@
 .. _`MesloLGS NF: 我备份的文件`: https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/tree/main/%E5%AD%97%E4%BD%93/MesloLGS%20NF
 .. _`其他带 NerdFont 图标的字体`: https://www.nerdfonts.com/font-downloads
 .. _`等距更纱黑体 SC: 通过官网下载`: https://github.com/be5invis/Sarasa-Gothic/releases
-.. _`等距更纱黑体 SC: 我备份的文件`: https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/tree/index/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
+.. _`等距更纱黑体 SC: 我备份的文件`: https://gitlab.com/FeignClaims/vscode_cpp_starter_resource/-/tree/main/%E5%AD%97%E4%BD%93/%E6%9B%B4%E7%BA%B1%E9%BB%91%E4%BD%93
 .. _`中科大源: 使用科大源安装 homebrew / linuxbrew`: https://mirrors.ustc.edu.cn/help/brew.git.html#homebrew-linuxbrew
 
 .. 配置
