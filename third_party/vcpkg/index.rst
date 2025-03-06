@@ -62,7 +62,7 @@
   :linenos:
 
   add_program(example_multiple         # 程序名为 example_multiple
-    src/example_multiple/index.cpp   # 源文件 1
+    src/example_multiple/main.cpp   # 源文件 1
     src/example_multiple/hello.cpp  # 源文件 2
   )
 
