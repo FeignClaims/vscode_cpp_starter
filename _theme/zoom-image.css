@@ -1,0 +1,24 @@
+img,
+video {
+  max-width: 95%;
+  width: auto;
+  height: auto;
+  max-height: 350px;
+  margin: 15px 10px;
+  transition: all 0.3s ease;
+  display: block;
+  object-fit: contain;
+}
+img {
+  cursor: zoom-in;
+}
+img.zoom-image {
+  max-height: none;
+  max-width: 100%;
+  z-index: 100;
+  position: relative;
+  cursor: zoom-out;
+}
+img:hover {
+  transform: scale(1.01);
+}

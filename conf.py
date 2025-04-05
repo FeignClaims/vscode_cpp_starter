@@ -91,4 +91,6 @@ html_extra_path = [
 
 
 def setup(app):
+    app.add_js_file("jquery.min.js")
+    app.add_js_file("zoom-image.js")
     app.add_css_file("theme.css")
