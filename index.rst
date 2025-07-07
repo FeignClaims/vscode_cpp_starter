@@ -44,7 +44,7 @@ Windows/MacOS/Linux 上 VSCode 配置 C++: Clang + Clang-based Tools + CMake + C
   configure/index
   verify/index
   add_your_program/index
-  cursor/index
+  ai/index
   third_party/index
   ohmyzsh/index
   visual_studio/index
