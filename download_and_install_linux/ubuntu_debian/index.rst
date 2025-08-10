@@ -70,7 +70,7 @@
 
 .. code-block:: bash
 
-  sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+  sudo bash -c "$(wget -O - https://mirrors.cernet.edu.cn/llvm-apt/llvm.sh)"
 
 .. code-block:: bash
 
