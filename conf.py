@@ -29,6 +29,9 @@ extensions = [
     'sphinxext.opengraph',
 ]
 
+myst_enable_extensions = [
+    "colon_fence"
+]
 intersphinx_mapping = {
     "question_board": ("https://question-board.readthedocs.io/", "https://question-board.readthedocs.io/objects.inv"),
 }

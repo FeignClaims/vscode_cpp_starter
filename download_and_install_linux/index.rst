@@ -48,7 +48,8 @@
 
   fedora/index
   ubuntu_debian/index
-
+  archlinux/index
+  
 .. toctree::
   :maxdepth: 1
   :caption: 基于架构的教程
